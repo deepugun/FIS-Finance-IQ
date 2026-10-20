@@ -1,0 +1,36 @@
+table UnderwritingDecisions
+
+	column DecisionId
+		dataType: string
+		isKey
+		sourceColumn: DecisionId
+
+	column RenewalId
+		dataType: string
+		sourceColumn: RenewalId
+
+	column AccountId
+		dataType: string
+		sourceColumn: AccountId
+
+	column Posture
+		dataType: string
+		sourceColumn: Posture
+
+	column Approved
+		dataType: boolean
+		sourceColumn: Approved
+
+	column ApprovedBy
+		dataType: string
+		sourceColumn: ApprovedBy
+
+	column Rationale
+		dataType: string
+		sourceColumn: Rationale
+
+	partition UnderwritingDecisions = entity
+		mode: directLake
+		source
+			entityName: demo_underwritingdecisions
+			expressionSource: DL_CommercialInsurance

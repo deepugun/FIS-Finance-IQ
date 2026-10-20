@@ -1,0 +1,40 @@
+table Submissions
+
+	column SubmissionId
+		dataType: string
+		isKey
+		sourceColumn: SubmissionId
+
+	column AccountId
+		dataType: string
+		sourceColumn: AccountId
+
+	column BrokerId
+		dataType: string
+		sourceColumn: BrokerId
+
+	column ReceivedDate
+		dataType: dateTime
+		sourceColumn: ReceivedDate
+
+	column DocumentRef
+		dataType: string
+		sourceColumn: DocumentRef
+
+	column BrokerStatement
+		dataType: string
+		sourceColumn: BrokerStatement
+
+	column EvidenceClass
+		dataType: string
+		sourceColumn: EvidenceClass
+
+	column Verified
+		dataType: boolean
+		sourceColumn: Verified
+
+	partition Submissions = entity
+		mode: directLake
+		source
+			entityName: demo_submissions
+			expressionSource: DL_CommercialInsurance

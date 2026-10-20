@@ -1,0 +1,53 @@
+table EngineeringRecommendations
+
+	column RecommendationId
+		dataType: string
+		isKey
+		sourceColumn: RecommendationId
+
+	column InspectionId
+		dataType: string
+		sourceColumn: InspectionId
+
+	column LocationId
+		dataType: string
+		sourceColumn: LocationId
+
+	column AccountId
+		dataType: string
+		sourceColumn: AccountId
+
+	column Title
+		dataType: string
+		sourceColumn: Title
+
+	column MaterialityWeight
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: MaterialityWeight
+
+	column Status
+		dataType: string
+		sourceColumn: Status
+
+	column IsCritical
+		dataType: boolean
+		sourceColumn: IsCritical
+
+	column DueDate
+		dataType: dateTime
+		sourceColumn: DueDate
+
+	column ClosureDate
+		dataType: dateTime
+		sourceColumn: ClosureDate
+
+	column ClosureEvidence
+		dataType: string
+		sourceColumn: ClosureEvidence
+
+	partition EngineeringRecommendations = entity
+		mode: directLake
+		source
+			entityName: demo_engineeringrecommendations
+			expressionSource: DL_CommercialInsurance

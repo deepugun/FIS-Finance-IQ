@@ -1,0 +1,36 @@
+table Exposures
+
+	column ExposureId
+		dataType: string
+		isKey
+		sourceColumn: ExposureId
+
+	column LocationId
+		dataType: string
+		sourceColumn: LocationId
+
+	column AccountId
+		dataType: string
+		sourceColumn: AccountId
+
+	column SnapshotDate
+		dataType: dateTime
+		sourceColumn: SnapshotDate
+
+	column ExposureType
+		dataType: string
+		sourceColumn: ExposureType
+
+	column ValueUSDCents
+		dataType: int64
+		sourceColumn: ValueUSDCents
+
+	column ValueBasis
+		dataType: string
+		sourceColumn: ValueBasis
+
+	partition Exposures = entity
+		mode: directLake
+		source
+			entityName: demo_exposures
+			expressionSource: DL_CommercialInsurance

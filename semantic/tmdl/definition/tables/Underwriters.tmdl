@@ -1,0 +1,24 @@
+table Underwriters
+
+	column UnderwriterId
+		dataType: string
+		isKey
+		sourceColumn: UnderwriterId
+
+	column UnderwriterName
+		dataType: string
+		sourceColumn: UnderwriterName
+
+	column Region
+		dataType: string
+		sourceColumn: Region
+
+	column AuthorityUSDCents
+		dataType: int64
+		sourceColumn: AuthorityUSDCents
+
+	partition Underwriters = entity
+		mode: directLake
+		source
+			entityName: demo_underwriters
+			expressionSource: DL_CommercialInsurance

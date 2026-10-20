@@ -1,0 +1,426 @@
+{
+  "nodes": [
+    {
+      "label": "Account",
+      "table": "node_Account",
+      "key": "AccountId",
+      "rows": 20
+    },
+    {
+      "label": "Insured",
+      "table": "node_Insured",
+      "key": "InsuredId",
+      "rows": 100
+    },
+    {
+      "label": "Broker",
+      "table": "node_Broker",
+      "key": "BrokerId",
+      "rows": 5
+    },
+    {
+      "label": "Policy",
+      "table": "node_Policy",
+      "key": "PolicyId",
+      "rows": 40
+    },
+    {
+      "label": "Coverage",
+      "table": "node_Coverage",
+      "key": "CoverageId",
+      "rows": 120
+    },
+    {
+      "label": "Location",
+      "table": "node_Location",
+      "key": "LocationId",
+      "rows": 100
+    },
+    {
+      "label": "Exposure",
+      "table": "node_Exposure",
+      "key": "ExposureId",
+      "rows": 200
+    },
+    {
+      "label": "Asset",
+      "table": "node_Asset",
+      "key": "AssetId",
+      "rows": 100
+    },
+    {
+      "label": "Claim",
+      "table": "node_Claim",
+      "key": "ClaimId",
+      "rows": 80
+    },
+    {
+      "label": "LossEvent",
+      "table": "node_LossEvent",
+      "key": "LossEventId",
+      "rows": 80
+    },
+    {
+      "label": "CATRisk",
+      "table": "node_CATRisk",
+      "key": "CATId",
+      "rows": 200
+    },
+    {
+      "label": "Peril",
+      "table": "node_Peril",
+      "key": "PerilId",
+      "rows": 4
+    },
+    {
+      "label": "RiskEngineeringInspection",
+      "table": "node_RiskEngineeringInspection",
+      "key": "InspectionId",
+      "rows": 100
+    },
+    {
+      "label": "EngineeringRecommendation",
+      "table": "node_EngineeringRecommendation",
+      "key": "RecommendationId",
+      "rows": 99
+    },
+    {
+      "label": "Renewal",
+      "table": "node_Renewal",
+      "key": "RenewalId",
+      "rows": 20
+    },
+    {
+      "label": "RenewalSignal",
+      "table": "node_RenewalSignal",
+      "key": "SignalId",
+      "rows": 44
+    },
+    {
+      "label": "Submission",
+      "table": "node_Submission",
+      "key": "SubmissionId",
+      "rows": 20
+    },
+    {
+      "label": "Industry",
+      "table": "node_Industry",
+      "key": "IndustryId",
+      "rows": 5
+    },
+    {
+      "label": "Country",
+      "table": "node_Country",
+      "key": "CountryId",
+      "rows": 10
+    },
+    {
+      "label": "MultinationalProgram",
+      "table": "node_MultinationalProgram",
+      "key": "ProgramId",
+      "rows": 20
+    },
+    {
+      "label": "LocalPolicy",
+      "table": "node_LocalPolicy",
+      "key": "LocalPolicyId",
+      "rows": 100
+    },
+    {
+      "label": "Underwriter",
+      "table": "node_Underwriter",
+      "key": "UnderwriterId",
+      "rows": 8
+    },
+    {
+      "label": "PricingScenario",
+      "table": "node_PricingScenario",
+      "key": "ScenarioId",
+      "rows": 3
+    },
+    {
+      "label": "UnderwritingDecision",
+      "table": "node_UnderwritingDecision",
+      "key": "DecisionId",
+      "rows": 1
+    },
+    {
+      "label": "ProgramRequirement",
+      "table": "node_ProgramRequirement",
+      "key": "RequirementId",
+      "rows": 100
+    }
+  ],
+  "edges": [
+    {
+      "label": "SERVICES",
+      "sourceLabel": "Broker",
+      "targetLabel": "Account",
+      "table": "edge_Broker_SERVICES_Account",
+      "sourceColumn": "SourceId",
+      "targetColumn": "TargetId",
+      "rows": 20
+    },
+    {
+      "label": "OWNS",
+      "sourceLabel": "Underwriter",
+      "targetLabel": "Account",
+      "table": "edge_Underwriter_OWNS_Account",
+      "sourceColumn": "SourceId",
+      "targetColumn": "TargetId",
+      "rows": 20
+    },
+    {
+      "label": "CLASSIFIED_AS",
+      "sourceLabel": "Account",
+      "targetLabel": "Industry",
+      "table": "edge_Account_CLASSIFIED_AS_Industry",
+      "sourceColumn": "SourceId",
+      "targetColumn": "TargetId",
+      "rows": 20
+    },
+    {
+      "label": "HAS_INSURED",
+      "sourceLabel": "Account",
+      "targetLabel": "Insured",
+      "table": "edge_Account_HAS_INSURED_Insured",
+      "sourceColumn": "SourceId",
+      "targetColumn": "TargetId",
+      "rows": 100
+    },
+    {
+      "label": "HOLDS",
+      "sourceLabel": "Account",
+      "targetLabel": "Policy",
+      "table": "edge_Account_HOLDS_Policy",
+      "sourceColumn": "SourceId",
+      "targetColumn": "TargetId",
+      "rows": 40
+    },
+    {
+      "label": "PROVIDES",
+      "sourceLabel": "Policy",
+      "targetLabel": "Coverage",
+      "table": "edge_Policy_PROVIDES_Coverage",
+      "sourceColumn": "SourceId",
+      "targetColumn": "TargetId",
+      "rows": 120
+    },
+    {
+      "label": "OPERATES",
+      "sourceLabel": "Account",
+      "targetLabel": "Location",
+      "table": "edge_Account_OPERATES_Location",
+      "sourceColumn": "SourceId",
+      "targetColumn": "TargetId",
+      "rows": 100
+    },
+    {
+      "label": "OCCUPIES",
+      "sourceLabel": "Insured",
+      "targetLabel": "Location",
+      "table": "edge_Insured_OCCUPIES_Location",
+      "sourceColumn": "SourceId",
+      "targetColumn": "TargetId",
+      "rows": 100
+    },
+    {
+      "label": "IN_COUNTRY",
+      "sourceLabel": "Location",
+      "targetLabel": "Country",
+      "table": "edge_Location_IN_COUNTRY_Country",
+      "sourceColumn": "SourceId",
+      "targetColumn": "TargetId",
+      "rows": 100
+    },
+    {
+      "label": "HAS_EXPOSURE",
+      "sourceLabel": "Location",
+      "targetLabel": "Exposure",
+      "table": "edge_Location_HAS_EXPOSURE_Exposure",
+      "sourceColumn": "SourceId",
+      "targetColumn": "TargetId",
+      "rows": 200
+    },
+    {
+      "label": "CONTAINS",
+      "sourceLabel": "Location",
+      "targetLabel": "Asset",
+      "table": "edge_Location_CONTAINS_Asset",
+      "sourceColumn": "SourceId",
+      "targetColumn": "TargetId",
+      "rows": 100
+    },
+    {
+      "label": "HAS_CAT",
+      "sourceLabel": "Location",
+      "targetLabel": "CATRisk",
+      "table": "edge_Location_HAS_CAT_CATRisk",
+      "sourceColumn": "SourceId",
+      "targetColumn": "TargetId",
+      "rows": 200
+    },
+    {
+      "label": "FOR_PERIL",
+      "sourceLabel": "CATRisk",
+      "targetLabel": "Peril",
+      "table": "edge_CATRisk_FOR_PERIL_Peril",
+      "sourceColumn": "SourceId",
+      "targetColumn": "TargetId",
+      "rows": 200
+    },
+    {
+      "label": "HAS_CLAIM",
+      "sourceLabel": "Location",
+      "targetLabel": "Claim",
+      "table": "edge_Location_HAS_CLAIM_Claim",
+      "sourceColumn": "SourceId",
+      "targetColumn": "TargetId",
+      "rows": 80
+    },
+    {
+      "label": "ON_POLICY",
+      "sourceLabel": "Claim",
+      "targetLabel": "Policy",
+      "table": "edge_Claim_ON_POLICY_Policy",
+      "sourceColumn": "SourceId",
+      "targetColumn": "TargetId",
+      "rows": 80
+    },
+    {
+      "label": "ON_COVERAGE",
+      "sourceLabel": "Claim",
+      "targetLabel": "Coverage",
+      "table": "edge_Claim_ON_COVERAGE_Coverage",
+      "sourceColumn": "SourceId",
+      "targetColumn": "TargetId",
+      "rows": 80
+    },
+    {
+      "label": "FROM_EVENT",
+      "sourceLabel": "Claim",
+      "targetLabel": "LossEvent",
+      "table": "edge_Claim_FROM_EVENT_LossEvent",
+      "sourceColumn": "SourceId",
+      "targetColumn": "TargetId",
+      "rows": 80
+    },
+    {
+      "label": "OF_PERIL",
+      "sourceLabel": "LossEvent",
+      "targetLabel": "Peril",
+      "table": "edge_LossEvent_OF_PERIL_Peril",
+      "sourceColumn": "SourceId",
+      "targetColumn": "TargetId",
+      "rows": 80
+    },
+    {
+      "label": "INSPECTED_BY",
+      "sourceLabel": "Location",
+      "targetLabel": "RiskEngineeringInspection",
+      "table": "edge_Location_INSPECTED_BY_RiskEngineeringInspection",
+      "sourceColumn": "SourceId",
+      "targetColumn": "TargetId",
+      "rows": 100
+    },
+    {
+      "label": "ISSUED",
+      "sourceLabel": "RiskEngineeringInspection",
+      "targetLabel": "EngineeringRecommendation",
+      "table": "edge_RiskEngineeringInspection_ISSUED_EngineeringRecommendation",
+      "sourceColumn": "SourceId",
+      "targetColumn": "TargetId",
+      "rows": 99
+    },
+    {
+      "label": "RENEWS",
+      "sourceLabel": "Account",
+      "targetLabel": "Renewal",
+      "table": "edge_Account_RENEWS_Renewal",
+      "sourceColumn": "SourceId",
+      "targetColumn": "TargetId",
+      "rows": 20
+    },
+    {
+      "label": "HAS_SIGNAL",
+      "sourceLabel": "Renewal",
+      "targetLabel": "RenewalSignal",
+      "table": "edge_Renewal_HAS_SIGNAL_RenewalSignal",
+      "sourceColumn": "SourceId",
+      "targetColumn": "TargetId",
+      "rows": 44
+    },
+    {
+      "label": "HAS_SUBMISSION",
+      "sourceLabel": "Account",
+      "targetLabel": "Submission",
+      "table": "edge_Account_HAS_SUBMISSION_Submission",
+      "sourceColumn": "SourceId",
+      "targetColumn": "TargetId",
+      "rows": 20
+    },
+    {
+      "label": "HAS_PROGRAM",
+      "sourceLabel": "Account",
+      "targetLabel": "MultinationalProgram",
+      "table": "edge_Account_HAS_PROGRAM_MultinationalProgram",
+      "sourceColumn": "SourceId",
+      "targetColumn": "TargetId",
+      "rows": 20
+    },
+    {
+      "label": "HAS_LOCAL",
+      "sourceLabel": "MultinationalProgram",
+      "targetLabel": "LocalPolicy",
+      "table": "edge_MultinationalProgram_HAS_LOCAL_LocalPolicy",
+      "sourceColumn": "SourceId",
+      "targetColumn": "TargetId",
+      "rows": 100
+    },
+    {
+      "label": "IN_COUNTRY",
+      "sourceLabel": "LocalPolicy",
+      "targetLabel": "Country",
+      "table": "edge_LocalPolicy_IN_COUNTRY_Country",
+      "sourceColumn": "SourceId",
+      "targetColumn": "TargetId",
+      "rows": 100
+    },
+    {
+      "label": "REQUIRES",
+      "sourceLabel": "MultinationalProgram",
+      "targetLabel": "ProgramRequirement",
+      "table": "edge_MultinationalProgram_REQUIRES_ProgramRequirement",
+      "sourceColumn": "SourceId",
+      "targetColumn": "TargetId",
+      "rows": 100
+    },
+    {
+      "label": "MATCHES_LOCAL",
+      "sourceLabel": "ProgramRequirement",
+      "targetLabel": "LocalPolicy",
+      "table": "edge_ProgramRequirement_MATCHES_LOCAL_LocalPolicy",
+      "sourceColumn": "SourceId",
+      "targetColumn": "TargetId",
+      "rows": 100
+    },
+    {
+      "label": "CONSIDERS",
+      "sourceLabel": "Renewal",
+      "targetLabel": "PricingScenario",
+      "table": "edge_Renewal_CONSIDERS_PricingScenario",
+      "sourceColumn": "SourceId",
+      "targetColumn": "TargetId",
+      "rows": 3
+    },
+    {
+      "label": "HAS_DECISION",
+      "sourceLabel": "Renewal",
+      "targetLabel": "UnderwritingDecision",
+      "table": "edge_Renewal_HAS_DECISION_UnderwritingDecision",
+      "sourceColumn": "SourceId",
+      "targetColumn": "TargetId",
+      "rows": 1
+    }
+  ]
+}

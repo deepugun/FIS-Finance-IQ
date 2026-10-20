@@ -1,0 +1,16 @@
+table Perils
+
+	column PerilId
+		dataType: string
+		isKey
+		sourceColumn: PerilId
+
+	column PerilName
+		dataType: string
+		sourceColumn: PerilName
+
+	partition Perils = entity
+		mode: directLake
+		source
+			entityName: demo_perils
+			expressionSource: DL_CommercialInsurance

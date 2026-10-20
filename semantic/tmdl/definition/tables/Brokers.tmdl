@@ -1,0 +1,16 @@
+table Brokers
+
+	column BrokerId
+		dataType: string
+		isKey
+		sourceColumn: BrokerId
+
+	column BrokerName
+		dataType: string
+		sourceColumn: BrokerName
+
+	partition Brokers = entity
+		mode: directLake
+		source
+			entityName: demo_brokers
+			expressionSource: DL_CommercialInsurance

@@ -1,0 +1,72 @@
+table Claims
+
+	column ClaimId
+		dataType: string
+		isKey
+		sourceColumn: ClaimId
+
+	column AccountId
+		dataType: string
+		sourceColumn: AccountId
+
+	column LocationId
+		dataType: string
+		sourceColumn: LocationId
+
+	column PolicyId
+		dataType: string
+		sourceColumn: PolicyId
+
+	column CoverageId
+		dataType: string
+		sourceColumn: CoverageId
+
+	column LossEventId
+		dataType: string
+		sourceColumn: LossEventId
+
+	column LossDate
+		dataType: dateTime
+		sourceColumn: LossDate
+
+	column ReportDate
+		dataType: dateTime
+		sourceColumn: ReportDate
+
+	column LossType
+		dataType: string
+		sourceColumn: LossType
+
+	column PerilId
+		dataType: string
+		sourceColumn: PerilId
+
+	column Status
+		dataType: string
+		sourceColumn: Status
+
+	column PaidUSDCents
+		dataType: int64
+		sourceColumn: PaidUSDCents
+
+	column OutstandingUSDCents
+		dataType: int64
+		sourceColumn: OutstandingUSDCents
+
+	column IncurredUSDCents
+		dataType: int64
+		sourceColumn: IncurredUSDCents
+
+	column SnapshotDate
+		dataType: dateTime
+		sourceColumn: SnapshotDate
+
+	column ClosureDate
+		dataType: dateTime
+		sourceColumn: ClosureDate
+
+	partition Claims = entity
+		mode: directLake
+		source
+			entityName: demo_claims
+			expressionSource: DL_CommercialInsurance

@@ -1,0 +1,58 @@
+table LocalPolicies
+
+	column LocalPolicyId
+		dataType: string
+		isKey
+		sourceColumn: LocalPolicyId
+
+	column ProgramId
+		dataType: string
+		sourceColumn: ProgramId
+
+	column CountryId
+		dataType: string
+		sourceColumn: CountryId
+
+	column InsuredId
+		dataType: string
+		sourceColumn: InsuredId
+
+	column EffectiveDate
+		dataType: dateTime
+		sourceColumn: EffectiveDate
+
+	column ExpiryDate
+		dataType: dateTime
+		sourceColumn: ExpiryDate
+
+	column Currency
+		dataType: string
+		sourceColumn: Currency
+
+	column LimitLocal
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: LimitLocal
+
+	column LimitUSDCents
+		dataType: int64
+		sourceColumn: LimitUSDCents
+
+	column BIIndemnityMonths
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: BIIndemnityMonths
+
+	column CoverageStatus
+		dataType: string
+		sourceColumn: CoverageStatus
+
+	column PremiumIncludedInMaster
+		dataType: boolean
+		sourceColumn: PremiumIncludedInMaster
+
+	partition LocalPolicies = entity
+		mode: directLake
+		source
+			entityName: demo_localpolicies
+			expressionSource: DL_CommercialInsurance

@@ -1,0 +1,28 @@
+table MultinationalPrograms
+
+	column ProgramId
+		dataType: string
+		isKey
+		sourceColumn: ProgramId
+
+	column AccountId
+		dataType: string
+		sourceColumn: AccountId
+
+	column MasterPolicyId
+		dataType: string
+		sourceColumn: MasterPolicyId
+
+	column ProgramName
+		dataType: string
+		sourceColumn: ProgramName
+
+	column DICDIL
+		dataType: string
+		sourceColumn: DICDIL
+
+	partition MultinationalPrograms = entity
+		mode: directLake
+		source
+			entityName: demo_multinationalprograms
+			expressionSource: DL_CommercialInsurance

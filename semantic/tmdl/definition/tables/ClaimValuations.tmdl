@@ -1,0 +1,44 @@
+table ClaimValuations
+
+	column ClaimValuationId
+		dataType: string
+		isKey
+		sourceColumn: ClaimValuationId
+
+	column ClaimId
+		dataType: string
+		sourceColumn: ClaimId
+
+	column AccountId
+		dataType: string
+		sourceColumn: AccountId
+
+	column PolicyId
+		dataType: string
+		sourceColumn: PolicyId
+
+	column LocationId
+		dataType: string
+		sourceColumn: LocationId
+
+	column SnapshotDate
+		dataType: dateTime
+		sourceColumn: SnapshotDate
+
+	column IncurredUSDCents
+		dataType: int64
+		sourceColumn: IncurredUSDCents
+
+	column PaidUSDCents
+		dataType: int64
+		sourceColumn: PaidUSDCents
+
+	column OutstandingUSDCents
+		dataType: int64
+		sourceColumn: OutstandingUSDCents
+
+	partition ClaimValuations = entity
+		mode: directLake
+		source
+			entityName: demo_claimvaluations
+			expressionSource: DL_CommercialInsurance

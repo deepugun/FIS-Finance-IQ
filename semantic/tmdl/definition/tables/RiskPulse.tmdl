@@ -1,0 +1,68 @@
+table RiskPulse
+
+	/// Average transparent renewal risk pulse
+	measure 'Average Risk Pulse' = AVERAGE(RiskPulse[Pulse])
+		formatString: #,##0.00
+
+	/// Accounts whose current pulse is at least 80
+	measure 'High Risk Accounts' = CALCULATE(DISTINCTCOUNT(RiskPulse[AccountId]), RiskPulse[Pulse] >= 80)
+		formatString: #,##0
+
+	column PulseId
+		dataType: string
+		isKey
+		sourceColumn: PulseId
+
+	column AccountId
+		dataType: string
+		sourceColumn: AccountId
+
+	column SnapshotDate
+		dataType: dateTime
+		sourceColumn: SnapshotDate
+
+	column Pulse
+		dataType: double
+		summarizeBy: none
+		sourceColumn: Pulse
+
+	column CAT
+		dataType: double
+		summarizeBy: none
+		sourceColumn: CAT
+
+	column Claims
+		dataType: double
+		summarizeBy: none
+		sourceColumn: Claims
+
+	column Growth
+		dataType: double
+		summarizeBy: none
+		sourceColumn: Growth
+
+	column Engineering
+		dataType: double
+		summarizeBy: none
+		sourceColumn: Engineering
+
+	column Concentration
+		dataType: double
+		summarizeBy: none
+		sourceColumn: Concentration
+
+	column Missing
+		dataType: double
+		summarizeBy: none
+		sourceColumn: Missing
+
+	column Proximity
+		dataType: double
+		summarizeBy: none
+		sourceColumn: Proximity
+
+	partition RiskPulse = entity
+		mode: directLake
+		source
+			entityName: demo_riskpulse
+			expressionSource: DL_CommercialInsurance

@@ -1,0 +1,428 @@
+{
+  "Countries": {
+    "key": "CountryId",
+    "columns": {
+      "CountryId": "varchar(250)",
+      "CountryName": "varchar(250)",
+      "Region": "varchar(250)",
+      "Currency": "varchar(250)",
+      "FXToUSD": "float",
+      "FXDate": "date"
+    }
+  },
+  "Industries": {
+    "key": "IndustryId",
+    "columns": {
+      "IndustryId": "varchar(250)",
+      "IndustryName": "varchar(250)",
+      "Classification": "varchar(250)"
+    }
+  },
+  "Perils": {
+    "key": "PerilId",
+    "columns": {
+      "PerilId": "varchar(250)",
+      "PerilName": "varchar(250)"
+    }
+  },
+  "Brokers": {
+    "key": "BrokerId",
+    "columns": {
+      "BrokerId": "varchar(250)",
+      "BrokerName": "varchar(250)"
+    }
+  },
+  "Underwriters": {
+    "key": "UnderwriterId",
+    "columns": {
+      "UnderwriterId": "varchar(250)",
+      "UnderwriterName": "varchar(250)",
+      "Region": "varchar(250)",
+      "AuthorityUSDCents": "bigint"
+    }
+  },
+  "Accounts": {
+    "key": "AccountId",
+    "columns": {
+      "AccountId": "varchar(250)",
+      "AccountName": "varchar(250)",
+      "BrokerId": "varchar(250)",
+      "UnderwriterId": "varchar(250)",
+      "IndustryId": "varchar(250)",
+      "Region": "varchar(250)",
+      "DomicileCountryId": "varchar(250)",
+      "RelationshipSince": "bigint",
+      "Currency": "varchar(250)"
+    }
+  },
+  "Renewals": {
+    "key": "RenewalId",
+    "columns": {
+      "RenewalId": "varchar(250)",
+      "AccountId": "varchar(250)",
+      "RenewalDate": "date",
+      "ReviewStatus": "varchar(250)",
+      "MissingItems": "bigint",
+      "RequiredItems": "bigint",
+      "ExpiringPolicyId": "varchar(250)",
+      "TargetRateChange": "float"
+    }
+  },
+  "Policies": {
+    "key": "PolicyId",
+    "columns": {
+      "PolicyId": "varchar(250)",
+      "AccountId": "varchar(250)",
+      "PolicyYear": "bigint",
+      "EffectiveDate": "date",
+      "ExpiryDate": "date",
+      "WrittenUSDCents": "bigint",
+      "EarnedUSDCents": "bigint",
+      "LimitUSDCents": "bigint",
+      "RetentionUSDCents": "bigint",
+      "Currency": "varchar(250)",
+      "ValuationDate": "date",
+      "Placement": "varchar(250)"
+    }
+  },
+  "PolicyValuations": {
+    "key": "PolicyValuationId",
+    "columns": {
+      "PolicyValuationId": "varchar(250)",
+      "PolicyId": "varchar(250)",
+      "AccountId": "varchar(250)",
+      "SnapshotDate": "date",
+      "WrittenUSDCents": "bigint",
+      "EarnedUSDCents": "bigint"
+    }
+  },
+  "Coverages": {
+    "key": "CoverageId",
+    "columns": {
+      "CoverageId": "varchar(250)",
+      "PolicyId": "varchar(250)",
+      "CoverageName": "varchar(250)",
+      "SublimitUSDCents": "bigint",
+      "WaitingHours": "bigint",
+      "SharesPolicyAggregate": "bit"
+    }
+  },
+  "MultinationalPrograms": {
+    "key": "ProgramId",
+    "columns": {
+      "ProgramId": "varchar(250)",
+      "AccountId": "varchar(250)",
+      "MasterPolicyId": "varchar(250)",
+      "ProgramName": "varchar(250)",
+      "DICDIL": "varchar(250)"
+    }
+  },
+  "Submissions": {
+    "key": "SubmissionId",
+    "columns": {
+      "SubmissionId": "varchar(250)",
+      "AccountId": "varchar(250)",
+      "BrokerId": "varchar(250)",
+      "ReceivedDate": "date",
+      "DocumentRef": "varchar(250)",
+      "BrokerStatement": "varchar(250)",
+      "EvidenceClass": "varchar(250)",
+      "Verified": "bit"
+    }
+  },
+  "Insureds": {
+    "key": "InsuredId",
+    "columns": {
+      "InsuredId": "varchar(250)",
+      "AccountId": "varchar(250)",
+      "LegalName": "varchar(250)",
+      "CountryId": "varchar(250)"
+    }
+  },
+  "Locations": {
+    "key": "LocationId",
+    "columns": {
+      "LocationId": "varchar(250)",
+      "AccountId": "varchar(250)",
+      "InsuredId": "varchar(250)",
+      "LocationName": "varchar(250)",
+      "CountryId": "varchar(250)",
+      "Latitude": "float",
+      "Longitude": "float",
+      "CATZone": "varchar(250)",
+      "Occupancy": "varchar(250)",
+      "BIIndemnityMonths": "bigint",
+      "TIVUSDCents": "bigint",
+      "PriorTIVUSDCents": "bigint",
+      "SnapshotDate": "date"
+    }
+  },
+  "Assets": {
+    "key": "AssetId",
+    "columns": {
+      "AssetId": "varchar(250)",
+      "LocationId": "varchar(250)",
+      "AssetName": "varchar(250)",
+      "ReplacementUSDCents": "bigint",
+      "LeadTimeMonths": "bigint"
+    }
+  },
+  "LocalPolicies": {
+    "key": "LocalPolicyId",
+    "columns": {
+      "LocalPolicyId": "varchar(250)",
+      "ProgramId": "varchar(250)",
+      "CountryId": "varchar(250)",
+      "InsuredId": "varchar(250)",
+      "EffectiveDate": "date",
+      "ExpiryDate": "date",
+      "Currency": "varchar(250)",
+      "LimitLocal": "bigint",
+      "LimitUSDCents": "bigint",
+      "BIIndemnityMonths": "bigint",
+      "CoverageStatus": "varchar(250)",
+      "PremiumIncludedInMaster": "bit"
+    }
+  },
+  "ProgramRequirements": {
+    "key": "RequirementId",
+    "columns": {
+      "RequirementId": "varchar(250)",
+      "ProgramId": "varchar(250)",
+      "CountryId": "varchar(250)",
+      "RequiredBIMonths": "bigint",
+      "LocalPolicyId": "varchar(250)",
+      "Status": "varchar(250)"
+    }
+  },
+  "Exposures": {
+    "key": "ExposureId",
+    "columns": {
+      "ExposureId": "varchar(250)",
+      "LocationId": "varchar(250)",
+      "AccountId": "varchar(250)",
+      "SnapshotDate": "date",
+      "ExposureType": "varchar(250)",
+      "ValueUSDCents": "bigint",
+      "ValueBasis": "varchar(250)"
+    }
+  },
+  "CATRisk": {
+    "key": "CATId",
+    "columns": {
+      "CATId": "varchar(250)",
+      "LocationId": "varchar(250)",
+      "AccountId": "varchar(250)",
+      "PerilId": "varchar(250)",
+      "SnapshotDate": "date",
+      "AALUSDCents": "bigint",
+      "Score": "bigint",
+      "Severity": "varchar(250)",
+      "ModelVersion": "varchar(250)",
+      "FinancialBasis": "varchar(250)",
+      "IsCurrent": "bit"
+    }
+  },
+  "EngineeringInspections": {
+    "key": "InspectionId",
+    "columns": {
+      "InspectionId": "varchar(250)",
+      "LocationId": "varchar(250)",
+      "InspectionDate": "date",
+      "Inspector": "varchar(250)",
+      "ReportRef": "varchar(250)"
+    }
+  },
+  "EngineeringRecommendations": {
+    "key": "RecommendationId",
+    "columns": {
+      "RecommendationId": "varchar(250)",
+      "InspectionId": "varchar(250)",
+      "LocationId": "varchar(250)",
+      "AccountId": "varchar(250)",
+      "Title": "varchar(250)",
+      "MaterialityWeight": "bigint",
+      "Status": "varchar(250)",
+      "IsCritical": "bit",
+      "DueDate": "date",
+      "ClosureDate": "date",
+      "ClosureEvidence": "varchar(250)"
+    }
+  },
+  "LossEvents": {
+    "key": "LossEventId",
+    "columns": {
+      "LossEventId": "varchar(250)",
+      "PerilId": "varchar(250)",
+      "EventName": "varchar(250)",
+      "EventDate": "date"
+    }
+  },
+  "Claims": {
+    "key": "ClaimId",
+    "columns": {
+      "ClaimId": "varchar(250)",
+      "AccountId": "varchar(250)",
+      "LocationId": "varchar(250)",
+      "PolicyId": "varchar(250)",
+      "CoverageId": "varchar(250)",
+      "LossEventId": "varchar(250)",
+      "LossDate": "date",
+      "ReportDate": "date",
+      "LossType": "varchar(250)",
+      "PerilId": "varchar(250)",
+      "Status": "varchar(250)",
+      "PaidUSDCents": "bigint",
+      "OutstandingUSDCents": "bigint",
+      "IncurredUSDCents": "bigint",
+      "SnapshotDate": "date",
+      "ClosureDate": "date"
+    }
+  },
+  "ClaimValuations": {
+    "key": "ClaimValuationId",
+    "columns": {
+      "ClaimValuationId": "varchar(250)",
+      "ClaimId": "varchar(250)",
+      "AccountId": "varchar(250)",
+      "PolicyId": "varchar(250)",
+      "LocationId": "varchar(250)",
+      "SnapshotDate": "date",
+      "IncurredUSDCents": "bigint",
+      "PaidUSDCents": "bigint",
+      "OutstandingUSDCents": "bigint"
+    }
+  },
+  "UnderwritingFeatures": {
+    "key": "AccountId",
+    "columns": {
+      "AccountId": "varchar(250)",
+      "SnapshotDate": "date",
+      "TIVUSDCents": "bigint",
+      "PriorTIVUSDCents": "bigint",
+      "AALUSDCents": "bigint",
+      "PriorAALUSDCents": "bigint",
+      "IncurredUSDCents": "bigint",
+      "PriorIncurredUSDCents": "bigint",
+      "TIVGrowth": "float",
+      "CATGrowth": "float",
+      "ClaimsGrowth": "float",
+      "DaysToRenewal": "bigint",
+      "OpenCritical": "bigint",
+      "CAT": "float",
+      "Claims": "float",
+      "Growth": "float",
+      "Engineering": "float",
+      "Concentration": "float",
+      "Missing": "float",
+      "Proximity": "float"
+    }
+  },
+  "RiskPulse": {
+    "key": "PulseId",
+    "columns": {
+      "PulseId": "varchar(250)",
+      "AccountId": "varchar(250)",
+      "SnapshotDate": "date",
+      "Pulse": "float",
+      "CAT": "float",
+      "Claims": "float",
+      "Growth": "float",
+      "Engineering": "float",
+      "Concentration": "float",
+      "Missing": "float",
+      "Proximity": "float"
+    }
+  },
+  "RenewalSignals": {
+    "key": "SignalId",
+    "columns": {
+      "SignalId": "varchar(250)",
+      "RenewalId": "varchar(250)",
+      "AccountId": "varchar(250)",
+      "SignalType": "varchar(250)",
+      "Value": "float",
+      "Threshold": "float",
+      "Materiality": "varchar(250)",
+      "SourceTable": "varchar(250)",
+      "DetectedDate": "date",
+      "EvidenceKey": "varchar(250)"
+    }
+  },
+  "PricingScenarios": {
+    "key": "ScenarioId",
+    "columns": {
+      "ScenarioId": "varchar(250)",
+      "RenewalId": "varchar(250)",
+      "AccountId": "varchar(250)",
+      "ScenarioName": "varchar(250)",
+      "RateChange": "float",
+      "CATLoad": "float",
+      "EngineeringCredit": "float",
+      "RetentionUSDCents": "bigint",
+      "LimitUSDCents": "bigint",
+      "TIVUSDCents": "bigint",
+      "BasePremiumUSDCents": "bigint",
+      "ExpectedNonCATUSDCents": "bigint",
+      "ExpectedCATUSDCents": "bigint",
+      "Commission": "float",
+      "ExpenseRatio": "float",
+      "CapitalUSDCents": "bigint",
+      "IndicatedUSDCents": "bigint",
+      "ExpectedLR": "float",
+      "ExpectedMargin": "float",
+      "RiskAdjustedReturn": "float",
+      "Attractiveness": "float",
+      "Status": "varchar(250)",
+      "LossFactorBasis": "varchar(250)"
+    }
+  },
+  "UnderwritingDecisions": {
+    "key": "DecisionId",
+    "columns": {
+      "DecisionId": "varchar(250)",
+      "RenewalId": "varchar(250)",
+      "AccountId": "varchar(250)",
+      "Posture": "varchar(250)",
+      "Approved": "bit",
+      "ApprovedBy": "varchar(250)",
+      "Rationale": "varchar(250)"
+    }
+  },
+  "UnderwritingEvents": {
+    "key": "EventId",
+    "columns": {
+      "EventId": "varchar(250)",
+      "AccountId": "varchar(250)",
+      "RunId": "varchar(250)",
+      "Sequence": "bigint",
+      "EventTime": "datetime2(6)",
+      "EventType": "varchar(250)",
+      "SourceVersion": "varchar(250)",
+      "BusinessAsOf": "date",
+      "CAT": "float",
+      "Claims": "float",
+      "Growth": "float",
+      "Engineering": "float",
+      "Concentration": "float",
+      "Missing": "float",
+      "Proximity": "float",
+      "Pulse": "float",
+      "DaysToRenewal": "bigint",
+      "OpenCritical": "bigint",
+      "ReserveChangePct": "float",
+      "ExposureChangePct": "float",
+      "LocationId": "varchar(250)",
+      "EvidenceRef": "varchar(250)"
+    }
+  },
+  "Calendar": {
+    "key": "Date",
+    "columns": {
+      "Date": "date",
+      "Year": "bigint",
+      "Month": "bigint",
+      "MonthName": "varchar(250)"
+    }
+  }
+}

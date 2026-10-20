@@ -1,0 +1,20 @@
+table Industries
+
+	column IndustryId
+		dataType: string
+		isKey
+		sourceColumn: IndustryId
+
+	column IndustryName
+		dataType: string
+		sourceColumn: IndustryName
+
+	column Classification
+		dataType: string
+		sourceColumn: Classification
+
+	partition Industries = entity
+		mode: directLake
+		source
+			entityName: demo_industries
+			expressionSource: DL_CommercialInsurance

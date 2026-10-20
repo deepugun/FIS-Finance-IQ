@@ -1,0 +1,28 @@
+table EngineeringInspections
+
+	column InspectionId
+		dataType: string
+		isKey
+		sourceColumn: InspectionId
+
+	column LocationId
+		dataType: string
+		sourceColumn: LocationId
+
+	column InspectionDate
+		dataType: dateTime
+		sourceColumn: InspectionDate
+
+	column Inspector
+		dataType: string
+		sourceColumn: Inspector
+
+	column ReportRef
+		dataType: string
+		sourceColumn: ReportRef
+
+	partition EngineeringInspections = entity
+		mode: directLake
+		source
+			entityName: demo_engineeringinspections
+			expressionSource: DL_CommercialInsurance

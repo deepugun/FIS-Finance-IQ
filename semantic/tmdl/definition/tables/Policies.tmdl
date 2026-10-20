@@ -1,0 +1,57 @@
+table Policies
+
+	column PolicyId
+		dataType: string
+		isKey
+		sourceColumn: PolicyId
+
+	column AccountId
+		dataType: string
+		sourceColumn: AccountId
+
+	column PolicyYear
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: PolicyYear
+
+	column EffectiveDate
+		dataType: dateTime
+		sourceColumn: EffectiveDate
+
+	column ExpiryDate
+		dataType: dateTime
+		sourceColumn: ExpiryDate
+
+	column WrittenUSDCents
+		dataType: int64
+		sourceColumn: WrittenUSDCents
+
+	column EarnedUSDCents
+		dataType: int64
+		sourceColumn: EarnedUSDCents
+
+	column LimitUSDCents
+		dataType: int64
+		sourceColumn: LimitUSDCents
+
+	column RetentionUSDCents
+		dataType: int64
+		sourceColumn: RetentionUSDCents
+
+	column Currency
+		dataType: string
+		sourceColumn: Currency
+
+	column ValuationDate
+		dataType: dateTime
+		sourceColumn: ValuationDate
+
+	column Placement
+		dataType: string
+		sourceColumn: Placement
+
+	partition Policies = entity
+		mode: directLake
+		source
+			entityName: demo_policies
+			expressionSource: DL_CommercialInsurance

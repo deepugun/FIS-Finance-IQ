@@ -1,0 +1,145 @@
+table Accounts
+
+	/// Number of commercial accounts in the current filter context
+	measure 'Account Count' = DISTINCTCOUNT(Accounts[AccountId])
+		formatString: #,##0
+
+	/// Selected valuation snapshot date (defaults to 2026-09-14)
+	measure 'As Of Date' = SELECTEDVALUE('Calendar'[Date], DATE(2026,9,14))
+		formatString: yyyy-mm-dd
+
+	/// Written premium in USD at the as-of snapshot
+	measure 'Written Premium' = VAR snapshot = [As Of Date] RETURN CALCULATE(DIVIDE(SUM(PolicyValuations[WrittenUSDCents]),100), PolicyValuations[SnapshotDate] = snapshot)
+		formatString: \$#,##0.00
+
+	/// Earned premium in USD at the as-of snapshot
+	measure 'Earned Premium' = VAR snapshot = [As Of Date] RETURN CALCULATE(DIVIDE(SUM(PolicyValuations[EarnedUSDCents]),100), PolicyValuations[SnapshotDate] = snapshot)
+		formatString: \$#,##0.00
+
+	/// Total insured value converted from integer cents to USD
+	measure 'Total Insured Value' = VAR snapshot = [As Of Date] RETURN CALCULATE(DIVIDE(SUM(Exposures[ValueUSDCents]),100), Exposures[SnapshotDate] = snapshot)
+		formatString: \$#,##0.00
+
+	/// Incurred loss converted from integer cents to USD
+	measure 'Incurred Loss' = VAR snapshot = [As Of Date] RETURN CALCULATE(DIVIDE(SUM(ClaimValuations[IncurredUSDCents]),100), ClaimValuations[SnapshotDate] = snapshot)
+		formatString: \$#,##0.00
+
+	/// Paid loss converted from integer cents to USD
+	measure 'Paid Loss' = VAR snapshot = [As Of Date] RETURN CALCULATE(DIVIDE(SUM(ClaimValuations[PaidUSDCents]),100), ClaimValuations[SnapshotDate] = snapshot)
+		formatString: \$#,##0.00
+
+	/// Case reserve / outstanding loss in USD
+	measure 'Outstanding Loss' = [Incurred Loss] - [Paid Loss]
+		formatString: \$#,##0.00
+
+	/// Incurred loss divided by earned premium
+	measure 'Loss Ratio' = DIVIDE([Incurred Loss],[Earned Premium])
+		formatString: 0.00%
+
+	/// Distinct claims valued at the as-of snapshot
+	measure 'Claim Count' = VAR snapshot = [As Of Date] RETURN CALCULATE(DISTINCTCOUNT(ClaimValuations[ClaimId]), ClaimValuations[SnapshotDate] = snapshot)
+		formatString: #,##0
+
+	/// Claims per earned policy year
+	measure 'Claim Frequency' = VAR snapshot = [As Of Date] VAR policyYears = CALCULATE(SUMX(PolicyValuations, DIVIDE(PolicyValuations[EarnedUSDCents],PolicyValuations[WrittenUSDCents])),PolicyValuations[SnapshotDate] = snapshot) RETURN DIVIDE([Claim Count],policyYears)
+		formatString: 0.00
+
+	/// Average incurred loss per claim
+	measure 'Claim Severity' = DIVIDE([Incurred Loss],[Claim Count])
+		formatString: \$#,##0.00
+
+	/// Modeled annual average catastrophe loss in USD
+	measure 'Modeled CAT Loss' = VAR snapshot = [As Of Date] RETURN CALCULATE(DIVIDE(SUM(CATRisk[AALUSDCents]),100),CATRisk[SnapshotDate] = snapshot)
+		formatString: \$#,##0.00
+
+	/// Modeled CAT AAL as a share of total insured value
+	measure 'CAT Loss To TIV' = DIVIDE([Modeled CAT Loss],[Total Insured Value])
+		formatString: 0.00%
+
+	/// Count of open risk engineering recommendations
+	measure 'Open Recommendations' = CALCULATE(COUNTROWS(EngineeringRecommendations),EngineeringRecommendations[Status] = "Open")
+		formatString: #,##0
+
+	/// Count of open critical risk engineering recommendations
+	measure 'Critical Recommendations' = CALCULATE([Open Recommendations],EngineeringRecommendations[IsCritical] = TRUE())
+		formatString: #,##0
+
+	/// Share of engineering recommendations that are closed
+	measure 'Engineering Completion Rate' = DIVIDE(CALCULATE(COUNTROWS(EngineeringRecommendations),EngineeringRecommendations[Status] = "Closed"),COUNTROWS(EngineeringRecommendations))
+		formatString: 0.00%
+
+	/// Count of high-materiality renewal signals
+	measure 'High Materiality Signals' = CALCULATE(COUNTROWS(RenewalSignals),RenewalSignals[Materiality] = "High")
+		formatString: #,##0
+
+	/// Accounts with pulse >= 80 renewing within 90 days
+	measure 'Accounts At Renewal Risk' = COUNTROWS(FILTER(VALUES(Accounts[AccountId]), CALCULATE(MAX(RiskPulse[Pulse])) >= 80 && CALCULATE(MIN(UnderwritingFeatures[DaysToRenewal])) >= 0 && CALCULATE(MIN(UnderwritingFeatures[DaysToRenewal])) <= 90))
+		formatString: #,##0
+
+	/// Expiring written premium for accounts at renewal risk
+	measure 'Premium At Risk' = SUMX(FILTER(VALUES(Accounts[AccountId]), CALCULATE(MAX(RiskPulse[Pulse])) >= 80 && CALCULATE(MIN(UnderwritingFeatures[DaysToRenewal])) >= 0 && CALCULATE(MIN(UnderwritingFeatures[DaysToRenewal])) <= 90), VAR expiring = CALCULATETABLE(VALUES(Renewals[ExpiringPolicyId])) RETURN CALCULATE(DIVIDE(SUM(Policies[WrittenUSDCents]),100), TREATAS(expiring,Policies[PolicyId])))
+		formatString: \$#,##0.00
+
+	/// Selected pricing scenario rate change
+	measure 'Renewal Rate Change' = SELECTEDVALUE(PricingScenarios[RateChange])
+		formatString: 0.00%
+
+	/// Year-over-year change in total insured value
+	measure 'TIV YoY' = VAR previous = CALCULATE([Total Insured Value], REMOVEFILTERS('Calendar'), TREATAS({DATE(2025,9,14)},'Calendar'[Date])) RETURN DIVIDE([Total Insured Value] - previous,previous)
+		formatString: 0.00%
+
+	/// Alias for year-over-year exposure growth
+	measure 'Exposure Growth' = [TIV YoY]
+		formatString: 0.00%
+
+	/// Year-over-year change in loss ratio
+	measure 'Loss Ratio YoY' = [Loss Ratio] - CALCULATE([Loss Ratio],REMOVEFILTERS('Calendar'),TREATAS({DATE(2025,9,14)},'Calendar'[Date]))
+		formatString: 0.00%
+
+	/// Year-over-year change in modeled CAT AAL
+	measure 'CAT Exposure Change' = VAR previous = CALCULATE([Modeled CAT Loss],REMOVEFILTERS('Calendar'),TREATAS({DATE(2025,9,14)},'Calendar'[Date])) RETURN DIVIDE([Modeled CAT Loss] - previous,previous)
+		formatString: 0.00%
+
+	column AccountId
+		dataType: string
+		isKey
+		sourceColumn: AccountId
+
+	column AccountName
+		dataType: string
+		sourceColumn: AccountName
+
+	column BrokerId
+		dataType: string
+		sourceColumn: BrokerId
+
+	column UnderwriterId
+		dataType: string
+		sourceColumn: UnderwriterId
+
+	column IndustryId
+		dataType: string
+		sourceColumn: IndustryId
+
+	column Region
+		dataType: string
+		sourceColumn: Region
+
+	column DomicileCountryId
+		dataType: string
+		sourceColumn: DomicileCountryId
+
+	column RelationshipSince
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: RelationshipSince
+
+	column Currency
+		dataType: string
+		sourceColumn: Currency
+
+	partition Accounts = entity
+		mode: directLake
+		source
+			entityName: demo_accounts
+			expressionSource: DL_CommercialInsurance

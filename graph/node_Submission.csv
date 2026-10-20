@@ -1,0 +1,21 @@
+SubmissionId,AccountId,BrokerId,ReceivedDate,DocumentRef,BrokerStatement,EvidenceClass,Verified
+SUB001,A001,B01,2026-09-01,DOC001,Bayport flood barrier funded; completion evidence pending. Rotterdam suppression upgrade verified.,Broker assertion,False
+SUB002,A002,B02,2026-09-01,DOC002,Statement of values and loss run received; validation in progress.,Broker assertion,False
+SUB003,A003,B03,2026-09-01,DOC003,Statement of values and loss run received; validation in progress.,Broker assertion,False
+SUB004,A004,B04,2026-09-01,DOC004,Statement of values and loss run received; validation in progress.,Broker assertion,False
+SUB005,A005,B05,2026-09-01,DOC005,Statement of values and loss run received; validation in progress.,Broker assertion,False
+SUB006,A006,B01,2026-09-01,DOC006,Statement of values and loss run received; validation in progress.,Broker assertion,False
+SUB007,A007,B02,2026-09-01,DOC007,Statement of values and loss run received; validation in progress.,Broker assertion,False
+SUB008,A008,B03,2026-09-01,DOC008,Statement of values and loss run received; validation in progress.,Broker assertion,False
+SUB009,A009,B04,2026-09-01,DOC009,Statement of values and loss run received; validation in progress.,Broker assertion,False
+SUB010,A010,B05,2026-09-01,DOC010,Statement of values and loss run received; validation in progress.,Broker assertion,False
+SUB011,A011,B01,2026-09-01,DOC011,Statement of values and loss run received; validation in progress.,Broker assertion,False
+SUB012,A012,B02,2026-09-01,DOC012,Statement of values and loss run received; validation in progress.,Broker assertion,False
+SUB013,A013,B03,2026-09-01,DOC013,Statement of values and loss run received; validation in progress.,Broker assertion,False
+SUB014,A014,B04,2026-09-01,DOC014,Statement of values and loss run received; validation in progress.,Broker assertion,False
+SUB015,A015,B05,2026-09-01,DOC015,Statement of values and loss run received; validation in progress.,Broker assertion,False
+SUB016,A016,B01,2026-09-01,DOC016,Statement of values and loss run received; validation in progress.,Broker assertion,False
+SUB017,A017,B02,2026-09-01,DOC017,Statement of values and loss run received; validation in progress.,Broker assertion,False
+SUB018,A018,B03,2026-09-01,DOC018,Statement of values and loss run received; validation in progress.,Broker assertion,False
+SUB019,A019,B04,2026-09-01,DOC019,Statement of values and loss run received; validation in progress.,Broker assertion,False
+SUB020,A020,B05,2026-09-01,DOC020,Statement of values and loss run received; validation in progress.,Broker assertion,False
