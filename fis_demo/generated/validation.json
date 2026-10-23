@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "synthetic": true,
+  "asOf": "2026-09-30",
+  "tableRows": {
+    "account": 8,
+    "cost_center": 6,
+    "DIM_DATE": 730,
+    "product": 6,
+    "ACTUALS": 6048,
+    "FORECAST": 3456,
+    "PLAN": 3456
+  },
+  "relationships": 12,
+  "foreignKeyChecks": 51840,
+  "metrics": {
+    "ActualRevenueYTD": 846750225.6,
+    "ActualOpexYTD": 463867796.1,
+    "ActualProfitYTD": 382882429.5,
+    "PlanRevenueFY": 1200551550.0,
+    "PlanOpexFY": 638591250.0,
+    "PlanProfitFY": 561960300.0,
+    "PlanRevenueYTD": 876508875.0,
+    "PlanOpexYTD": 466228125.0,
+    "PlanProfitYTD": 410280750.0,
+    "ForecastRevenueFY": 1158990178.32,
+    "ForecastOpexFY": 637368793.14,
+    "ForecastProfitFY": 521621385.18,
+    "ForecastRevenueYTD": 846750225.6,
+    "ForecastOpexYTD": 463867796.1,
+    "ForecastProfitYTD": 382882429.5,
+    "RevenueVarianceYTD": -29758649.4,
+    "ExpenseVarianceYTD": 2360328.9,
+    "ProfitVarianceYTD": -27398320.5,
+    "ForecastProfitVarianceFY": -40338914.82,
+    "CloudDigitalActualYTD": 4898894.0,
+    "CloudDigitalPlanYTD": 3963960.0
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "queries": [
+    "MATCH (f:`ACTUALS`)-[:`ACTUALS_account`]->(a:`account`),\n      (f)-[:`ACTUALS_cost_center`]->(c:`cost_center`),\n      (f)-[:`ACTUALS_product`]->(p:`product`),\n      (f)-[:`ACTUALS_DIM_DATE`]->(d:`DIM_DATE`)\nFILTER a.`Account` = '500100' AND c.`CostCenter` = '300110'\n  AND p.`ProductLine` = 'DIGITAL' AND d.`YEAR` = 2026\nRETURN f.`RecordID` AS `EvidenceId`, d.`DATE` AS `Period`, f.`AmountCents` AS `ActualCents`\nORDER BY `Period`",
+    "MATCH (f:`FORECAST`)-[:`FORECAST_account`]->(a:`account`),\n      (f)-[:`FORECAST_product`]->(p:`product`)\nFILTER a.`AccountType` = 'Revenue'\nLET productId = p.`ProductLine`\nRETURN productId AS `Product`, SUM(f.`AmountCents`) AS `ForecastRevenueCents`\nGROUP BY productId ORDER BY `Product`",
+    "MATCH (f:`PLAN`)-[:`PLAN_account`]->(a:`account`),\n      (f)-[:`PLAN_cost_center`]->(c:`cost_center`),\n      (f)-[:`PLAN_product`]->(p:`product`),\n      (f)-[:`PLAN_DIM_DATE`]->(d:`DIM_DATE`)\nFILTER a.`Account` = '500100' AND c.`CostCenter` = '300110' AND p.`ProductLine` = 'DIGITAL'\nRETURN d.`DATE` AS `Period`, f.`AmountCents` AS `PlanCents` ORDER BY `Period`"
+  ]
+}

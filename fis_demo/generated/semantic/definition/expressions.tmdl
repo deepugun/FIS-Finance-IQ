@@ -1,0 +1,5 @@
+expression DL_FIS_Finance =
+	let
+		Source = AzureStorage.DataLake("https://onelake.dfs.fabric.microsoft.com/f00e31f4-f4ab-435c-87f4-fdb5f4b06c4a/3773425f-3a99-4bda-be3f-acecfcabb0df", [HierarchicalNavigation=true])
+	in
+		Source

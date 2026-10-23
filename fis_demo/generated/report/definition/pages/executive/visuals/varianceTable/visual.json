@@ -1,0 +1,80 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "varianceTable",
+  "position": {
+    "x": 20,
+    "y": 325,
+    "z": 10,
+    "height": 220,
+    "width": 1400,
+    "tabOrder": 10
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "product"
+                    }
+                  },
+                  "Property": "Description"
+                }
+              },
+              "queryRef": "product.Description",
+              "nativeQueryRef": "Description"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ACTUALS"
+                    }
+                  },
+                  "Property": "Actual Revenue YTD"
+                }
+              },
+              "queryRef": "ACTUALS.Actual Revenue YTD",
+              "nativeQueryRef": "Actual Revenue YTD"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ACTUALS"
+                    }
+                  },
+                  "Property": "Plan Revenue YTD"
+                }
+              },
+              "queryRef": "ACTUALS.Plan Revenue YTD",
+              "nativeQueryRef": "Plan Revenue YTD"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ACTUALS"
+                    }
+                  },
+                  "Property": "Operating Profit Variance YTD"
+                }
+              },
+              "queryRef": "ACTUALS.Operating Profit Variance YTD",
+              "nativeQueryRef": "Operating Profit Variance YTD"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

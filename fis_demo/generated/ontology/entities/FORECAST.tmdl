@@ -1,0 +1,142 @@
+entity 'FORECAST'
+	lineageTag: 184b6847-0b5f-5eae-a301-dd763fa5c900
+	backingTable: 'FORECAST'
+	keyProperty: RecordID
+
+	property 'RecordID'
+		dataType: string
+		lineageTag: 37fd48b4-68fd-51bb-91d8-41622088e49c
+		backingConfiguration
+			valueColumn: 'FORECAST'.'RecordID'
+
+	property 'ACCOUNT'
+		dataType: string
+		lineageTag: 80e95898-85aa-5ee2-af4c-ed50dd02dec2
+		backingConfiguration
+			valueColumn: 'FORECAST'.'ACCOUNT'
+
+	property 'Amount'
+		dataType: decimal
+		lineageTag: c6fde5fd-fbb6-52af-949c-f8b09632369e
+		backingConfiguration
+			valueColumn: 'FORECAST'.'Amount'
+
+	property 'AmountCents'
+		dataType: int64
+		lineageTag: ec8b589e-1378-54cb-b187-5e4933cbb4a9
+		backingConfiguration
+			valueColumn: 'FORECAST'.'AmountCents'
+
+	property 'CC_PR_AC'
+		dataType: string
+		lineageTag: 2a9cfbc4-01d1-5c05-a676-3647b194a4d2
+		backingConfiguration
+			valueColumn: 'FORECAST'.'CC_PR_AC'
+
+	property 'COSTCENTER'
+		dataType: string
+		lineageTag: 997c017b-556c-509d-a68f-ca10eb44e151
+		backingConfiguration
+			valueColumn: 'FORECAST'.'COSTCENTER'
+
+	property 'COSTCENTER_PRODUCTLINE'
+		dataType: string
+		lineageTag: 9e9027ef-2cd4-5d74-a36e-e59db929e099
+		backingConfiguration
+			valueColumn: 'FORECAST'.'COSTCENTER_PRODUCTLINE'
+
+	property 'CURRENCY'
+		dataType: string
+		lineageTag: fadc09cd-298f-59ab-b1a4-612877f8350f
+		backingConfiguration
+			valueColumn: 'FORECAST'.'CURRENCY'
+
+	property 'CUSTOMER'
+		dataType: string
+		lineageTag: 321250f8-0879-5d36-ade3-7dd0e1c67d2b
+		backingConfiguration
+			valueColumn: 'FORECAST'.'CUSTOMER'
+
+	property 'DATASOURCE'
+		dataType: string
+		lineageTag: 52f23241-abd5-550b-ae74-ca7cf0cb589b
+		backingConfiguration
+			valueColumn: 'FORECAST'.'DATASOURCE'
+
+	property 'DATE'
+		dataType: dateTime
+		lineageTag: 948313a4-ae29-514f-a7fd-7c8ff2ea6489
+		backingConfiguration
+			valueColumn: 'FORECAST'.'DATE'
+
+	property 'ENTITY'
+		dataType: string
+		lineageTag: b9fdda60-1406-528d-82fc-84408bff5166
+		backingConfiguration
+			valueColumn: 'FORECAST'.'ENTITY'
+
+	property 'ICP'
+		dataType: string
+		lineageTag: 433e9473-0f3f-55c6-94d3-46204748d390
+		backingConfiguration
+			valueColumn: 'FORECAST'.'ICP'
+
+	property 'LOAD_DATE'
+		dataType: dateTime
+		lineageTag: 77845e7a-6ed8-5817-8881-bbc753f5d409
+		backingConfiguration
+			valueColumn: 'FORECAST'.'LOAD_DATE'
+
+	property 'LOAD_TIMESTAMP'
+		dataType: dateTime
+		lineageTag: 0d7bda63-f84a-5422-b862-49b87e36a105
+		backingConfiguration
+			valueColumn: 'FORECAST'.'LOAD_TIMESTAMP'
+
+	property 'LOCATION'
+		dataType: string
+		lineageTag: 57fd3835-1565-5b56-941a-74b967cf6447
+		backingConfiguration
+			valueColumn: 'FORECAST'.'LOCATION'
+
+	property 'PERIOD'
+		dataType: int64
+		lineageTag: 037e8da5-e160-5c24-8322-3abc40ac1891
+		backingConfiguration
+			valueColumn: 'FORECAST'.'PERIOD'
+
+	property 'PRODUCTLINE'
+		dataType: string
+		lineageTag: c108c804-e3f8-5010-9f79-2a907c046442
+		backingConfiguration
+			valueColumn: 'FORECAST'.'PRODUCTLINE'
+
+	property 'QUARTER'
+		dataType: string
+		lineageTag: 10692030-36c1-5c31-9163-a119607aafb2
+		backingConfiguration
+			valueColumn: 'FORECAST'.'QUARTER'
+
+	property 'SCENARIO'
+		dataType: string
+		lineageTag: 61d62b5a-4f47-57d0-b8fb-31c79e235f9e
+		backingConfiguration
+			valueColumn: 'FORECAST'.'SCENARIO'
+
+	property 'VERSION'
+		dataType: string
+		lineageTag: 6982c715-3f25-5bf2-a284-afb3a5fb5c8a
+		backingConfiguration
+			valueColumn: 'FORECAST'.'VERSION'
+
+	property 'VIEW'
+		dataType: string
+		lineageTag: ebb0f8ab-87fb-5f5d-aa49-dd4d61924281
+		backingConfiguration
+			valueColumn: 'FORECAST'.'VIEW'
+
+	property 'YEAR'
+		dataType: int64
+		lineageTag: 48541d50-fac1-5421-8be8-e06c5cd4d040
+		backingConfiguration
+			valueColumn: 'FORECAST'.'YEAR'

@@ -1,0 +1,125 @@
+table 'PLAN'
+
+	column 'RecordID'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: RecordID
+
+	column 'ACCOUNT'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: ACCOUNT
+
+	column 'Amount'
+		dataType: decimal
+		summarizeBy: none
+		formatString: \$#,##0.00;(\$#,##0.00)
+		sourceColumn: Amount
+
+	column 'AmountCents'
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: AmountCents
+
+	column 'CC_PR_AC'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: CC_PR_AC
+
+	column 'COSTCENTER'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: COSTCENTER
+
+	column 'COSTCENTER_PRODUCTLINE'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: COSTCENTER_PRODUCTLINE
+
+	column 'CURRENCY'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: CURRENCY
+
+	column 'CUSTOMER'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: CUSTOMER
+
+	column 'DATASOURCE'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: DATASOURCE
+
+	column 'DATE'
+		dataType: dateTime
+		summarizeBy: none
+		formatString: yyyy-mm-dd
+		sourceColumn: DATE
+
+	column 'ENTITY'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: ENTITY
+
+	column 'ICP'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: ICP
+
+	column 'LOAD_DATE'
+		dataType: dateTime
+		summarizeBy: none
+		formatString: yyyy-mm-dd
+		sourceColumn: LOAD_DATE
+
+	column 'LOAD_TIMESTAMP'
+		dataType: dateTime
+		summarizeBy: none
+		sourceColumn: LOAD_TIMESTAMP
+
+	column 'LOCATION'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: LOCATION
+
+	column 'PERIOD'
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: PERIOD
+
+	column 'PRODUCTLINE'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: PRODUCTLINE
+
+	column 'QUARTER'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: QUARTER
+
+	column 'SCENARIO'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: SCENARIO
+
+	column 'VERSION'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: VERSION
+
+	column 'VIEW'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: VIEW
+
+	column 'YEAR'
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: YEAR
+
+	partition 'PLAN' = entity
+		mode: directLake
+		source
+			entityName: plan
+			expressionSource: DL_FIS_Finance

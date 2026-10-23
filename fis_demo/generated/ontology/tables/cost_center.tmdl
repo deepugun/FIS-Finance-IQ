@@ -1,0 +1,93 @@
+table 'cost_center'
+
+	column 'CostCenter'
+		dataType: string
+		summarizeBy: none
+		isKey
+		sourceColumn: CostCenter
+
+	column 'CostCenter_Cleaned'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: CostCenter_Cleaned
+
+	column 'Description'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Description
+
+	column 'Function'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Function
+
+	column 'DemoWeight'
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: DemoWeight
+
+	column 'CC_L1'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: CC_L1
+
+	column 'CC_L1_Description'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: CC_L1_Description
+
+	column 'CC_L1_Description_New'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: CC_L1_Description_New
+
+	column 'CC_L2'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: CC_L2
+
+	column 'CC_L2_Description'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: CC_L2_Description
+
+	column 'CC_L2_Description_New'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: CC_L2_Description_New
+
+	column 'CC_L3'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: CC_L3
+
+	column 'CC_L3_Description'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: CC_L3_Description
+
+	column 'CC_L3_Description_New'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: CC_L3_Description_New
+
+	column 'CC_L4'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: CC_L4
+
+	column 'CC_L4_Description'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: CC_L4_Description
+
+	column 'CC_L4_Description_New'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: CC_L4_Description_New
+
+	partition 'cost_center' = entity
+		mode: directLake
+		source
+			entityName: cost_center
+			expressionSource: DL_FIS_Finance

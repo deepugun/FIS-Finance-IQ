@@ -1,0 +1,74 @@
+[
+  {
+    "fromTable": "ACTUALS",
+    "fromColumn": "ACCOUNT",
+    "toTable": "account",
+    "toColumn": "Account"
+  },
+  {
+    "fromTable": "ACTUALS",
+    "fromColumn": "COSTCENTER",
+    "toTable": "cost_center",
+    "toColumn": "CostCenter"
+  },
+  {
+    "fromTable": "ACTUALS",
+    "fromColumn": "DATE",
+    "toTable": "DIM_DATE",
+    "toColumn": "DATE"
+  },
+  {
+    "fromTable": "ACTUALS",
+    "fromColumn": "PRODUCTLINE",
+    "toTable": "product",
+    "toColumn": "ProductLine"
+  },
+  {
+    "fromTable": "FORECAST",
+    "fromColumn": "ACCOUNT",
+    "toTable": "account",
+    "toColumn": "Account"
+  },
+  {
+    "fromTable": "FORECAST",
+    "fromColumn": "COSTCENTER",
+    "toTable": "cost_center",
+    "toColumn": "CostCenter"
+  },
+  {
+    "fromTable": "FORECAST",
+    "fromColumn": "DATE",
+    "toTable": "DIM_DATE",
+    "toColumn": "DATE"
+  },
+  {
+    "fromTable": "FORECAST",
+    "fromColumn": "PRODUCTLINE",
+    "toTable": "product",
+    "toColumn": "ProductLine"
+  },
+  {
+    "fromTable": "PLAN",
+    "fromColumn": "ACCOUNT",
+    "toTable": "account",
+    "toColumn": "Account"
+  },
+  {
+    "fromTable": "PLAN",
+    "fromColumn": "COSTCENTER",
+    "toTable": "cost_center",
+    "toColumn": "CostCenter"
+  },
+  {
+    "fromTable": "PLAN",
+    "fromColumn": "DATE",
+    "toTable": "DIM_DATE",
+    "toColumn": "DATE"
+  },
+  {
+    "fromTable": "PLAN",
+    "fromColumn": "PRODUCTLINE",
+    "toTable": "product",
+    "toColumn": "ProductLine"
+  }
+]

@@ -1,0 +1,184 @@
+entity 'product'
+	lineageTag: bc2b61a3-0b32-5d5e-a4a0-8efa3fdf45ef
+	backingTable: 'product'
+	keyProperty: ProductLine
+
+	property 'ProductLine'
+		dataType: string
+		lineageTag: 3819ce69-2db6-5685-b45b-742aaeb7b63c
+		backingConfiguration
+			valueColumn: 'product'.'ProductLine'
+
+	property 'ProductLine_Cleaned'
+		dataType: string
+		lineageTag: 57a5073f-0879-52e1-9be8-77a05a9ed0c1
+		backingConfiguration
+			valueColumn: 'product'.'ProductLine_Cleaned'
+
+	property 'Description'
+		dataType: string
+		lineageTag: f5ca10ef-0fe7-540e-a5a8-3042d7cb79aa
+		backingConfiguration
+			valueColumn: 'product'.'Description'
+
+	property 'Description_New'
+		dataType: string
+		lineageTag: 6d5cb515-0b5f-537f-8803-c1d7bed47801
+		backingConfiguration
+			valueColumn: 'product'.'Description_New'
+
+	property 'Segment'
+		dataType: string
+		lineageTag: 75a178f3-3892-54b1-bb1b-13786bbe01d6
+		backingConfiguration
+			valueColumn: 'product'.'Segment'
+
+	property 'DemoWeight'
+		dataType: int64
+		lineageTag: 65ead9c8-cccb-560c-93cd-edff31068a41
+		backingConfiguration
+			valueColumn: 'product'.'DemoWeight'
+
+	property 'L1'
+		dataType: string
+		lineageTag: f9089cc3-3313-5369-9dcd-cc517298acac
+		backingConfiguration
+			valueColumn: 'product'.'L1'
+
+	property 'L1_Description'
+		dataType: string
+		lineageTag: ccd543da-fd92-5842-9cc0-bd2db75cce65
+		backingConfiguration
+			valueColumn: 'product'.'L1_Description'
+
+	property 'L1_Description_New'
+		dataType: string
+		lineageTag: d2434ea5-c5e8-5321-8919-100184d86436
+		backingConfiguration
+			valueColumn: 'product'.'L1_Description_New'
+
+	property 'L2'
+		dataType: string
+		lineageTag: f206c763-9528-5996-bb7b-b8e6fe533a35
+		backingConfiguration
+			valueColumn: 'product'.'L2'
+
+	property 'L2_Description'
+		dataType: string
+		lineageTag: af3f0dcd-8662-5902-bed9-630eeca578f8
+		backingConfiguration
+			valueColumn: 'product'.'L2_Description'
+
+	property 'L2_Description_New'
+		dataType: string
+		lineageTag: 89c4e8d3-1438-558d-911e-02f89269a3bc
+		backingConfiguration
+			valueColumn: 'product'.'L2_Description_New'
+
+	property 'L3'
+		dataType: string
+		lineageTag: fe1916f2-7ec5-5a9b-8416-69412d4971c9
+		backingConfiguration
+			valueColumn: 'product'.'L3'
+
+	property 'L3_Description'
+		dataType: string
+		lineageTag: 853c760f-f595-501f-9a34-5bf216624af2
+		backingConfiguration
+			valueColumn: 'product'.'L3_Description'
+
+	property 'L3_Description_New'
+		dataType: string
+		lineageTag: a416e934-7572-5f4f-8f13-639306d8e641
+		backingConfiguration
+			valueColumn: 'product'.'L3_Description_New'
+
+	property 'L4'
+		dataType: string
+		lineageTag: d7d0511f-0ff3-504b-9d1a-d7de5a3d5dcb
+		backingConfiguration
+			valueColumn: 'product'.'L4'
+
+	property 'L4_Description'
+		dataType: string
+		lineageTag: 47760461-6fae-5ac2-9917-16b881d40e16
+		backingConfiguration
+			valueColumn: 'product'.'L4_Description'
+
+	property 'L4_Description_New'
+		dataType: string
+		lineageTag: c98f52b6-ad91-5a67-a43c-c1b133cc8ae2
+		backingConfiguration
+			valueColumn: 'product'.'L4_Description_New'
+
+	property 'L5'
+		dataType: string
+		lineageTag: 5a7a8bbc-0c41-539f-bc8b-3a75751c7846
+		backingConfiguration
+			valueColumn: 'product'.'L5'
+
+	property 'L5_Description'
+		dataType: string
+		lineageTag: 8e18d35c-24e8-54fb-a6e8-33ddfb5e837f
+		backingConfiguration
+			valueColumn: 'product'.'L5_Description'
+
+	property 'L5_Description_New'
+		dataType: string
+		lineageTag: 8cdc497a-62af-5698-961b-35589b0f1151
+		backingConfiguration
+			valueColumn: 'product'.'L5_Description_New'
+
+	property 'L6'
+		dataType: string
+		lineageTag: 59c51c74-bcf8-5f27-9b17-e33ebb240c2b
+		backingConfiguration
+			valueColumn: 'product'.'L6'
+
+	property 'L6_Description'
+		dataType: string
+		lineageTag: 0ee7e17c-fd91-5c0b-b39d-12b2c8f960f0
+		backingConfiguration
+			valueColumn: 'product'.'L6_Description'
+
+	property 'L6_Description_New'
+		dataType: string
+		lineageTag: 69768e6c-8635-554e-9c46-db8c092aa6fd
+		backingConfiguration
+			valueColumn: 'product'.'L6_Description_New'
+
+	property 'L7'
+		dataType: string
+		lineageTag: 34c51319-301e-5877-9480-3751c3f0c4a6
+		backingConfiguration
+			valueColumn: 'product'.'L7'
+
+	property 'L7_Description'
+		dataType: string
+		lineageTag: a3704268-3daa-50ff-b4d8-6e8f73873d71
+		backingConfiguration
+			valueColumn: 'product'.'L7_Description'
+
+	property 'L7_Description_New'
+		dataType: string
+		lineageTag: 4cc96721-88fd-53e4-907c-502a4df80748
+		backingConfiguration
+			valueColumn: 'product'.'L7_Description_New'
+
+	property 'L8'
+		dataType: string
+		lineageTag: 2894a9e7-1d02-59b8-b185-539bfee8a97b
+		backingConfiguration
+			valueColumn: 'product'.'L8'
+
+	property 'L8_Description'
+		dataType: string
+		lineageTag: d717dc93-6bb8-52a9-9ac2-e7c5c749b8d7
+		backingConfiguration
+			valueColumn: 'product'.'L8_Description'
+
+	property 'L8_Description_New'
+		dataType: string
+		lineageTag: d04f2d7e-b590-5074-a091-9f685b0ff8ca
+		backingConfiguration
+			valueColumn: 'product'.'L8_Description_New'

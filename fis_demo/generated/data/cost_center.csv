@@ -1,0 +1,7 @@
+CostCenter,CostCenter_Cleaned,Description,Function,DemoWeight,CC_L1,CC_L1_Description,CC_L1_Description_New,CC_L2,CC_L2_Description,CC_L2_Description_New,CC_L3,CC_L3_Description,CC_L3_Description_New,CC_L4,CC_L4_Description,CC_L4_Description_New
+100110,100110,Banking Engineering,Engineering,100,FIS demo,FIS demo,FIS demo,Engineering,Engineering,Engineering,Banking Engineering,Banking Engineering,Banking Engineering,100110,100110,100110
+100210,100210,Digital Operations,Operations,85,FIS demo,FIS demo,FIS demo,Operations,Operations,Operations,Digital Operations,Digital Operations,Digital Operations,100210,100210,100210
+200110,200110,Markets Operations,Operations,110,FIS demo,FIS demo,FIS demo,Operations,Operations,Operations,Markets Operations,Markets Operations,Markets Operations,200110,200110,200110
+300110,300110,Cloud Infrastructure,Technology,140,FIS demo,FIS demo,FIS demo,Technology,Technology,Technology,Cloud Infrastructure,Cloud Infrastructure,Cloud Infrastructure,300110,300110,300110
+900110,900110,Corporate Finance,Corporate,55,FIS demo,FIS demo,FIS demo,Corporate,Corporate,Corporate,Corporate Finance,Corporate Finance,Corporate Finance,900110,900110,900110
+900210,900210,Risk and Compliance,Corporate,60,FIS demo,FIS demo,FIS demo,Corporate,Corporate,Corporate,Risk and Compliance,Risk and Compliance,Risk and Compliance,900210,900210,900210

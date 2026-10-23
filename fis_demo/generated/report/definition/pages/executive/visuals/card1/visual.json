@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "card1",
+  "position": {
+    "x": 490,
+    "y": 20,
+    "z": 5,
+    "height": 130,
+    "width": 450,
+    "tabOrder": 5
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ACTUALS"
+                    }
+                  },
+                  "Property": "Plan Revenue YTD"
+                }
+              },
+              "queryRef": "ACTUALS.Plan Revenue YTD",
+              "nativeQueryRef": "Plan Revenue YTD"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "modelLayout": {
+    "positions": {
+      "account_nodeType": {
+        "x": 0,
+        "y": 0
+      },
+      "cost_center_nodeType": {
+        "x": 280,
+        "y": 0
+      },
+      "DIM_DATE_nodeType": {
+        "x": 560,
+        "y": 0
+      },
+      "product_nodeType": {
+        "x": 840,
+        "y": 0
+      },
+      "ACTUALS_nodeType": {
+        "x": 0,
+        "y": 280
+      },
+      "FORECAST_nodeType": {
+        "x": 280,
+        "y": 280
+      },
+      "PLAN_nodeType": {
+        "x": 560,
+        "y": 280
+      }
+    },
+    "styles": {},
+    "pan": {
+      "x": 0,
+      "y": 0
+    },
+    "zoomLevel": 1
+  }
+}

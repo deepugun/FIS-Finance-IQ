@@ -1,4 +1,12 @@
-# Fabric IQ Commercial Insurance POC
+# FIS Finance IQ Demo
+
+The FIS-oriented demo is in **[fis_demo](fis_demo/README.md)**. It uses synthetic
+ACTUALS, FORECAST and PLAN data with the shared account, cost-center, date and
+product dimensions, deployed into a separate, single-user Fabric workspace.
+See the [FIS runbook](fis_demo/README.md) for the finance story, acceptance values,
+model contract and deployment instructions.
+
+## Preserved base project: Fabric IQ Commercial Insurance POC
 
 A synthetic commercial-insurance lab for Microsoft Fabric IQ: governed source data,
 medallion Lakehouses, a Direct Lake semantic model, renewal-risk signals, Eventhouse

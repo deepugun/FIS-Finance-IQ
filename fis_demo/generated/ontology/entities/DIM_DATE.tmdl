@@ -1,0 +1,142 @@
+entity 'DIM_DATE'
+	lineageTag: 30411585-4e9f-5206-b334-9152e28d3bfe
+	backingTable: 'DIM_DATE'
+	keyProperty: DATE_INTEGER
+
+	property 'DATE'
+		dataType: dateTime
+		lineageTag: 5fd8b88a-7f46-585d-a8f9-175b07fb4ab1
+		backingConfiguration
+			valueColumn: 'DIM_DATE'.'DATE'
+
+	property 'DATE_INTEGER'
+		dataType: int64
+		lineageTag: c32bd060-1f51-5f1d-a880-5ad3881bea1d
+		backingConfiguration
+			valueColumn: 'DIM_DATE'.'DATE_INTEGER'
+
+	property 'DAY_NUMBER'
+		dataType: int64
+		lineageTag: 612a08b6-d34d-5324-a62b-44bc98d3ab3d
+		backingConfiguration
+			valueColumn: 'DIM_DATE'.'DAY_NUMBER'
+
+	property 'DAY_OF_WEEK'
+		dataType: int64
+		lineageTag: a16b23fb-bdb3-5cb4-89b7-04e6375ab7ca
+		backingConfiguration
+			valueColumn: 'DIM_DATE'.'DAY_OF_WEEK'
+
+	property 'DAY_OF_WEEK_LONG'
+		dataType: string
+		lineageTag: 50d3c68a-c6d9-574c-86ad-7517f0bc36d0
+		backingConfiguration
+			valueColumn: 'DIM_DATE'.'DAY_OF_WEEK_LONG'
+
+	property 'DAY_OF_WEEK_SHORT'
+		dataType: string
+		lineageTag: 23cfa22e-4ba7-5fff-a574-866d4bd28b03
+		backingConfiguration
+			valueColumn: 'DIM_DATE'.'DAY_OF_WEEK_SHORT'
+
+	property 'FIRST_DAY_MONTH'
+		dataType: dateTime
+		lineageTag: d4b05061-6561-5065-9766-ca7a029d475e
+		backingConfiguration
+			valueColumn: 'DIM_DATE'.'FIRST_DAY_MONTH'
+
+	property 'LAST_DAY_MONTH'
+		dataType: dateTime
+		lineageTag: 86d848e6-a63a-5593-98ba-5a6677e1bc67
+		backingConfiguration
+			valueColumn: 'DIM_DATE'.'LAST_DAY_MONTH'
+
+	property 'MONTH_ID'
+		dataType: int64
+		lineageTag: a27be647-6c97-5191-a31b-e631a4cd64c2
+		backingConfiguration
+			valueColumn: 'DIM_DATE'.'MONTH_ID'
+
+	property 'MONTH_NAME_LONG'
+		dataType: string
+		lineageTag: 55a0e99c-4c4c-5b72-9506-dc3320d79e52
+		backingConfiguration
+			valueColumn: 'DIM_DATE'.'MONTH_NAME_LONG'
+
+	property 'MONTH_NAME_SHORT'
+		dataType: string
+		lineageTag: a4a98c17-37bd-5ac4-a245-ca82333143ad
+		backingConfiguration
+			valueColumn: 'DIM_DATE'.'MONTH_NAME_SHORT'
+
+	property 'MONTH_YEAR'
+		dataType: string
+		lineageTag: 7b006aab-5e70-5ee5-9861-b8a78030c72f
+		backingConfiguration
+			valueColumn: 'DIM_DATE'.'MONTH_YEAR'
+
+	property 'MONTH_YEAR_INTEGER'
+		dataType: int64
+		lineageTag: c850894a-2edc-54f7-a8c0-836a50f96ccf
+		backingConfiguration
+			valueColumn: 'DIM_DATE'.'MONTH_YEAR_INTEGER'
+
+	property 'MONTHNUMBER'
+		dataType: int64
+		lineageTag: 9438c583-af3b-5dab-8ce6-e4f9df06f9ce
+		backingConfiguration
+			valueColumn: 'DIM_DATE'.'MONTHNUMBER'
+
+	property 'PY_COMPARE_DATE'
+		dataType: dateTime
+		lineageTag: 92500d6a-31cb-5534-a553-1cedcb98e3cf
+		backingConfiguration
+			valueColumn: 'DIM_DATE'.'PY_COMPARE_DATE'
+
+	property 'QUARTER'
+		dataType: string
+		lineageTag: 2364e07c-1ab9-5626-a60e-657707822545
+		backingConfiguration
+			valueColumn: 'DIM_DATE'.'QUARTER'
+
+	property 'QUARTER_ID'
+		dataType: int64
+		lineageTag: 1a1a06ff-97ba-512f-bdc2-b9e19212cf93
+		backingConfiguration
+			valueColumn: 'DIM_DATE'.'QUARTER_ID'
+
+	property 'REPORTING_MONTH'
+		dataType: string
+		lineageTag: 0f7aee4a-e8d3-5a9c-b789-e5599e4337f0
+		backingConfiguration
+			valueColumn: 'DIM_DATE'.'REPORTING_MONTH'
+
+	property 'WEEK_OF_YEAR'
+		dataType: int64
+		lineageTag: a3874e4d-1e50-51fc-ad56-46fce30d2907
+		backingConfiguration
+			valueColumn: 'DIM_DATE'.'WEEK_OF_YEAR'
+
+	property 'YEAR'
+		dataType: int64
+		lineageTag: 6e312205-349d-528d-bb90-7624c7aee6e3
+		backingConfiguration
+			valueColumn: 'DIM_DATE'.'YEAR'
+
+	property 'YEAR_MONTH'
+		dataType: string
+		lineageTag: fb4718fd-f3a6-5727-bee3-89eef936d8f3
+		backingConfiguration
+			valueColumn: 'DIM_DATE'.'YEAR_MONTH'
+
+	property 'YEAR_MONTH_SHORT'
+		dataType: string
+		lineageTag: 84fccc01-66bb-53ba-ba6a-095173ef391f
+		backingConfiguration
+			valueColumn: 'DIM_DATE'.'YEAR_MONTH_SHORT'
+
+	property 'YEAR_QUARTER'
+		dataType: string
+		lineageTag: 11a70b2f-68f8-574c-adab-4dfb1803f583
+		backingConfiguration
+			valueColumn: 'DIM_DATE'.'YEAR_QUARTER'

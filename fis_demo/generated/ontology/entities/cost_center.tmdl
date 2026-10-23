@@ -1,0 +1,106 @@
+entity 'cost_center'
+	lineageTag: 489b38fd-b733-5e04-9cde-752e77b642e6
+	backingTable: 'cost_center'
+	keyProperty: CostCenter
+
+	property 'CostCenter'
+		dataType: string
+		lineageTag: d0d588e3-6bdb-5555-b3be-1cb918160d2d
+		backingConfiguration
+			valueColumn: 'cost_center'.'CostCenter'
+
+	property 'CostCenter_Cleaned'
+		dataType: string
+		lineageTag: ff1e91fe-a396-5327-a8a2-06c7bf81abd7
+		backingConfiguration
+			valueColumn: 'cost_center'.'CostCenter_Cleaned'
+
+	property 'Description'
+		dataType: string
+		lineageTag: cd304d2c-5a53-59cb-8186-d23803d5e101
+		backingConfiguration
+			valueColumn: 'cost_center'.'Description'
+
+	property 'Function'
+		dataType: string
+		lineageTag: 1f94cd54-cd7f-5ce9-9721-253809731455
+		backingConfiguration
+			valueColumn: 'cost_center'.'Function'
+
+	property 'DemoWeight'
+		dataType: int64
+		lineageTag: 540f8cb0-5bbc-57de-914e-4b3c21b359bc
+		backingConfiguration
+			valueColumn: 'cost_center'.'DemoWeight'
+
+	property 'CC_L1'
+		dataType: string
+		lineageTag: 2af35e3f-d3c7-558c-b207-1ec7a3086bc1
+		backingConfiguration
+			valueColumn: 'cost_center'.'CC_L1'
+
+	property 'CC_L1_Description'
+		dataType: string
+		lineageTag: 8d752af1-1354-55b4-a850-98ac68d1be2c
+		backingConfiguration
+			valueColumn: 'cost_center'.'CC_L1_Description'
+
+	property 'CC_L1_Description_New'
+		dataType: string
+		lineageTag: 12dcf57a-b0f9-5fe1-a553-a427631dbbef
+		backingConfiguration
+			valueColumn: 'cost_center'.'CC_L1_Description_New'
+
+	property 'CC_L2'
+		dataType: string
+		lineageTag: 5ff49dee-0af3-5ccd-a440-defb36a6a36b
+		backingConfiguration
+			valueColumn: 'cost_center'.'CC_L2'
+
+	property 'CC_L2_Description'
+		dataType: string
+		lineageTag: d6f4d08e-b910-5c87-9056-d0baaf15afd5
+		backingConfiguration
+			valueColumn: 'cost_center'.'CC_L2_Description'
+
+	property 'CC_L2_Description_New'
+		dataType: string
+		lineageTag: 9c7a60ae-6b39-5eb5-8d6a-93fafb245120
+		backingConfiguration
+			valueColumn: 'cost_center'.'CC_L2_Description_New'
+
+	property 'CC_L3'
+		dataType: string
+		lineageTag: feef69f7-6dfc-509c-9fb3-7dd2fd497e70
+		backingConfiguration
+			valueColumn: 'cost_center'.'CC_L3'
+
+	property 'CC_L3_Description'
+		dataType: string
+		lineageTag: e01cca8c-4bd8-5f1a-8d35-d4f5f598bdea
+		backingConfiguration
+			valueColumn: 'cost_center'.'CC_L3_Description'
+
+	property 'CC_L3_Description_New'
+		dataType: string
+		lineageTag: 03cdb4e2-50cb-59f0-8113-8e2fede36636
+		backingConfiguration
+			valueColumn: 'cost_center'.'CC_L3_Description_New'
+
+	property 'CC_L4'
+		dataType: string
+		lineageTag: 6e89f080-c3b8-54a9-89cc-bf4a43018f1b
+		backingConfiguration
+			valueColumn: 'cost_center'.'CC_L4'
+
+	property 'CC_L4_Description'
+		dataType: string
+		lineageTag: d72f07bd-7e4a-570f-bf5b-75ea9adce108
+		backingConfiguration
+			valueColumn: 'cost_center'.'CC_L4_Description'
+
+	property 'CC_L4_Description_New'
+		dataType: string
+		lineageTag: a441add4-cc77-5884-8722-2f00f002ee40
+		backingConfiguration
+			valueColumn: 'cost_center'.'CC_L4_Description_New'

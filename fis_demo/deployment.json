@@ -1,0 +1,336 @@
+{
+  "baseRepository": "https://github.com/deepugun/fabric-iq-commercial-insurance-poc",
+  "baseCommit": "501f412f68ce4b048d5eb4fadcf3e04abe00265f",
+  "synthetic": true,
+  "asOf": "2026-09-30",
+  "workspaceId": "f00e31f4-f4ab-435c-87f4-fdb5f4b06c4a",
+  "workspaceName": "FIS-Finance-IQ",
+  "privacy": {
+    "workspace": {
+      "id": "f00e31f4-f4ab-435c-87f4-fdb5f4b06c4a",
+      "displayName": "FIS-Finance-IQ",
+      "description": "FIS synthetic FP&A demo; dedicated single-user workspace. Fictional financial technology data only; not FIS reported results. Based on deepugun/fabric-iq-commercial-insurance-poc. Existing capacity reused; no scheduled jobs, external sharing, notifications or source-system writes.",
+      "type": "Workspace",
+      "capacityId": "430e2755-966b-4060-881a-ea4f35180fdd",
+      "capacityRegion": "Central US",
+      "oneLakeEndpoints": {
+        "blobEndpoint": "https://centralus-onelake.blob.fabric.microsoft.com",
+        "dfsEndpoint": "https://centralus-onelake.dfs.fabric.microsoft.com"
+      },
+      "capacityAssignmentProgress": "Completed"
+    },
+    "roleAssignments": [
+      {
+        "id": "57a6a661-56fe-42a0-87b9-b5f9eb7a8af3",
+        "principal": {
+          "id": "57a6a661-56fe-42a0-87b9-b5f9eb7a8af3",
+          "displayName": "Deepak Gundavaram",
+          "type": "User",
+          "userDetails": {
+            "userPrincipalName": "kgundavaram@MngEnvMCAP283499.onmicrosoft.com"
+          }
+        },
+        "role": "Admin"
+      }
+    ],
+    "tenantId": "e71292eb-9def-4f9e-8b65-2e9fdbd52cf9",
+    "explicitMembers": 1,
+    "privacyVerified": true,
+    "boundary": "Only the caller is assigned a workspace role. Tenant administrative policies still apply."
+  },
+  "workspaceUrl": "https://app.fabric.microsoft.com/groups/f00e31f4-f4ab-435c-87f4-fdb5f4b06c4a/list",
+  "status": "verified",
+  "updatedUtc": "2026-10-22T18:13:11.611811+00:00",
+  "lakehouses": {
+    "bronze": {
+      "id": "ad139c93-78be-4c31-a249-375f1ba4c65d",
+      "displayName": "FIS_Finance_Bronze",
+      "type": "Lakehouse"
+    },
+    "silver": {
+      "id": "e15b7040-5c9f-46a0-9ada-d4bc69ba6ad3",
+      "displayName": "FIS_Finance_Silver",
+      "type": "Lakehouse"
+    },
+    "gold": {
+      "id": "3773425f-3a99-4bda-be3f-acecfcabb0df",
+      "displayName": "FIS_Finance_Gold",
+      "type": "Lakehouse"
+    }
+  },
+  "notebook": {
+    "id": "afa4465e-aff5-4e60-9dc5-a401a5e6d326",
+    "type": "Notebook",
+    "displayName": "FIS_01_Finance_Medallion",
+    "description": "FIS synthetic finance demo. Not actual FIS results.",
+    "workspaceId": "f00e31f4-f4ab-435c-87f4-fdb5f4b06c4a",
+    "logicalId": null
+  },
+  "notebookJob": {
+    "id": "eca4d477-7b97-4b33-af42-d2d4f2d42b4a",
+    "itemId": "afa4465e-aff5-4e60-9dc5-a401a5e6d326",
+    "jobType": "RunNotebook",
+    "invokeType": "Manual",
+    "status": "Completed",
+    "failureReason": null,
+    "rootActivityId": "72e104ca-990b-4b01-bd0b-792e29719d5d",
+    "startTimeUtc": "2026-10-21T21:55:28.9455382",
+    "endTimeUtc": "2026-10-21T22:00:33.9714826"
+  },
+  "liveData": {
+    "status": "PASS",
+    "synthetic": true,
+    "asOf": "2026-09-30",
+    "tableRows": {
+      "account": 8,
+      "cost_center": 6,
+      "DIM_DATE": 730,
+      "product": 6,
+      "ACTUALS": 6048,
+      "FORECAST": 3456,
+      "PLAN": 3456
+    },
+    "relationships": 12,
+    "foreignKeyChecks": 51840,
+    "metrics": {
+      "ActualRevenueYTD": 846750225.6,
+      "ActualOpexYTD": 463867796.1,
+      "ActualProfitYTD": 382882429.5,
+      "PlanRevenueFY": 1200551550.0,
+      "PlanOpexFY": 638591250.0,
+      "PlanProfitFY": 561960300.0,
+      "PlanRevenueYTD": 876508875.0,
+      "PlanOpexYTD": 466228125.0,
+      "PlanProfitYTD": 410280750.0,
+      "ForecastRevenueFY": 1158990178.32,
+      "ForecastOpexFY": 637368793.14,
+      "ForecastProfitFY": 521621385.18,
+      "ForecastRevenueYTD": 846750225.6,
+      "ForecastOpexYTD": 463867796.1,
+      "ForecastProfitYTD": 382882429.5,
+      "RevenueVarianceYTD": -29758649.4,
+      "ExpenseVarianceYTD": 2360328.9,
+      "ProfitVarianceYTD": -27398320.5,
+      "ForecastProfitVarianceFY": -40338914.82,
+      "CloudDigitalActualYTD": 4898894.0,
+      "CloudDigitalPlanYTD": 3963960.0
+    },
+    "edgeRows": {
+      "edge_actuals_account": 6048,
+      "edge_actuals_cost_center": 6048,
+      "edge_actuals_dim_date": 6048,
+      "edge_actuals_product": 6048,
+      "edge_forecast_account": 3456,
+      "edge_forecast_cost_center": 3456,
+      "edge_forecast_dim_date": 3456,
+      "edge_forecast_product": 3456,
+      "edge_plan_account": 3456,
+      "edge_plan_cost_center": 3456,
+      "edge_plan_dim_date": 3456,
+      "edge_plan_product": 3456
+    },
+    "reviewFlags": 2,
+    "fewShots": [
+      {
+        "question": "Which cost centers and products have an unfavorable cloud expense variance YTD?",
+        "rows": 36
+      },
+      {
+        "question": "Show the monthly evidence for Digital Banking cloud overspend.",
+        "rows": 9
+      },
+      {
+        "question": "Compare full-year revenue forecast and plan by product.",
+        "rows": 6
+      },
+      {
+        "question": "What is the actual revenue versus plan by month in 2026 through September?",
+        "rows": 9
+      }
+    ]
+  },
+  "semanticModel": {
+    "id": "f9179801-db61-48ce-a536-f8de621718bb",
+    "type": "SemanticModel",
+    "displayName": "FIS_Finance_IQ_Model",
+    "description": "FIS synthetic finance demo. Not actual FIS results.",
+    "workspaceId": "f00e31f4-f4ab-435c-87f4-fdb5f4b06c4a",
+    "logicalId": null
+  },
+  "semanticVerification": {
+    "status": "PASS",
+    "metrics": {
+      "ActualRevenueYTD": 846750225.6,
+      "PlanRevenueYTD": 876508875.0,
+      "ActualOpexYTD": 463867796.1,
+      "PlanOpexYTD": 466228125.0,
+      "ActualProfitYTD": 382882429.5,
+      "PlanProfitYTD": 410280750.0,
+      "RevenueVarianceYTD": -29758649.399999976,
+      "ExpenseVarianceYTD": 2360328.899999976,
+      "ProfitVarianceYTD": -27398320.5,
+      "ForecastRevenueFY": 1158990178.32,
+      "PlanRevenueFY": 1200551550.0,
+      "ForecastProfitFY": 521621385.17999995,
+      "PlanProfitFY": 561960300.0,
+      "ForecastProfitVarianceFY": -40338914.82000005,
+      "CloudDigitalActualYTD": 4898894.0,
+      "CloudDigitalPlanYTD": 3963960.0
+    },
+    "relationshipFilterChecks": {
+      "ACTUALS_account": 756,
+      "FORECAST_account": 432,
+      "PLAN_account": 432,
+      "ACTUALS_cost_center": 1008,
+      "FORECAST_cost_center": 576,
+      "PLAN_cost_center": 576,
+      "ACTUALS_DIM_DATE": 288,
+      "FORECAST_DIM_DATE": 288,
+      "PLAN_DIM_DATE": 288,
+      "ACTUALS_product": 1008,
+      "FORECAST_product": 576,
+      "PLAN_product": 576
+    },
+    "relationships": 12
+  },
+  "report": {
+    "id": "7a8240e8-b94b-42a3-9a5e-f0f6beb224d5",
+    "type": "Report",
+    "displayName": "FIS Finance IQ - Synthetic FP&A",
+    "description": "FIS synthetic finance demo. Not actual FIS results.",
+    "workspaceId": "f00e31f4-f4ab-435c-87f4-fdb5f4b06c4a",
+    "logicalId": null,
+    "url": "https://app.powerbi.com/groups/f00e31f4-f4ab-435c-87f4-fdb5f4b06c4a/reports/7a8240e8-b94b-42a3-9a5e-f0f6beb224d5",
+    "datasetId": "f9179801-db61-48ce-a536-f8de621718bb",
+    "renderExport": {
+      "@odata.context": "https://wabi-us-central-b-primary-redirect.analysis.windows.net/v1.0/myorg/groups/f00e31f4-f4ab-435c-87f4-fdb5f4b06c4a/$metadata#exports/$entity",
+      "id": "MS9CbG9iSWRWMi1mYmYyNGQ4Yy01NGYwLTQxNzAtYWVjZC0zYTA1MzRkOWE5MzJHVEN3dFoyZm84YmpuY1Q3WHhKeDZmSTFnQTVNQmdVT0owSk9tRXRhbjh3PS4=",
+      "createdDateTime": "2026-10-21T22:16:47.134283Z",
+      "lastActionDateTime": "2026-10-21T22:26:03.1755175Z",
+      "reportId": "7a8240e8-b94b-42a3-9a5e-f0f6beb224d5",
+      "reportName": "FIS Finance IQ - Synthetic FP&A",
+      "status": "Succeeded",
+      "percentComplete": 100,
+      "resourceLocation": "https://api.powerbi.com/v1.0/myorg/groups/f00e31f4-f4ab-435c-87f4-fdb5f4b06c4a/reports/7a8240e8-b94b-42a3-9a5e-f0f6beb224d5/exports/MS9CbG9iSWRWMi1mYmYyNGQ4Yy01NGYwLTQxNzAtYWVjZC0zYTA1MzRkOWE5MzJHVEN3dFoyZm84YmpuY1Q3WHhKeDZmSTFnQTVNQmdVT0owSk9tRXRhbjh3PS4=/file",
+      "resourceFileExtension": ".pdf",
+      "expirationTime": "2026-10-22T22:16:47.3669592Z"
+    }
+  },
+  "graph": {
+    "id": "3ddb3979-d5a2-4d9b-b787-83e17286d44f",
+    "type": "GraphModel",
+    "displayName": "FIS_Finance_Relationship_Graph",
+    "description": "FIS synthetic finance demo. Not actual FIS results.",
+    "workspaceId": "f00e31f4-f4ab-435c-87f4-fdb5f4b06c4a",
+    "logicalId": null,
+    "refreshJob": {
+      "id": "56af6efc-8658-4acf-ac73-191b255d4e59",
+      "itemId": "3ddb3979-d5a2-4d9b-b787-83e17286d44f",
+      "jobType": "Refresh",
+      "invokeType": "Manual",
+      "status": "Completed",
+      "failureReason": null,
+      "rootActivityId": "a56b500a-998f-4c73-b251-56d9178b2cdc",
+      "startTimeUtc": "2026-10-21T22:12:32.3965921",
+      "endTimeUtc": "2026-10-21T22:15:00.4328333"
+    },
+    "gqlVerification": [
+      {
+        "status": "00000",
+        "rows": 9,
+        "sample": [
+          {
+            "EvidenceId": "ACTUALS-202601-500100-300110-DIGITAL",
+            "Period": "2026-01-01T00:00:00Z",
+            "ActualCents": 42882840
+          },
+          {
+            "EvidenceId": "ACTUALS-202602-500100-300110-DIGITAL",
+            "Period": "2026-02-01T00:00:00Z",
+            "ActualCents": 43723680
+          }
+        ]
+      },
+      {
+        "status": "00000",
+        "rows": 6,
+        "sample": [
+          {
+            "Product": "BNK_CORE",
+            "ForecastRevenueCents": 21250638744
+          },
+          {
+            "Product": "CAP_MKT",
+            "ForecastRevenueCents": 22100664300
+          }
+        ]
+      },
+      {
+        "status": "00000",
+        "rows": 12,
+        "sample": [
+          {
+            "Period": "2026-01-01T00:00:00Z",
+            "PlanCents": 40840800
+          },
+          {
+            "Period": "2026-02-01T00:00:00Z",
+            "PlanCents": 41641600
+          }
+        ]
+      }
+    ]
+  },
+  "ontologyDateKeyNotebook": {
+    "id": "17500174-49a1-4316-abe3-1e5365dd9c0c",
+    "type": "Notebook",
+    "displayName": "FIS_02_Prepare_Ontology_Date_Keys",
+    "description": "FIS synthetic finance demo. Not actual FIS results.",
+    "workspaceId": "f00e31f4-f4ab-435c-87f4-fdb5f4b06c4a",
+    "logicalId": null
+  },
+  "ontologyDateKeyJob": {
+    "id": "e945f778-b057-483e-8891-6cf07c7c284e",
+    "itemId": "17500174-49a1-4316-abe3-1e5365dd9c0c",
+    "jobType": "RunNotebook",
+    "invokeType": "Manual",
+    "status": "Completed",
+    "failureReason": null,
+    "rootActivityId": "8857e4c0-5a16-4847-a7c7-a95fddd84dce",
+    "startTimeUtc": "2026-10-22T18:01:25.3881967",
+    "endTimeUtc": "2026-10-22T18:02:11.4740974"
+  },
+  "ontology": {
+    "id": "d3bae860-a0ac-4e0d-af9f-161a935648fd",
+    "type": "Ontology",
+    "displayName": "FIS_Finance_Ontology",
+    "description": "FIS synthetic finance demo. Not actual FIS results.",
+    "workspaceId": "f00e31f4-f4ab-435c-87f4-fdb5f4b06c4a",
+    "logicalId": null,
+    "entityTypes": 7,
+    "relationshipTypes": 12
+  },
+  "agent": {
+    "id": "42f62d3d-9c9f-4636-b279-a9e176fe4c91",
+    "type": "DataAgent",
+    "displayName": "FIS_Finance_Data_Agent",
+    "description": "FIS synthetic finance demo. Not actual FIS results.",
+    "workspaceId": "f00e31f4-f4ab-435c-87f4-fdb5f4b06c4a",
+    "logicalId": null,
+    "published": true,
+    "sqlExamplesValidatedInSpark": 4,
+    "conversationalResponsesVerified": false
+  },
+  "reportRendering": {
+    "status": "PASS",
+    "pages": 3,
+    "bytes": 231670,
+    "exportId": "MS9CbG9iSWRWMi1hZmQ4NWE3ZS04YjMwLTQwZmQtOWJkNy01YmQxNWQwN2YwMjFHSEV3Ym5abjlWNmRUb0FRNTJweDJ0clhlWTV1aEJWSzR5N1ZjTGpRQ3MwPS4=",
+    "pageTextLengths": [
+      953,
+      895,
+      980
+    ],
+    "pdf": "C:\\Users\\kgundavaram\\OneDrive - Microsoft\\Desktop\\FIS-IQ\\fis_demo\\generated\\FIS-Finance-IQ-Demo.pdf"
+  }
+}

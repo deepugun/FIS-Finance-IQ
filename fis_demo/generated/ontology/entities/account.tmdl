@@ -1,0 +1,136 @@
+entity 'account'
+	lineageTag: 27e1dad8-189c-58d0-b8e7-95a99835c453
+	backingTable: 'account'
+	keyProperty: Account
+
+	property 'Account'
+		dataType: string
+		lineageTag: 91d59b3e-9a7b-5479-a69e-9110327b76de
+		backingConfiguration
+			valueColumn: 'account'.'Account'
+
+	property 'Description'
+		dataType: string
+		lineageTag: 4afb4955-a687-5dbe-b631-335509d45c24
+		backingConfiguration
+			valueColumn: 'account'.'Description'
+
+	property 'Description_raw'
+		dataType: string
+		lineageTag: c9d357d7-378b-5335-a7f6-9ceebcf38829
+		backingConfiguration
+			valueColumn: 'account'.'Description_raw'
+
+	property 'AccountType'
+		dataType: string
+		lineageTag: eab806c9-0f73-599d-9790-dc1ce7f0f825
+		backingConfiguration
+			valueColumn: 'account'.'AccountType'
+
+	property 'FavorableSign'
+		dataType: int64
+		lineageTag: 3fa13bb4-6448-50df-b284-a9627b51cd99
+		backingConfiguration
+			valueColumn: 'account'.'FavorableSign'
+
+	property 'MonthlyBaseCents'
+		dataType: int64
+		lineageTag: 6715dd2d-5c92-507b-ae77-8296e2b01831
+		backingConfiguration
+			valueColumn: 'account'.'MonthlyBaseCents'
+
+	property 'L1'
+		dataType: string
+		lineageTag: 2b27e00c-d7c0-5f38-9c5f-1abafce49d4f
+		backingConfiguration
+			valueColumn: 'account'.'L1'
+
+	property 'L1_Description'
+		dataType: string
+		lineageTag: 94de7fa6-d6c4-5070-b3cd-f89541d3b639
+		backingConfiguration
+			valueColumn: 'account'.'L1_Description'
+
+	property 'L2'
+		dataType: string
+		lineageTag: be8a2a02-499f-5b7f-a2bd-35a5b0c842cb
+		backingConfiguration
+			valueColumn: 'account'.'L2'
+
+	property 'L2_Description'
+		dataType: string
+		lineageTag: 269690e2-0ea6-5019-8f61-8a1ea8d43d7c
+		backingConfiguration
+			valueColumn: 'account'.'L2_Description'
+
+	property 'L3'
+		dataType: string
+		lineageTag: 1922a7b4-df40-57b0-8982-34a5605b88bd
+		backingConfiguration
+			valueColumn: 'account'.'L3'
+
+	property 'L3_Description'
+		dataType: string
+		lineageTag: 6b52c7a2-eddb-589f-90be-ca4def8c4c5c
+		backingConfiguration
+			valueColumn: 'account'.'L3_Description'
+
+	property 'L4'
+		dataType: string
+		lineageTag: 65827459-2309-520d-929a-90b66ed261b3
+		backingConfiguration
+			valueColumn: 'account'.'L4'
+
+	property 'L4_Description'
+		dataType: string
+		lineageTag: 1e0435a3-8b49-5196-a2c9-388a37a2cedf
+		backingConfiguration
+			valueColumn: 'account'.'L4_Description'
+
+	property 'L5'
+		dataType: string
+		lineageTag: 3216dac6-a621-5447-bc8f-2414f8804b88
+		backingConfiguration
+			valueColumn: 'account'.'L5'
+
+	property 'L5_Description'
+		dataType: string
+		lineageTag: 4b8a4740-a5df-5468-a4d5-d0f4967ea347
+		backingConfiguration
+			valueColumn: 'account'.'L5_Description'
+
+	property 'L6'
+		dataType: string
+		lineageTag: e8e4b456-f4fa-599e-8a22-33538bebdd50
+		backingConfiguration
+			valueColumn: 'account'.'L6'
+
+	property 'L6_Description'
+		dataType: string
+		lineageTag: b07e81a0-b495-519e-8886-d1da606abc68
+		backingConfiguration
+			valueColumn: 'account'.'L6_Description'
+
+	property 'L7'
+		dataType: string
+		lineageTag: f05ea539-7ec4-58db-8bfa-945472870730
+		backingConfiguration
+			valueColumn: 'account'.'L7'
+
+	property 'L7_Description'
+		dataType: string
+		lineageTag: 13b13583-aadd-5360-a43d-09cbcb75ee99
+		backingConfiguration
+			valueColumn: 'account'.'L7_Description'
+
+	property 'L8'
+		dataType: string
+		lineageTag: c23b9a18-7ded-585c-ba8c-3ff58fd4e278
+		backingConfiguration
+			valueColumn: 'account'.'L8'
+
+	property 'L8_Description'
+		dataType: string
+		lineageTag: 703241b5-cf33-582a-8c09-c4c1680b8f42
+		backingConfiguration
+			valueColumn: 'account'.'L8_Description'

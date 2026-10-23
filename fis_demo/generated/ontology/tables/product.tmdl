@@ -1,0 +1,158 @@
+table 'product'
+
+	column 'ProductLine'
+		dataType: string
+		summarizeBy: none
+		isKey
+		sourceColumn: ProductLine
+
+	column 'ProductLine_Cleaned'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: ProductLine_Cleaned
+
+	column 'Description'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Description
+
+	column 'Description_New'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Description_New
+
+	column 'Segment'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Segment
+
+	column 'DemoWeight'
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: DemoWeight
+
+	column 'L1'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: L1
+
+	column 'L1_Description'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: L1_Description
+
+	column 'L1_Description_New'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: L1_Description_New
+
+	column 'L2'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: L2
+
+	column 'L2_Description'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: L2_Description
+
+	column 'L2_Description_New'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: L2_Description_New
+
+	column 'L3'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: L3
+
+	column 'L3_Description'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: L3_Description
+
+	column 'L3_Description_New'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: L3_Description_New
+
+	column 'L4'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: L4
+
+	column 'L4_Description'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: L4_Description
+
+	column 'L4_Description_New'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: L4_Description_New
+
+	column 'L5'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: L5
+
+	column 'L5_Description'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: L5_Description
+
+	column 'L5_Description_New'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: L5_Description_New
+
+	column 'L6'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: L6
+
+	column 'L6_Description'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: L6_Description
+
+	column 'L6_Description_New'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: L6_Description_New
+
+	column 'L7'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: L7
+
+	column 'L7_Description'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: L7_Description
+
+	column 'L7_Description_New'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: L7_Description_New
+
+	column 'L8'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: L8
+
+	column 'L8_Description'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: L8_Description
+
+	column 'L8_Description_New'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: L8_Description_New
+
+	partition 'product' = entity
+		mode: directLake
+		source
+			entityName: product
+			expressionSource: DL_FIS_Finance

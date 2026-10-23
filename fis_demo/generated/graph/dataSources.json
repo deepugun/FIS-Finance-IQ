@@ -1,0 +1,137 @@
+{
+  "dataSources": [
+    {
+      "name": "account",
+      "type": "DeltaTable",
+      "properties": {
+        "path": "abfss://f00e31f4-f4ab-435c-87f4-fdb5f4b06c4a@onelake.dfs.fabric.microsoft.com/3773425f-3a99-4bda-be3f-acecfcabb0df/Tables/account"
+      }
+    },
+    {
+      "name": "cost_center",
+      "type": "DeltaTable",
+      "properties": {
+        "path": "abfss://f00e31f4-f4ab-435c-87f4-fdb5f4b06c4a@onelake.dfs.fabric.microsoft.com/3773425f-3a99-4bda-be3f-acecfcabb0df/Tables/cost_center"
+      }
+    },
+    {
+      "name": "DIM_DATE",
+      "type": "DeltaTable",
+      "properties": {
+        "path": "abfss://f00e31f4-f4ab-435c-87f4-fdb5f4b06c4a@onelake.dfs.fabric.microsoft.com/3773425f-3a99-4bda-be3f-acecfcabb0df/Tables/dim_date"
+      }
+    },
+    {
+      "name": "product",
+      "type": "DeltaTable",
+      "properties": {
+        "path": "abfss://f00e31f4-f4ab-435c-87f4-fdb5f4b06c4a@onelake.dfs.fabric.microsoft.com/3773425f-3a99-4bda-be3f-acecfcabb0df/Tables/product"
+      }
+    },
+    {
+      "name": "ACTUALS",
+      "type": "DeltaTable",
+      "properties": {
+        "path": "abfss://f00e31f4-f4ab-435c-87f4-fdb5f4b06c4a@onelake.dfs.fabric.microsoft.com/3773425f-3a99-4bda-be3f-acecfcabb0df/Tables/actuals"
+      }
+    },
+    {
+      "name": "FORECAST",
+      "type": "DeltaTable",
+      "properties": {
+        "path": "abfss://f00e31f4-f4ab-435c-87f4-fdb5f4b06c4a@onelake.dfs.fabric.microsoft.com/3773425f-3a99-4bda-be3f-acecfcabb0df/Tables/forecast"
+      }
+    },
+    {
+      "name": "PLAN",
+      "type": "DeltaTable",
+      "properties": {
+        "path": "abfss://f00e31f4-f4ab-435c-87f4-fdb5f4b06c4a@onelake.dfs.fabric.microsoft.com/3773425f-3a99-4bda-be3f-acecfcabb0df/Tables/plan"
+      }
+    },
+    {
+      "name": "ACTUALS_account",
+      "type": "DeltaTable",
+      "properties": {
+        "path": "abfss://f00e31f4-f4ab-435c-87f4-fdb5f4b06c4a@onelake.dfs.fabric.microsoft.com/3773425f-3a99-4bda-be3f-acecfcabb0df/Tables/edge_actuals_account"
+      }
+    },
+    {
+      "name": "ACTUALS_cost_center",
+      "type": "DeltaTable",
+      "properties": {
+        "path": "abfss://f00e31f4-f4ab-435c-87f4-fdb5f4b06c4a@onelake.dfs.fabric.microsoft.com/3773425f-3a99-4bda-be3f-acecfcabb0df/Tables/edge_actuals_cost_center"
+      }
+    },
+    {
+      "name": "ACTUALS_DIM_DATE",
+      "type": "DeltaTable",
+      "properties": {
+        "path": "abfss://f00e31f4-f4ab-435c-87f4-fdb5f4b06c4a@onelake.dfs.fabric.microsoft.com/3773425f-3a99-4bda-be3f-acecfcabb0df/Tables/edge_actuals_dim_date"
+      }
+    },
+    {
+      "name": "ACTUALS_product",
+      "type": "DeltaTable",
+      "properties": {
+        "path": "abfss://f00e31f4-f4ab-435c-87f4-fdb5f4b06c4a@onelake.dfs.fabric.microsoft.com/3773425f-3a99-4bda-be3f-acecfcabb0df/Tables/edge_actuals_product"
+      }
+    },
+    {
+      "name": "FORECAST_account",
+      "type": "DeltaTable",
+      "properties": {
+        "path": "abfss://f00e31f4-f4ab-435c-87f4-fdb5f4b06c4a@onelake.dfs.fabric.microsoft.com/3773425f-3a99-4bda-be3f-acecfcabb0df/Tables/edge_forecast_account"
+      }
+    },
+    {
+      "name": "FORECAST_cost_center",
+      "type": "DeltaTable",
+      "properties": {
+        "path": "abfss://f00e31f4-f4ab-435c-87f4-fdb5f4b06c4a@onelake.dfs.fabric.microsoft.com/3773425f-3a99-4bda-be3f-acecfcabb0df/Tables/edge_forecast_cost_center"
+      }
+    },
+    {
+      "name": "FORECAST_DIM_DATE",
+      "type": "DeltaTable",
+      "properties": {
+        "path": "abfss://f00e31f4-f4ab-435c-87f4-fdb5f4b06c4a@onelake.dfs.fabric.microsoft.com/3773425f-3a99-4bda-be3f-acecfcabb0df/Tables/edge_forecast_dim_date"
+      }
+    },
+    {
+      "name": "FORECAST_product",
+      "type": "DeltaTable",
+      "properties": {
+        "path": "abfss://f00e31f4-f4ab-435c-87f4-fdb5f4b06c4a@onelake.dfs.fabric.microsoft.com/3773425f-3a99-4bda-be3f-acecfcabb0df/Tables/edge_forecast_product"
+      }
+    },
+    {
+      "name": "PLAN_account",
+      "type": "DeltaTable",
+      "properties": {
+        "path": "abfss://f00e31f4-f4ab-435c-87f4-fdb5f4b06c4a@onelake.dfs.fabric.microsoft.com/3773425f-3a99-4bda-be3f-acecfcabb0df/Tables/edge_plan_account"
+      }
+    },
+    {
+      "name": "PLAN_cost_center",
+      "type": "DeltaTable",
+      "properties": {
+        "path": "abfss://f00e31f4-f4ab-435c-87f4-fdb5f4b06c4a@onelake.dfs.fabric.microsoft.com/3773425f-3a99-4bda-be3f-acecfcabb0df/Tables/edge_plan_cost_center"
+      }
+    },
+    {
+      "name": "PLAN_DIM_DATE",
+      "type": "DeltaTable",
+      "properties": {
+        "path": "abfss://f00e31f4-f4ab-435c-87f4-fdb5f4b06c4a@onelake.dfs.fabric.microsoft.com/3773425f-3a99-4bda-be3f-acecfcabb0df/Tables/edge_plan_dim_date"
+      }
+    },
+    {
+      "name": "PLAN_product",
+      "type": "DeltaTable",
+      "properties": {
+        "path": "abfss://f00e31f4-f4ab-435c-87f4-fdb5f4b06c4a@onelake.dfs.fabric.microsoft.com/3773425f-3a99-4bda-be3f-acecfcabb0df/Tables/edge_plan_product"
+      }
+    }
+  ]
+}

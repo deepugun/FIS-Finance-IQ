@@ -1,0 +1,83 @@
+relationship 'ACTUALS to account'
+	fromColumn: 'ACTUALS'.ACCOUNT
+	toColumn: 'account'.Account
+	fromCardinality: many
+	toCardinality: one
+	crossFilteringBehavior: oneDirection
+
+relationship 'ACTUALS to cost_center'
+	fromColumn: 'ACTUALS'.COSTCENTER
+	toColumn: 'cost_center'.CostCenter
+	fromCardinality: many
+	toCardinality: one
+	crossFilteringBehavior: oneDirection
+
+relationship 'ACTUALS to DIM_DATE'
+	fromColumn: 'ACTUALS'.DATE
+	toColumn: 'DIM_DATE'.DATE
+	fromCardinality: many
+	toCardinality: one
+	crossFilteringBehavior: oneDirection
+
+relationship 'ACTUALS to product'
+	fromColumn: 'ACTUALS'.PRODUCTLINE
+	toColumn: 'product'.ProductLine
+	fromCardinality: many
+	toCardinality: one
+	crossFilteringBehavior: oneDirection
+
+relationship 'FORECAST to account'
+	fromColumn: 'FORECAST'.ACCOUNT
+	toColumn: 'account'.Account
+	fromCardinality: many
+	toCardinality: one
+	crossFilteringBehavior: oneDirection
+
+relationship 'FORECAST to cost_center'
+	fromColumn: 'FORECAST'.COSTCENTER
+	toColumn: 'cost_center'.CostCenter
+	fromCardinality: many
+	toCardinality: one
+	crossFilteringBehavior: oneDirection
+
+relationship 'FORECAST to DIM_DATE'
+	fromColumn: 'FORECAST'.DATE
+	toColumn: 'DIM_DATE'.DATE
+	fromCardinality: many
+	toCardinality: one
+	crossFilteringBehavior: oneDirection
+
+relationship 'FORECAST to product'
+	fromColumn: 'FORECAST'.PRODUCTLINE
+	toColumn: 'product'.ProductLine
+	fromCardinality: many
+	toCardinality: one
+	crossFilteringBehavior: oneDirection
+
+relationship 'PLAN to account'
+	fromColumn: 'PLAN'.ACCOUNT
+	toColumn: 'account'.Account
+	fromCardinality: many
+	toCardinality: one
+	crossFilteringBehavior: oneDirection
+
+relationship 'PLAN to cost_center'
+	fromColumn: 'PLAN'.COSTCENTER
+	toColumn: 'cost_center'.CostCenter
+	fromCardinality: many
+	toCardinality: one
+	crossFilteringBehavior: oneDirection
+
+relationship 'PLAN to DIM_DATE'
+	fromColumn: 'PLAN'.DATE
+	toColumn: 'DIM_DATE'.DATE
+	fromCardinality: many
+	toCardinality: one
+	crossFilteringBehavior: oneDirection
+
+relationship 'PLAN to product'
+	fromColumn: 'PLAN'.PRODUCTLINE
+	toColumn: 'product'.ProductLine
+	fromCardinality: many
+	toCardinality: one
+	crossFilteringBehavior: oneDirection

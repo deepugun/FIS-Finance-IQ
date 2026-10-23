@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "card4",
+  "position": {
+    "x": 490,
+    "y": 165,
+    "z": 17,
+    "height": 130,
+    "width": 450,
+    "tabOrder": 17
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ACTUALS"
+                    }
+                  },
+                  "Property": "Favorable Expense Variance Pct YTD"
+                }
+              },
+              "queryRef": "ACTUALS.Favorable Expense Variance Pct YTD",
+              "nativeQueryRef": "Favorable Expense Variance Pct YTD"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

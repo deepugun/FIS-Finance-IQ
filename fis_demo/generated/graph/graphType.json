@@ -1,0 +1,1039 @@
+{
+  "nodeTypes": [
+    {
+      "alias": "account_nodeType",
+      "labels": [
+        "account"
+      ],
+      "primaryKeyProperties": [
+        "Account"
+      ],
+      "properties": [
+        {
+          "name": "Account",
+          "type": "STRING"
+        },
+        {
+          "name": "Description",
+          "type": "STRING"
+        },
+        {
+          "name": "Description_raw",
+          "type": "STRING"
+        },
+        {
+          "name": "AccountType",
+          "type": "STRING"
+        },
+        {
+          "name": "FavorableSign",
+          "type": "INT"
+        },
+        {
+          "name": "MonthlyBaseCents",
+          "type": "INT"
+        },
+        {
+          "name": "L1",
+          "type": "STRING"
+        },
+        {
+          "name": "L1_Description",
+          "type": "STRING"
+        },
+        {
+          "name": "L2",
+          "type": "STRING"
+        },
+        {
+          "name": "L2_Description",
+          "type": "STRING"
+        },
+        {
+          "name": "L3",
+          "type": "STRING"
+        },
+        {
+          "name": "L3_Description",
+          "type": "STRING"
+        },
+        {
+          "name": "L4",
+          "type": "STRING"
+        },
+        {
+          "name": "L4_Description",
+          "type": "STRING"
+        },
+        {
+          "name": "L5",
+          "type": "STRING"
+        },
+        {
+          "name": "L5_Description",
+          "type": "STRING"
+        },
+        {
+          "name": "L6",
+          "type": "STRING"
+        },
+        {
+          "name": "L6_Description",
+          "type": "STRING"
+        },
+        {
+          "name": "L7",
+          "type": "STRING"
+        },
+        {
+          "name": "L7_Description",
+          "type": "STRING"
+        },
+        {
+          "name": "L8",
+          "type": "STRING"
+        },
+        {
+          "name": "L8_Description",
+          "type": "STRING"
+        }
+      ]
+    },
+    {
+      "alias": "cost_center_nodeType",
+      "labels": [
+        "cost_center"
+      ],
+      "primaryKeyProperties": [
+        "CostCenter"
+      ],
+      "properties": [
+        {
+          "name": "CostCenter",
+          "type": "STRING"
+        },
+        {
+          "name": "CostCenter_Cleaned",
+          "type": "STRING"
+        },
+        {
+          "name": "Description",
+          "type": "STRING"
+        },
+        {
+          "name": "Function",
+          "type": "STRING"
+        },
+        {
+          "name": "DemoWeight",
+          "type": "INT"
+        },
+        {
+          "name": "CC_L1",
+          "type": "STRING"
+        },
+        {
+          "name": "CC_L1_Description",
+          "type": "STRING"
+        },
+        {
+          "name": "CC_L1_Description_New",
+          "type": "STRING"
+        },
+        {
+          "name": "CC_L2",
+          "type": "STRING"
+        },
+        {
+          "name": "CC_L2_Description",
+          "type": "STRING"
+        },
+        {
+          "name": "CC_L2_Description_New",
+          "type": "STRING"
+        },
+        {
+          "name": "CC_L3",
+          "type": "STRING"
+        },
+        {
+          "name": "CC_L3_Description",
+          "type": "STRING"
+        },
+        {
+          "name": "CC_L3_Description_New",
+          "type": "STRING"
+        },
+        {
+          "name": "CC_L4",
+          "type": "STRING"
+        },
+        {
+          "name": "CC_L4_Description",
+          "type": "STRING"
+        },
+        {
+          "name": "CC_L4_Description_New",
+          "type": "STRING"
+        }
+      ]
+    },
+    {
+      "alias": "DIM_DATE_nodeType",
+      "labels": [
+        "DIM_DATE"
+      ],
+      "primaryKeyProperties": [
+        "DATE"
+      ],
+      "properties": [
+        {
+          "name": "DATE",
+          "type": "DATETIME"
+        },
+        {
+          "name": "DATE_INTEGER",
+          "type": "INT"
+        },
+        {
+          "name": "DAY_NUMBER",
+          "type": "INT"
+        },
+        {
+          "name": "DAY_OF_WEEK",
+          "type": "INT"
+        },
+        {
+          "name": "DAY_OF_WEEK_LONG",
+          "type": "STRING"
+        },
+        {
+          "name": "DAY_OF_WEEK_SHORT",
+          "type": "STRING"
+        },
+        {
+          "name": "FIRST_DAY_MONTH",
+          "type": "DATETIME"
+        },
+        {
+          "name": "LAST_DAY_MONTH",
+          "type": "DATETIME"
+        },
+        {
+          "name": "MONTH_ID",
+          "type": "INT"
+        },
+        {
+          "name": "MONTH_NAME_LONG",
+          "type": "STRING"
+        },
+        {
+          "name": "MONTH_NAME_SHORT",
+          "type": "STRING"
+        },
+        {
+          "name": "MONTH_YEAR",
+          "type": "STRING"
+        },
+        {
+          "name": "MONTH_YEAR_INTEGER",
+          "type": "INT"
+        },
+        {
+          "name": "MONTHNUMBER",
+          "type": "INT"
+        },
+        {
+          "name": "PY_COMPARE_DATE",
+          "type": "DATETIME"
+        },
+        {
+          "name": "QUARTER",
+          "type": "STRING"
+        },
+        {
+          "name": "QUARTER_ID",
+          "type": "INT"
+        },
+        {
+          "name": "REPORTING_MONTH",
+          "type": "STRING"
+        },
+        {
+          "name": "WEEK_OF_YEAR",
+          "type": "INT"
+        },
+        {
+          "name": "YEAR",
+          "type": "INT"
+        },
+        {
+          "name": "YEAR_MONTH",
+          "type": "STRING"
+        },
+        {
+          "name": "YEAR_MONTH_SHORT",
+          "type": "STRING"
+        },
+        {
+          "name": "YEAR_QUARTER",
+          "type": "STRING"
+        }
+      ]
+    },
+    {
+      "alias": "product_nodeType",
+      "labels": [
+        "product"
+      ],
+      "primaryKeyProperties": [
+        "ProductLine"
+      ],
+      "properties": [
+        {
+          "name": "ProductLine",
+          "type": "STRING"
+        },
+        {
+          "name": "ProductLine_Cleaned",
+          "type": "STRING"
+        },
+        {
+          "name": "Description",
+          "type": "STRING"
+        },
+        {
+          "name": "Description_New",
+          "type": "STRING"
+        },
+        {
+          "name": "Segment",
+          "type": "STRING"
+        },
+        {
+          "name": "DemoWeight",
+          "type": "INT"
+        },
+        {
+          "name": "L1",
+          "type": "STRING"
+        },
+        {
+          "name": "L1_Description",
+          "type": "STRING"
+        },
+        {
+          "name": "L1_Description_New",
+          "type": "STRING"
+        },
+        {
+          "name": "L2",
+          "type": "STRING"
+        },
+        {
+          "name": "L2_Description",
+          "type": "STRING"
+        },
+        {
+          "name": "L2_Description_New",
+          "type": "STRING"
+        },
+        {
+          "name": "L3",
+          "type": "STRING"
+        },
+        {
+          "name": "L3_Description",
+          "type": "STRING"
+        },
+        {
+          "name": "L3_Description_New",
+          "type": "STRING"
+        },
+        {
+          "name": "L4",
+          "type": "STRING"
+        },
+        {
+          "name": "L4_Description",
+          "type": "STRING"
+        },
+        {
+          "name": "L4_Description_New",
+          "type": "STRING"
+        },
+        {
+          "name": "L5",
+          "type": "STRING"
+        },
+        {
+          "name": "L5_Description",
+          "type": "STRING"
+        },
+        {
+          "name": "L5_Description_New",
+          "type": "STRING"
+        },
+        {
+          "name": "L6",
+          "type": "STRING"
+        },
+        {
+          "name": "L6_Description",
+          "type": "STRING"
+        },
+        {
+          "name": "L6_Description_New",
+          "type": "STRING"
+        },
+        {
+          "name": "L7",
+          "type": "STRING"
+        },
+        {
+          "name": "L7_Description",
+          "type": "STRING"
+        },
+        {
+          "name": "L7_Description_New",
+          "type": "STRING"
+        },
+        {
+          "name": "L8",
+          "type": "STRING"
+        },
+        {
+          "name": "L8_Description",
+          "type": "STRING"
+        },
+        {
+          "name": "L8_Description_New",
+          "type": "STRING"
+        }
+      ]
+    },
+    {
+      "alias": "ACTUALS_nodeType",
+      "labels": [
+        "ACTUALS"
+      ],
+      "primaryKeyProperties": [
+        "RecordID"
+      ],
+      "properties": [
+        {
+          "name": "RecordID",
+          "type": "STRING"
+        },
+        {
+          "name": "ACCOUNT",
+          "type": "STRING"
+        },
+        {
+          "name": "Amount",
+          "type": "FLOAT"
+        },
+        {
+          "name": "AmountCents",
+          "type": "INT"
+        },
+        {
+          "name": "CC_PR_AC",
+          "type": "STRING"
+        },
+        {
+          "name": "COSTCENTER",
+          "type": "STRING"
+        },
+        {
+          "name": "COSTCENTER_PRODUCTLINE",
+          "type": "STRING"
+        },
+        {
+          "name": "CURRENCY",
+          "type": "STRING"
+        },
+        {
+          "name": "CUSTOMER",
+          "type": "STRING"
+        },
+        {
+          "name": "DATASOURCE",
+          "type": "STRING"
+        },
+        {
+          "name": "DATE",
+          "type": "DATETIME"
+        },
+        {
+          "name": "ENTITY",
+          "type": "STRING"
+        },
+        {
+          "name": "ICP",
+          "type": "STRING"
+        },
+        {
+          "name": "LOAD_DATE",
+          "type": "DATETIME"
+        },
+        {
+          "name": "LOAD_TIMESTAMP",
+          "type": "DATETIME"
+        },
+        {
+          "name": "LOCATION",
+          "type": "STRING"
+        },
+        {
+          "name": "PERIOD",
+          "type": "INT"
+        },
+        {
+          "name": "PRODUCTLINE",
+          "type": "STRING"
+        },
+        {
+          "name": "QUARTER",
+          "type": "STRING"
+        },
+        {
+          "name": "SCENARIO",
+          "type": "STRING"
+        },
+        {
+          "name": "VERSION",
+          "type": "STRING"
+        },
+        {
+          "name": "VIEW",
+          "type": "STRING"
+        },
+        {
+          "name": "YEAR",
+          "type": "INT"
+        }
+      ]
+    },
+    {
+      "alias": "FORECAST_nodeType",
+      "labels": [
+        "FORECAST"
+      ],
+      "primaryKeyProperties": [
+        "RecordID"
+      ],
+      "properties": [
+        {
+          "name": "RecordID",
+          "type": "STRING"
+        },
+        {
+          "name": "ACCOUNT",
+          "type": "STRING"
+        },
+        {
+          "name": "Amount",
+          "type": "FLOAT"
+        },
+        {
+          "name": "AmountCents",
+          "type": "INT"
+        },
+        {
+          "name": "CC_PR_AC",
+          "type": "STRING"
+        },
+        {
+          "name": "COSTCENTER",
+          "type": "STRING"
+        },
+        {
+          "name": "COSTCENTER_PRODUCTLINE",
+          "type": "STRING"
+        },
+        {
+          "name": "CURRENCY",
+          "type": "STRING"
+        },
+        {
+          "name": "CUSTOMER",
+          "type": "STRING"
+        },
+        {
+          "name": "DATASOURCE",
+          "type": "STRING"
+        },
+        {
+          "name": "DATE",
+          "type": "DATETIME"
+        },
+        {
+          "name": "ENTITY",
+          "type": "STRING"
+        },
+        {
+          "name": "ICP",
+          "type": "STRING"
+        },
+        {
+          "name": "LOAD_DATE",
+          "type": "DATETIME"
+        },
+        {
+          "name": "LOAD_TIMESTAMP",
+          "type": "DATETIME"
+        },
+        {
+          "name": "LOCATION",
+          "type": "STRING"
+        },
+        {
+          "name": "PERIOD",
+          "type": "INT"
+        },
+        {
+          "name": "PRODUCTLINE",
+          "type": "STRING"
+        },
+        {
+          "name": "QUARTER",
+          "type": "STRING"
+        },
+        {
+          "name": "SCENARIO",
+          "type": "STRING"
+        },
+        {
+          "name": "VERSION",
+          "type": "STRING"
+        },
+        {
+          "name": "VIEW",
+          "type": "STRING"
+        },
+        {
+          "name": "YEAR",
+          "type": "INT"
+        }
+      ]
+    },
+    {
+      "alias": "PLAN_nodeType",
+      "labels": [
+        "PLAN"
+      ],
+      "primaryKeyProperties": [
+        "RecordID"
+      ],
+      "properties": [
+        {
+          "name": "RecordID",
+          "type": "STRING"
+        },
+        {
+          "name": "ACCOUNT",
+          "type": "STRING"
+        },
+        {
+          "name": "Amount",
+          "type": "FLOAT"
+        },
+        {
+          "name": "AmountCents",
+          "type": "INT"
+        },
+        {
+          "name": "CC_PR_AC",
+          "type": "STRING"
+        },
+        {
+          "name": "COSTCENTER",
+          "type": "STRING"
+        },
+        {
+          "name": "COSTCENTER_PRODUCTLINE",
+          "type": "STRING"
+        },
+        {
+          "name": "CURRENCY",
+          "type": "STRING"
+        },
+        {
+          "name": "CUSTOMER",
+          "type": "STRING"
+        },
+        {
+          "name": "DATASOURCE",
+          "type": "STRING"
+        },
+        {
+          "name": "DATE",
+          "type": "DATETIME"
+        },
+        {
+          "name": "ENTITY",
+          "type": "STRING"
+        },
+        {
+          "name": "ICP",
+          "type": "STRING"
+        },
+        {
+          "name": "LOAD_DATE",
+          "type": "DATETIME"
+        },
+        {
+          "name": "LOAD_TIMESTAMP",
+          "type": "DATETIME"
+        },
+        {
+          "name": "LOCATION",
+          "type": "STRING"
+        },
+        {
+          "name": "PERIOD",
+          "type": "INT"
+        },
+        {
+          "name": "PRODUCTLINE",
+          "type": "STRING"
+        },
+        {
+          "name": "QUARTER",
+          "type": "STRING"
+        },
+        {
+          "name": "SCENARIO",
+          "type": "STRING"
+        },
+        {
+          "name": "VERSION",
+          "type": "STRING"
+        },
+        {
+          "name": "VIEW",
+          "type": "STRING"
+        },
+        {
+          "name": "YEAR",
+          "type": "INT"
+        }
+      ]
+    }
+  ],
+  "edgeTypes": [
+    {
+      "alias": "ACTUALS_account",
+      "labels": [
+        "ACTUALS_account"
+      ],
+      "sourceNodeType": {
+        "alias": "ACTUALS_nodeType"
+      },
+      "destinationNodeType": {
+        "alias": "account_nodeType"
+      },
+      "properties": [
+        {
+          "name": "EdgeId",
+          "type": "STRING"
+        },
+        {
+          "name": "SourceId",
+          "type": "STRING"
+        },
+        {
+          "name": "TargetId",
+          "type": "STRING"
+        }
+      ]
+    },
+    {
+      "alias": "ACTUALS_cost_center",
+      "labels": [
+        "ACTUALS_cost_center"
+      ],
+      "sourceNodeType": {
+        "alias": "ACTUALS_nodeType"
+      },
+      "destinationNodeType": {
+        "alias": "cost_center_nodeType"
+      },
+      "properties": [
+        {
+          "name": "EdgeId",
+          "type": "STRING"
+        },
+        {
+          "name": "SourceId",
+          "type": "STRING"
+        },
+        {
+          "name": "TargetId",
+          "type": "STRING"
+        }
+      ]
+    },
+    {
+      "alias": "ACTUALS_DIM_DATE",
+      "labels": [
+        "ACTUALS_DIM_DATE"
+      ],
+      "sourceNodeType": {
+        "alias": "ACTUALS_nodeType"
+      },
+      "destinationNodeType": {
+        "alias": "DIM_DATE_nodeType"
+      },
+      "properties": [
+        {
+          "name": "EdgeId",
+          "type": "STRING"
+        },
+        {
+          "name": "SourceId",
+          "type": "STRING"
+        },
+        {
+          "name": "TargetId",
+          "type": "DATETIME"
+        }
+      ]
+    },
+    {
+      "alias": "ACTUALS_product",
+      "labels": [
+        "ACTUALS_product"
+      ],
+      "sourceNodeType": {
+        "alias": "ACTUALS_nodeType"
+      },
+      "destinationNodeType": {
+        "alias": "product_nodeType"
+      },
+      "properties": [
+        {
+          "name": "EdgeId",
+          "type": "STRING"
+        },
+        {
+          "name": "SourceId",
+          "type": "STRING"
+        },
+        {
+          "name": "TargetId",
+          "type": "STRING"
+        }
+      ]
+    },
+    {
+      "alias": "FORECAST_account",
+      "labels": [
+        "FORECAST_account"
+      ],
+      "sourceNodeType": {
+        "alias": "FORECAST_nodeType"
+      },
+      "destinationNodeType": {
+        "alias": "account_nodeType"
+      },
+      "properties": [
+        {
+          "name": "EdgeId",
+          "type": "STRING"
+        },
+        {
+          "name": "SourceId",
+          "type": "STRING"
+        },
+        {
+          "name": "TargetId",
+          "type": "STRING"
+        }
+      ]
+    },
+    {
+      "alias": "FORECAST_cost_center",
+      "labels": [
+        "FORECAST_cost_center"
+      ],
+      "sourceNodeType": {
+        "alias": "FORECAST_nodeType"
+      },
+      "destinationNodeType": {
+        "alias": "cost_center_nodeType"
+      },
+      "properties": [
+        {
+          "name": "EdgeId",
+          "type": "STRING"
+        },
+        {
+          "name": "SourceId",
+          "type": "STRING"
+        },
+        {
+          "name": "TargetId",
+          "type": "STRING"
+        }
+      ]
+    },
+    {
+      "alias": "FORECAST_DIM_DATE",
+      "labels": [
+        "FORECAST_DIM_DATE"
+      ],
+      "sourceNodeType": {
+        "alias": "FORECAST_nodeType"
+      },
+      "destinationNodeType": {
+        "alias": "DIM_DATE_nodeType"
+      },
+      "properties": [
+        {
+          "name": "EdgeId",
+          "type": "STRING"
+        },
+        {
+          "name": "SourceId",
+          "type": "STRING"
+        },
+        {
+          "name": "TargetId",
+          "type": "DATETIME"
+        }
+      ]
+    },
+    {
+      "alias": "FORECAST_product",
+      "labels": [
+        "FORECAST_product"
+      ],
+      "sourceNodeType": {
+        "alias": "FORECAST_nodeType"
+      },
+      "destinationNodeType": {
+        "alias": "product_nodeType"
+      },
+      "properties": [
+        {
+          "name": "EdgeId",
+          "type": "STRING"
+        },
+        {
+          "name": "SourceId",
+          "type": "STRING"
+        },
+        {
+          "name": "TargetId",
+          "type": "STRING"
+        }
+      ]
+    },
+    {
+      "alias": "PLAN_account",
+      "labels": [
+        "PLAN_account"
+      ],
+      "sourceNodeType": {
+        "alias": "PLAN_nodeType"
+      },
+      "destinationNodeType": {
+        "alias": "account_nodeType"
+      },
+      "properties": [
+        {
+          "name": "EdgeId",
+          "type": "STRING"
+        },
+        {
+          "name": "SourceId",
+          "type": "STRING"
+        },
+        {
+          "name": "TargetId",
+          "type": "STRING"
+        }
+      ]
+    },
+    {
+      "alias": "PLAN_cost_center",
+      "labels": [
+        "PLAN_cost_center"
+      ],
+      "sourceNodeType": {
+        "alias": "PLAN_nodeType"
+      },
+      "destinationNodeType": {
+        "alias": "cost_center_nodeType"
+      },
+      "properties": [
+        {
+          "name": "EdgeId",
+          "type": "STRING"
+        },
+        {
+          "name": "SourceId",
+          "type": "STRING"
+        },
+        {
+          "name": "TargetId",
+          "type": "STRING"
+        }
+      ]
+    },
+    {
+      "alias": "PLAN_DIM_DATE",
+      "labels": [
+        "PLAN_DIM_DATE"
+      ],
+      "sourceNodeType": {
+        "alias": "PLAN_nodeType"
+      },
+      "destinationNodeType": {
+        "alias": "DIM_DATE_nodeType"
+      },
+      "properties": [
+        {
+          "name": "EdgeId",
+          "type": "STRING"
+        },
+        {
+          "name": "SourceId",
+          "type": "STRING"
+        },
+        {
+          "name": "TargetId",
+          "type": "DATETIME"
+        }
+      ]
+    },
+    {
+      "alias": "PLAN_product",
+      "labels": [
+        "PLAN_product"
+      ],
+      "sourceNodeType": {
+        "alias": "PLAN_nodeType"
+      },
+      "destinationNodeType": {
+        "alias": "product_nodeType"
+      },
+      "properties": [
+        {
+          "name": "EdgeId",
+          "type": "STRING"
+        },
+        {
+          "name": "SourceId",
+          "type": "STRING"
+        },
+        {
+          "name": "TargetId",
+          "type": "STRING"
+        }
+      ]
+    }
+  ]
+}

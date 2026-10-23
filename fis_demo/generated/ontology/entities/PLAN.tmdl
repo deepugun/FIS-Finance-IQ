@@ -1,0 +1,142 @@
+entity 'PLAN'
+	lineageTag: b647e9f3-39f1-51f0-a931-4777afaa7609
+	backingTable: 'PLAN'
+	keyProperty: RecordID
+
+	property 'RecordID'
+		dataType: string
+		lineageTag: 8fd2cc11-7014-5a74-84b0-499f48b1a97a
+		backingConfiguration
+			valueColumn: 'PLAN'.'RecordID'
+
+	property 'ACCOUNT'
+		dataType: string
+		lineageTag: f0256a78-bac0-5d3e-b814-d37ae7aac7b6
+		backingConfiguration
+			valueColumn: 'PLAN'.'ACCOUNT'
+
+	property 'Amount'
+		dataType: decimal
+		lineageTag: f01c4070-3edd-585a-a95d-ec7f3b18a7d4
+		backingConfiguration
+			valueColumn: 'PLAN'.'Amount'
+
+	property 'AmountCents'
+		dataType: int64
+		lineageTag: d2faf926-e064-5f9c-a211-640349f1fd45
+		backingConfiguration
+			valueColumn: 'PLAN'.'AmountCents'
+
+	property 'CC_PR_AC'
+		dataType: string
+		lineageTag: d97bbd20-db9f-5321-b0ea-e4988c963ab5
+		backingConfiguration
+			valueColumn: 'PLAN'.'CC_PR_AC'
+
+	property 'COSTCENTER'
+		dataType: string
+		lineageTag: 9082dec9-207d-5fdd-be7e-8134c3b22343
+		backingConfiguration
+			valueColumn: 'PLAN'.'COSTCENTER'
+
+	property 'COSTCENTER_PRODUCTLINE'
+		dataType: string
+		lineageTag: 8330124e-b5e4-50be-b8cc-26fea7fd3929
+		backingConfiguration
+			valueColumn: 'PLAN'.'COSTCENTER_PRODUCTLINE'
+
+	property 'CURRENCY'
+		dataType: string
+		lineageTag: 1ea9a195-7077-5c0f-b5ed-8d5641f49635
+		backingConfiguration
+			valueColumn: 'PLAN'.'CURRENCY'
+
+	property 'CUSTOMER'
+		dataType: string
+		lineageTag: 9cebd7f5-b869-55f2-b7e3-eadb6caf3ce1
+		backingConfiguration
+			valueColumn: 'PLAN'.'CUSTOMER'
+
+	property 'DATASOURCE'
+		dataType: string
+		lineageTag: 2acd79e6-8bcb-5be8-8b87-5d591b2864e3
+		backingConfiguration
+			valueColumn: 'PLAN'.'DATASOURCE'
+
+	property 'DATE'
+		dataType: dateTime
+		lineageTag: dd7c9f6d-a86f-5e63-91bc-ed5a0b0e241f
+		backingConfiguration
+			valueColumn: 'PLAN'.'DATE'
+
+	property 'ENTITY'
+		dataType: string
+		lineageTag: c308e981-ca4b-53a0-a252-13ec6d26c490
+		backingConfiguration
+			valueColumn: 'PLAN'.'ENTITY'
+
+	property 'ICP'
+		dataType: string
+		lineageTag: b15e0b59-1f63-53a9-99d8-9e197ee759a3
+		backingConfiguration
+			valueColumn: 'PLAN'.'ICP'
+
+	property 'LOAD_DATE'
+		dataType: dateTime
+		lineageTag: 79899ae6-16d0-5daf-9b11-c0e2d895ed81
+		backingConfiguration
+			valueColumn: 'PLAN'.'LOAD_DATE'
+
+	property 'LOAD_TIMESTAMP'
+		dataType: dateTime
+		lineageTag: c15d1fc2-e840-5ece-9cf9-56d67e57dc65
+		backingConfiguration
+			valueColumn: 'PLAN'.'LOAD_TIMESTAMP'
+
+	property 'LOCATION'
+		dataType: string
+		lineageTag: 5d4da3b8-a011-59fc-9c59-b08441492530
+		backingConfiguration
+			valueColumn: 'PLAN'.'LOCATION'
+
+	property 'PERIOD'
+		dataType: int64
+		lineageTag: 48c819d9-08fd-5d29-b97d-fe66b79f7392
+		backingConfiguration
+			valueColumn: 'PLAN'.'PERIOD'
+
+	property 'PRODUCTLINE'
+		dataType: string
+		lineageTag: 43fd5f1d-7ea8-5703-8fc2-ba02baf225e5
+		backingConfiguration
+			valueColumn: 'PLAN'.'PRODUCTLINE'
+
+	property 'QUARTER'
+		dataType: string
+		lineageTag: 62c17b1a-0372-55fc-814a-65d97aa1886f
+		backingConfiguration
+			valueColumn: 'PLAN'.'QUARTER'
+
+	property 'SCENARIO'
+		dataType: string
+		lineageTag: b70e6010-1049-5b1d-8395-277a29415646
+		backingConfiguration
+			valueColumn: 'PLAN'.'SCENARIO'
+
+	property 'VERSION'
+		dataType: string
+		lineageTag: 1ea9d101-864b-5c02-96a7-079a367d5d81
+		backingConfiguration
+			valueColumn: 'PLAN'.'VERSION'
+
+	property 'VIEW'
+		dataType: string
+		lineageTag: bd29b071-09e5-5651-91e2-7c8eeea887b9
+		backingConfiguration
+			valueColumn: 'PLAN'.'VIEW'
+
+	property 'YEAR'
+		dataType: int64
+		lineageTag: 2507f3d1-8b57-5066-8ec5-a75d7afecac3
+		backingConfiguration
+			valueColumn: 'PLAN'.'YEAR'

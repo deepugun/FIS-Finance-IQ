@@ -1,0 +1,999 @@
+{
+  "nodeTables": [
+    {
+      "id": "b86216f6-8a8d-56a8-8e06-5385d6fb8a6a",
+      "nodeTypeAlias": "account_nodeType",
+      "dataSourceName": "account",
+      "propertyMappings": [
+        {
+          "propertyName": "Account",
+          "sourceColumn": "Account"
+        },
+        {
+          "propertyName": "Description",
+          "sourceColumn": "Description"
+        },
+        {
+          "propertyName": "Description_raw",
+          "sourceColumn": "Description_raw"
+        },
+        {
+          "propertyName": "AccountType",
+          "sourceColumn": "AccountType"
+        },
+        {
+          "propertyName": "FavorableSign",
+          "sourceColumn": "FavorableSign"
+        },
+        {
+          "propertyName": "MonthlyBaseCents",
+          "sourceColumn": "MonthlyBaseCents"
+        },
+        {
+          "propertyName": "L1",
+          "sourceColumn": "L1"
+        },
+        {
+          "propertyName": "L1_Description",
+          "sourceColumn": "L1_Description"
+        },
+        {
+          "propertyName": "L2",
+          "sourceColumn": "L2"
+        },
+        {
+          "propertyName": "L2_Description",
+          "sourceColumn": "L2_Description"
+        },
+        {
+          "propertyName": "L3",
+          "sourceColumn": "L3"
+        },
+        {
+          "propertyName": "L3_Description",
+          "sourceColumn": "L3_Description"
+        },
+        {
+          "propertyName": "L4",
+          "sourceColumn": "L4"
+        },
+        {
+          "propertyName": "L4_Description",
+          "sourceColumn": "L4_Description"
+        },
+        {
+          "propertyName": "L5",
+          "sourceColumn": "L5"
+        },
+        {
+          "propertyName": "L5_Description",
+          "sourceColumn": "L5_Description"
+        },
+        {
+          "propertyName": "L6",
+          "sourceColumn": "L6"
+        },
+        {
+          "propertyName": "L6_Description",
+          "sourceColumn": "L6_Description"
+        },
+        {
+          "propertyName": "L7",
+          "sourceColumn": "L7"
+        },
+        {
+          "propertyName": "L7_Description",
+          "sourceColumn": "L7_Description"
+        },
+        {
+          "propertyName": "L8",
+          "sourceColumn": "L8"
+        },
+        {
+          "propertyName": "L8_Description",
+          "sourceColumn": "L8_Description"
+        }
+      ]
+    },
+    {
+      "id": "b635e8bf-4d7d-589d-bceb-ab088f56bfbd",
+      "nodeTypeAlias": "cost_center_nodeType",
+      "dataSourceName": "cost_center",
+      "propertyMappings": [
+        {
+          "propertyName": "CostCenter",
+          "sourceColumn": "CostCenter"
+        },
+        {
+          "propertyName": "CostCenter_Cleaned",
+          "sourceColumn": "CostCenter_Cleaned"
+        },
+        {
+          "propertyName": "Description",
+          "sourceColumn": "Description"
+        },
+        {
+          "propertyName": "Function",
+          "sourceColumn": "Function"
+        },
+        {
+          "propertyName": "DemoWeight",
+          "sourceColumn": "DemoWeight"
+        },
+        {
+          "propertyName": "CC_L1",
+          "sourceColumn": "CC_L1"
+        },
+        {
+          "propertyName": "CC_L1_Description",
+          "sourceColumn": "CC_L1_Description"
+        },
+        {
+          "propertyName": "CC_L1_Description_New",
+          "sourceColumn": "CC_L1_Description_New"
+        },
+        {
+          "propertyName": "CC_L2",
+          "sourceColumn": "CC_L2"
+        },
+        {
+          "propertyName": "CC_L2_Description",
+          "sourceColumn": "CC_L2_Description"
+        },
+        {
+          "propertyName": "CC_L2_Description_New",
+          "sourceColumn": "CC_L2_Description_New"
+        },
+        {
+          "propertyName": "CC_L3",
+          "sourceColumn": "CC_L3"
+        },
+        {
+          "propertyName": "CC_L3_Description",
+          "sourceColumn": "CC_L3_Description"
+        },
+        {
+          "propertyName": "CC_L3_Description_New",
+          "sourceColumn": "CC_L3_Description_New"
+        },
+        {
+          "propertyName": "CC_L4",
+          "sourceColumn": "CC_L4"
+        },
+        {
+          "propertyName": "CC_L4_Description",
+          "sourceColumn": "CC_L4_Description"
+        },
+        {
+          "propertyName": "CC_L4_Description_New",
+          "sourceColumn": "CC_L4_Description_New"
+        }
+      ]
+    },
+    {
+      "id": "750e3b86-5eb2-5833-afe3-2dcef54c6a9f",
+      "nodeTypeAlias": "DIM_DATE_nodeType",
+      "dataSourceName": "DIM_DATE",
+      "propertyMappings": [
+        {
+          "propertyName": "DATE",
+          "sourceColumn": "DATE"
+        },
+        {
+          "propertyName": "DATE_INTEGER",
+          "sourceColumn": "DATE_INTEGER"
+        },
+        {
+          "propertyName": "DAY_NUMBER",
+          "sourceColumn": "DAY_NUMBER"
+        },
+        {
+          "propertyName": "DAY_OF_WEEK",
+          "sourceColumn": "DAY_OF_WEEK"
+        },
+        {
+          "propertyName": "DAY_OF_WEEK_LONG",
+          "sourceColumn": "DAY_OF_WEEK_LONG"
+        },
+        {
+          "propertyName": "DAY_OF_WEEK_SHORT",
+          "sourceColumn": "DAY_OF_WEEK_SHORT"
+        },
+        {
+          "propertyName": "FIRST_DAY_MONTH",
+          "sourceColumn": "FIRST_DAY_MONTH"
+        },
+        {
+          "propertyName": "LAST_DAY_MONTH",
+          "sourceColumn": "LAST_DAY_MONTH"
+        },
+        {
+          "propertyName": "MONTH_ID",
+          "sourceColumn": "MONTH_ID"
+        },
+        {
+          "propertyName": "MONTH_NAME_LONG",
+          "sourceColumn": "MONTH_NAME_LONG"
+        },
+        {
+          "propertyName": "MONTH_NAME_SHORT",
+          "sourceColumn": "MONTH_NAME_SHORT"
+        },
+        {
+          "propertyName": "MONTH_YEAR",
+          "sourceColumn": "MONTH_YEAR"
+        },
+        {
+          "propertyName": "MONTH_YEAR_INTEGER",
+          "sourceColumn": "MONTH_YEAR_INTEGER"
+        },
+        {
+          "propertyName": "MONTHNUMBER",
+          "sourceColumn": "MONTHNUMBER"
+        },
+        {
+          "propertyName": "PY_COMPARE_DATE",
+          "sourceColumn": "PY_COMPARE_DATE"
+        },
+        {
+          "propertyName": "QUARTER",
+          "sourceColumn": "QUARTER"
+        },
+        {
+          "propertyName": "QUARTER_ID",
+          "sourceColumn": "QUARTER_ID"
+        },
+        {
+          "propertyName": "REPORTING_MONTH",
+          "sourceColumn": "REPORTING_MONTH"
+        },
+        {
+          "propertyName": "WEEK_OF_YEAR",
+          "sourceColumn": "WEEK_OF_YEAR"
+        },
+        {
+          "propertyName": "YEAR",
+          "sourceColumn": "YEAR"
+        },
+        {
+          "propertyName": "YEAR_MONTH",
+          "sourceColumn": "YEAR_MONTH"
+        },
+        {
+          "propertyName": "YEAR_MONTH_SHORT",
+          "sourceColumn": "YEAR_MONTH_SHORT"
+        },
+        {
+          "propertyName": "YEAR_QUARTER",
+          "sourceColumn": "YEAR_QUARTER"
+        }
+      ]
+    },
+    {
+      "id": "7797717e-acd8-5451-aaa8-4f507d4a5d98",
+      "nodeTypeAlias": "product_nodeType",
+      "dataSourceName": "product",
+      "propertyMappings": [
+        {
+          "propertyName": "ProductLine",
+          "sourceColumn": "ProductLine"
+        },
+        {
+          "propertyName": "ProductLine_Cleaned",
+          "sourceColumn": "ProductLine_Cleaned"
+        },
+        {
+          "propertyName": "Description",
+          "sourceColumn": "Description"
+        },
+        {
+          "propertyName": "Description_New",
+          "sourceColumn": "Description_New"
+        },
+        {
+          "propertyName": "Segment",
+          "sourceColumn": "Segment"
+        },
+        {
+          "propertyName": "DemoWeight",
+          "sourceColumn": "DemoWeight"
+        },
+        {
+          "propertyName": "L1",
+          "sourceColumn": "L1"
+        },
+        {
+          "propertyName": "L1_Description",
+          "sourceColumn": "L1_Description"
+        },
+        {
+          "propertyName": "L1_Description_New",
+          "sourceColumn": "L1_Description_New"
+        },
+        {
+          "propertyName": "L2",
+          "sourceColumn": "L2"
+        },
+        {
+          "propertyName": "L2_Description",
+          "sourceColumn": "L2_Description"
+        },
+        {
+          "propertyName": "L2_Description_New",
+          "sourceColumn": "L2_Description_New"
+        },
+        {
+          "propertyName": "L3",
+          "sourceColumn": "L3"
+        },
+        {
+          "propertyName": "L3_Description",
+          "sourceColumn": "L3_Description"
+        },
+        {
+          "propertyName": "L3_Description_New",
+          "sourceColumn": "L3_Description_New"
+        },
+        {
+          "propertyName": "L4",
+          "sourceColumn": "L4"
+        },
+        {
+          "propertyName": "L4_Description",
+          "sourceColumn": "L4_Description"
+        },
+        {
+          "propertyName": "L4_Description_New",
+          "sourceColumn": "L4_Description_New"
+        },
+        {
+          "propertyName": "L5",
+          "sourceColumn": "L5"
+        },
+        {
+          "propertyName": "L5_Description",
+          "sourceColumn": "L5_Description"
+        },
+        {
+          "propertyName": "L5_Description_New",
+          "sourceColumn": "L5_Description_New"
+        },
+        {
+          "propertyName": "L6",
+          "sourceColumn": "L6"
+        },
+        {
+          "propertyName": "L6_Description",
+          "sourceColumn": "L6_Description"
+        },
+        {
+          "propertyName": "L6_Description_New",
+          "sourceColumn": "L6_Description_New"
+        },
+        {
+          "propertyName": "L7",
+          "sourceColumn": "L7"
+        },
+        {
+          "propertyName": "L7_Description",
+          "sourceColumn": "L7_Description"
+        },
+        {
+          "propertyName": "L7_Description_New",
+          "sourceColumn": "L7_Description_New"
+        },
+        {
+          "propertyName": "L8",
+          "sourceColumn": "L8"
+        },
+        {
+          "propertyName": "L8_Description",
+          "sourceColumn": "L8_Description"
+        },
+        {
+          "propertyName": "L8_Description_New",
+          "sourceColumn": "L8_Description_New"
+        }
+      ]
+    },
+    {
+      "id": "126fce6f-866b-5070-bafb-1c3253ee455d",
+      "nodeTypeAlias": "ACTUALS_nodeType",
+      "dataSourceName": "ACTUALS",
+      "propertyMappings": [
+        {
+          "propertyName": "RecordID",
+          "sourceColumn": "RecordID"
+        },
+        {
+          "propertyName": "ACCOUNT",
+          "sourceColumn": "ACCOUNT"
+        },
+        {
+          "propertyName": "Amount",
+          "sourceColumn": "Amount"
+        },
+        {
+          "propertyName": "AmountCents",
+          "sourceColumn": "AmountCents"
+        },
+        {
+          "propertyName": "CC_PR_AC",
+          "sourceColumn": "CC_PR_AC"
+        },
+        {
+          "propertyName": "COSTCENTER",
+          "sourceColumn": "COSTCENTER"
+        },
+        {
+          "propertyName": "COSTCENTER_PRODUCTLINE",
+          "sourceColumn": "COSTCENTER_PRODUCTLINE"
+        },
+        {
+          "propertyName": "CURRENCY",
+          "sourceColumn": "CURRENCY"
+        },
+        {
+          "propertyName": "CUSTOMER",
+          "sourceColumn": "CUSTOMER"
+        },
+        {
+          "propertyName": "DATASOURCE",
+          "sourceColumn": "DATASOURCE"
+        },
+        {
+          "propertyName": "DATE",
+          "sourceColumn": "DATE"
+        },
+        {
+          "propertyName": "ENTITY",
+          "sourceColumn": "ENTITY"
+        },
+        {
+          "propertyName": "ICP",
+          "sourceColumn": "ICP"
+        },
+        {
+          "propertyName": "LOAD_DATE",
+          "sourceColumn": "LOAD_DATE"
+        },
+        {
+          "propertyName": "LOAD_TIMESTAMP",
+          "sourceColumn": "LOAD_TIMESTAMP"
+        },
+        {
+          "propertyName": "LOCATION",
+          "sourceColumn": "LOCATION"
+        },
+        {
+          "propertyName": "PERIOD",
+          "sourceColumn": "PERIOD"
+        },
+        {
+          "propertyName": "PRODUCTLINE",
+          "sourceColumn": "PRODUCTLINE"
+        },
+        {
+          "propertyName": "QUARTER",
+          "sourceColumn": "QUARTER"
+        },
+        {
+          "propertyName": "SCENARIO",
+          "sourceColumn": "SCENARIO"
+        },
+        {
+          "propertyName": "VERSION",
+          "sourceColumn": "VERSION"
+        },
+        {
+          "propertyName": "VIEW",
+          "sourceColumn": "VIEW"
+        },
+        {
+          "propertyName": "YEAR",
+          "sourceColumn": "YEAR"
+        }
+      ]
+    },
+    {
+      "id": "c9911027-420b-5ff4-9858-c7ba658f7ad2",
+      "nodeTypeAlias": "FORECAST_nodeType",
+      "dataSourceName": "FORECAST",
+      "propertyMappings": [
+        {
+          "propertyName": "RecordID",
+          "sourceColumn": "RecordID"
+        },
+        {
+          "propertyName": "ACCOUNT",
+          "sourceColumn": "ACCOUNT"
+        },
+        {
+          "propertyName": "Amount",
+          "sourceColumn": "Amount"
+        },
+        {
+          "propertyName": "AmountCents",
+          "sourceColumn": "AmountCents"
+        },
+        {
+          "propertyName": "CC_PR_AC",
+          "sourceColumn": "CC_PR_AC"
+        },
+        {
+          "propertyName": "COSTCENTER",
+          "sourceColumn": "COSTCENTER"
+        },
+        {
+          "propertyName": "COSTCENTER_PRODUCTLINE",
+          "sourceColumn": "COSTCENTER_PRODUCTLINE"
+        },
+        {
+          "propertyName": "CURRENCY",
+          "sourceColumn": "CURRENCY"
+        },
+        {
+          "propertyName": "CUSTOMER",
+          "sourceColumn": "CUSTOMER"
+        },
+        {
+          "propertyName": "DATASOURCE",
+          "sourceColumn": "DATASOURCE"
+        },
+        {
+          "propertyName": "DATE",
+          "sourceColumn": "DATE"
+        },
+        {
+          "propertyName": "ENTITY",
+          "sourceColumn": "ENTITY"
+        },
+        {
+          "propertyName": "ICP",
+          "sourceColumn": "ICP"
+        },
+        {
+          "propertyName": "LOAD_DATE",
+          "sourceColumn": "LOAD_DATE"
+        },
+        {
+          "propertyName": "LOAD_TIMESTAMP",
+          "sourceColumn": "LOAD_TIMESTAMP"
+        },
+        {
+          "propertyName": "LOCATION",
+          "sourceColumn": "LOCATION"
+        },
+        {
+          "propertyName": "PERIOD",
+          "sourceColumn": "PERIOD"
+        },
+        {
+          "propertyName": "PRODUCTLINE",
+          "sourceColumn": "PRODUCTLINE"
+        },
+        {
+          "propertyName": "QUARTER",
+          "sourceColumn": "QUARTER"
+        },
+        {
+          "propertyName": "SCENARIO",
+          "sourceColumn": "SCENARIO"
+        },
+        {
+          "propertyName": "VERSION",
+          "sourceColumn": "VERSION"
+        },
+        {
+          "propertyName": "VIEW",
+          "sourceColumn": "VIEW"
+        },
+        {
+          "propertyName": "YEAR",
+          "sourceColumn": "YEAR"
+        }
+      ]
+    },
+    {
+      "id": "940f9dff-6866-5c62-b19b-436a2e4bbd17",
+      "nodeTypeAlias": "PLAN_nodeType",
+      "dataSourceName": "PLAN",
+      "propertyMappings": [
+        {
+          "propertyName": "RecordID",
+          "sourceColumn": "RecordID"
+        },
+        {
+          "propertyName": "ACCOUNT",
+          "sourceColumn": "ACCOUNT"
+        },
+        {
+          "propertyName": "Amount",
+          "sourceColumn": "Amount"
+        },
+        {
+          "propertyName": "AmountCents",
+          "sourceColumn": "AmountCents"
+        },
+        {
+          "propertyName": "CC_PR_AC",
+          "sourceColumn": "CC_PR_AC"
+        },
+        {
+          "propertyName": "COSTCENTER",
+          "sourceColumn": "COSTCENTER"
+        },
+        {
+          "propertyName": "COSTCENTER_PRODUCTLINE",
+          "sourceColumn": "COSTCENTER_PRODUCTLINE"
+        },
+        {
+          "propertyName": "CURRENCY",
+          "sourceColumn": "CURRENCY"
+        },
+        {
+          "propertyName": "CUSTOMER",
+          "sourceColumn": "CUSTOMER"
+        },
+        {
+          "propertyName": "DATASOURCE",
+          "sourceColumn": "DATASOURCE"
+        },
+        {
+          "propertyName": "DATE",
+          "sourceColumn": "DATE"
+        },
+        {
+          "propertyName": "ENTITY",
+          "sourceColumn": "ENTITY"
+        },
+        {
+          "propertyName": "ICP",
+          "sourceColumn": "ICP"
+        },
+        {
+          "propertyName": "LOAD_DATE",
+          "sourceColumn": "LOAD_DATE"
+        },
+        {
+          "propertyName": "LOAD_TIMESTAMP",
+          "sourceColumn": "LOAD_TIMESTAMP"
+        },
+        {
+          "propertyName": "LOCATION",
+          "sourceColumn": "LOCATION"
+        },
+        {
+          "propertyName": "PERIOD",
+          "sourceColumn": "PERIOD"
+        },
+        {
+          "propertyName": "PRODUCTLINE",
+          "sourceColumn": "PRODUCTLINE"
+        },
+        {
+          "propertyName": "QUARTER",
+          "sourceColumn": "QUARTER"
+        },
+        {
+          "propertyName": "SCENARIO",
+          "sourceColumn": "SCENARIO"
+        },
+        {
+          "propertyName": "VERSION",
+          "sourceColumn": "VERSION"
+        },
+        {
+          "propertyName": "VIEW",
+          "sourceColumn": "VIEW"
+        },
+        {
+          "propertyName": "YEAR",
+          "sourceColumn": "YEAR"
+        }
+      ]
+    }
+  ],
+  "edgeTables": [
+    {
+      "id": "0a701eea-8693-593b-9c9b-e9951448bcf9",
+      "edgeTypeAlias": "ACTUALS_account",
+      "dataSourceName": "ACTUALS_account",
+      "sourceNodeKeyColumns": [
+        "SourceId"
+      ],
+      "destinationNodeKeyColumns": [
+        "TargetId"
+      ],
+      "propertyMappings": [
+        {
+          "propertyName": "EdgeId",
+          "sourceColumn": "EdgeId"
+        },
+        {
+          "propertyName": "SourceId",
+          "sourceColumn": "SourceId"
+        },
+        {
+          "propertyName": "TargetId",
+          "sourceColumn": "TargetId"
+        }
+      ]
+    },
+    {
+      "id": "7c757e7b-c45e-5d46-9512-5359c1cabfcb",
+      "edgeTypeAlias": "ACTUALS_cost_center",
+      "dataSourceName": "ACTUALS_cost_center",
+      "sourceNodeKeyColumns": [
+        "SourceId"
+      ],
+      "destinationNodeKeyColumns": [
+        "TargetId"
+      ],
+      "propertyMappings": [
+        {
+          "propertyName": "EdgeId",
+          "sourceColumn": "EdgeId"
+        },
+        {
+          "propertyName": "SourceId",
+          "sourceColumn": "SourceId"
+        },
+        {
+          "propertyName": "TargetId",
+          "sourceColumn": "TargetId"
+        }
+      ]
+    },
+    {
+      "id": "1f1c4f8e-8a5f-56ea-82e9-32637f12ce06",
+      "edgeTypeAlias": "ACTUALS_DIM_DATE",
+      "dataSourceName": "ACTUALS_DIM_DATE",
+      "sourceNodeKeyColumns": [
+        "SourceId"
+      ],
+      "destinationNodeKeyColumns": [
+        "TargetId"
+      ],
+      "propertyMappings": [
+        {
+          "propertyName": "EdgeId",
+          "sourceColumn": "EdgeId"
+        },
+        {
+          "propertyName": "SourceId",
+          "sourceColumn": "SourceId"
+        },
+        {
+          "propertyName": "TargetId",
+          "sourceColumn": "TargetId"
+        }
+      ]
+    },
+    {
+      "id": "c87d156c-5b59-55b7-a631-3aefccba6b82",
+      "edgeTypeAlias": "ACTUALS_product",
+      "dataSourceName": "ACTUALS_product",
+      "sourceNodeKeyColumns": [
+        "SourceId"
+      ],
+      "destinationNodeKeyColumns": [
+        "TargetId"
+      ],
+      "propertyMappings": [
+        {
+          "propertyName": "EdgeId",
+          "sourceColumn": "EdgeId"
+        },
+        {
+          "propertyName": "SourceId",
+          "sourceColumn": "SourceId"
+        },
+        {
+          "propertyName": "TargetId",
+          "sourceColumn": "TargetId"
+        }
+      ]
+    },
+    {
+      "id": "cb660313-f2cc-55cf-b308-64d9f3a1a931",
+      "edgeTypeAlias": "FORECAST_account",
+      "dataSourceName": "FORECAST_account",
+      "sourceNodeKeyColumns": [
+        "SourceId"
+      ],
+      "destinationNodeKeyColumns": [
+        "TargetId"
+      ],
+      "propertyMappings": [
+        {
+          "propertyName": "EdgeId",
+          "sourceColumn": "EdgeId"
+        },
+        {
+          "propertyName": "SourceId",
+          "sourceColumn": "SourceId"
+        },
+        {
+          "propertyName": "TargetId",
+          "sourceColumn": "TargetId"
+        }
+      ]
+    },
+    {
+      "id": "0f22326c-4c24-52f0-8673-aa31b67b66fc",
+      "edgeTypeAlias": "FORECAST_cost_center",
+      "dataSourceName": "FORECAST_cost_center",
+      "sourceNodeKeyColumns": [
+        "SourceId"
+      ],
+      "destinationNodeKeyColumns": [
+        "TargetId"
+      ],
+      "propertyMappings": [
+        {
+          "propertyName": "EdgeId",
+          "sourceColumn": "EdgeId"
+        },
+        {
+          "propertyName": "SourceId",
+          "sourceColumn": "SourceId"
+        },
+        {
+          "propertyName": "TargetId",
+          "sourceColumn": "TargetId"
+        }
+      ]
+    },
+    {
+      "id": "f8832207-7037-5e5d-b1de-a524fdab57a5",
+      "edgeTypeAlias": "FORECAST_DIM_DATE",
+      "dataSourceName": "FORECAST_DIM_DATE",
+      "sourceNodeKeyColumns": [
+        "SourceId"
+      ],
+      "destinationNodeKeyColumns": [
+        "TargetId"
+      ],
+      "propertyMappings": [
+        {
+          "propertyName": "EdgeId",
+          "sourceColumn": "EdgeId"
+        },
+        {
+          "propertyName": "SourceId",
+          "sourceColumn": "SourceId"
+        },
+        {
+          "propertyName": "TargetId",
+          "sourceColumn": "TargetId"
+        }
+      ]
+    },
+    {
+      "id": "e167794f-2a37-5a8f-9d6c-80ee34deb3bb",
+      "edgeTypeAlias": "FORECAST_product",
+      "dataSourceName": "FORECAST_product",
+      "sourceNodeKeyColumns": [
+        "SourceId"
+      ],
+      "destinationNodeKeyColumns": [
+        "TargetId"
+      ],
+      "propertyMappings": [
+        {
+          "propertyName": "EdgeId",
+          "sourceColumn": "EdgeId"
+        },
+        {
+          "propertyName": "SourceId",
+          "sourceColumn": "SourceId"
+        },
+        {
+          "propertyName": "TargetId",
+          "sourceColumn": "TargetId"
+        }
+      ]
+    },
+    {
+      "id": "8c8c9834-2e25-5bd9-a29b-9f70a1b683ce",
+      "edgeTypeAlias": "PLAN_account",
+      "dataSourceName": "PLAN_account",
+      "sourceNodeKeyColumns": [
+        "SourceId"
+      ],
+      "destinationNodeKeyColumns": [
+        "TargetId"
+      ],
+      "propertyMappings": [
+        {
+          "propertyName": "EdgeId",
+          "sourceColumn": "EdgeId"
+        },
+        {
+          "propertyName": "SourceId",
+          "sourceColumn": "SourceId"
+        },
+        {
+          "propertyName": "TargetId",
+          "sourceColumn": "TargetId"
+        }
+      ]
+    },
+    {
+      "id": "7906de85-c59c-5b6a-9735-8f50602a8c90",
+      "edgeTypeAlias": "PLAN_cost_center",
+      "dataSourceName": "PLAN_cost_center",
+      "sourceNodeKeyColumns": [
+        "SourceId"
+      ],
+      "destinationNodeKeyColumns": [
+        "TargetId"
+      ],
+      "propertyMappings": [
+        {
+          "propertyName": "EdgeId",
+          "sourceColumn": "EdgeId"
+        },
+        {
+          "propertyName": "SourceId",
+          "sourceColumn": "SourceId"
+        },
+        {
+          "propertyName": "TargetId",
+          "sourceColumn": "TargetId"
+        }
+      ]
+    },
+    {
+      "id": "fab0276d-161f-513b-bc60-73094acbfeb9",
+      "edgeTypeAlias": "PLAN_DIM_DATE",
+      "dataSourceName": "PLAN_DIM_DATE",
+      "sourceNodeKeyColumns": [
+        "SourceId"
+      ],
+      "destinationNodeKeyColumns": [
+        "TargetId"
+      ],
+      "propertyMappings": [
+        {
+          "propertyName": "EdgeId",
+          "sourceColumn": "EdgeId"
+        },
+        {
+          "propertyName": "SourceId",
+          "sourceColumn": "SourceId"
+        },
+        {
+          "propertyName": "TargetId",
+          "sourceColumn": "TargetId"
+        }
+      ]
+    },
+    {
+      "id": "72df6859-c50f-5cb2-838a-66df33f8e8fd",
+      "edgeTypeAlias": "PLAN_product",
+      "dataSourceName": "PLAN_product",
+      "sourceNodeKeyColumns": [
+        "SourceId"
+      ],
+      "destinationNodeKeyColumns": [
+        "TargetId"
+      ],
+      "propertyMappings": [
+        {
+          "propertyName": "EdgeId",
+          "sourceColumn": "EdgeId"
+        },
+        {
+          "propertyName": "SourceId",
+          "sourceColumn": "SourceId"
+        },
+        {
+          "propertyName": "TargetId",
+          "sourceColumn": "TargetId"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "varianceTable",
+  "position": {
+    "x": 20,
+    "y": 325,
+    "z": 28,
+    "height": 220,
+    "width": 1400,
+    "tabOrder": 28
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "product"
+                    }
+                  },
+                  "Property": "Description"
+                }
+              },
+              "queryRef": "product.Description",
+              "nativeQueryRef": "Description"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ACTUALS"
+                    }
+                  },
+                  "Property": "Forecast Revenue FY"
+                }
+              },
+              "queryRef": "ACTUALS.Forecast Revenue FY",
+              "nativeQueryRef": "Forecast Revenue FY"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ACTUALS"
+                    }
+                  },
+                  "Property": "Plan Revenue FY"
+                }
+              },
+              "queryRef": "ACTUALS.Plan Revenue FY",
+              "nativeQueryRef": "Plan Revenue FY"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ACTUALS"
+                    }
+                  },
+                  "Property": "Forecast Operating Profit Variance FY"
+                }
+              },
+              "queryRef": "ACTUALS.Forecast Operating Profit Variance FY",
+              "nativeQueryRef": "Forecast Operating Profit Variance FY"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,18 @@
+model Model
+
+ref namespace default
+ref table 'account'
+ref entity 'account'
+ref table 'cost_center'
+ref entity 'cost_center'
+ref table 'DIM_DATE'
+ref entity 'DIM_DATE'
+ref table 'product'
+ref entity 'product'
+ref table 'ACTUALS'
+ref entity 'ACTUALS'
+ref table 'FORECAST'
+ref entity 'FORECAST'
+ref table 'PLAN'
+ref entity 'PLAN'
+ref expression DL_FIS_Finance

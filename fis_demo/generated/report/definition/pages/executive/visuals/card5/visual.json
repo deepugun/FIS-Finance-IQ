@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "card5",
+  "position": {
+    "x": 960,
+    "y": 165,
+    "z": 9,
+    "height": 130,
+    "width": 450,
+    "tabOrder": 9
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ACTUALS"
+                    }
+                  },
+                  "Property": "Operating Profit Variance YTD"
+                }
+              },
+              "queryRef": "ACTUALS.Operating Profit Variance YTD",
+              "nativeQueryRef": "Operating Profit Variance YTD"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

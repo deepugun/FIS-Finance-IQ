@@ -1,0 +1,118 @@
+table 'account'
+
+	column 'Account'
+		dataType: string
+		summarizeBy: none
+		isKey
+		sourceColumn: Account
+
+	column 'Description'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Description
+
+	column 'Description_raw'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Description_raw
+
+	column 'AccountType'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: AccountType
+
+	column 'FavorableSign'
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: FavorableSign
+
+	column 'MonthlyBaseCents'
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: MonthlyBaseCents
+
+	column 'L1'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: L1
+
+	column 'L1_Description'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: L1_Description
+
+	column 'L2'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: L2
+
+	column 'L2_Description'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: L2_Description
+
+	column 'L3'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: L3
+
+	column 'L3_Description'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: L3_Description
+
+	column 'L4'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: L4
+
+	column 'L4_Description'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: L4_Description
+
+	column 'L5'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: L5
+
+	column 'L5_Description'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: L5_Description
+
+	column 'L6'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: L6
+
+	column 'L6_Description'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: L6_Description
+
+	column 'L7'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: L7
+
+	column 'L7_Description'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: L7_Description
+
+	column 'L8'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: L8
+
+	column 'L8_Description'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: L8_Description
+
+	partition 'account' = entity
+		mode: directLake
+		source
+			entityName: account
+			expressionSource: DL_FIS_Finance

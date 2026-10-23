@@ -1,0 +1,83 @@
+entityRelationship 'ACTUALS_account'
+	lineageTag: 6c6c6678-a97a-5568-8784-9f97446c69c0
+	fromEntity: 'ACTUALS'
+	toEntity: 'account'
+	backingConfiguration
+		relationship: 'ACTUALS to account'
+
+entityRelationship 'ACTUALS_cost_center'
+	lineageTag: 8919d8ee-acdb-5bda-b16e-137050d940ce
+	fromEntity: 'ACTUALS'
+	toEntity: 'cost_center'
+	backingConfiguration
+		relationship: 'ACTUALS to cost_center'
+
+entityRelationship 'ACTUALS_DIM_DATE'
+	lineageTag: 0b33708a-0eaf-5432-903d-f373920693f6
+	fromEntity: 'ACTUALS'
+	toEntity: 'DIM_DATE'
+	backingConfiguration
+		relationship: 'ACTUALS to DIM_DATE'
+
+entityRelationship 'ACTUALS_product'
+	lineageTag: cef7b50a-8dbd-5e76-b1e7-5541572873ec
+	fromEntity: 'ACTUALS'
+	toEntity: 'product'
+	backingConfiguration
+		relationship: 'ACTUALS to product'
+
+entityRelationship 'FORECAST_account'
+	lineageTag: e6cfb902-bfa2-5cea-8b38-c6838c2633a0
+	fromEntity: 'FORECAST'
+	toEntity: 'account'
+	backingConfiguration
+		relationship: 'FORECAST to account'
+
+entityRelationship 'FORECAST_cost_center'
+	lineageTag: 4f55f1b0-cfe4-5785-b81e-eebae826be55
+	fromEntity: 'FORECAST'
+	toEntity: 'cost_center'
+	backingConfiguration
+		relationship: 'FORECAST to cost_center'
+
+entityRelationship 'FORECAST_DIM_DATE'
+	lineageTag: 194a90e5-a233-5f8a-9b96-9a4869a87a09
+	fromEntity: 'FORECAST'
+	toEntity: 'DIM_DATE'
+	backingConfiguration
+		relationship: 'FORECAST to DIM_DATE'
+
+entityRelationship 'FORECAST_product'
+	lineageTag: a9f31e38-a8a0-52cf-b731-cc52f64d8a0e
+	fromEntity: 'FORECAST'
+	toEntity: 'product'
+	backingConfiguration
+		relationship: 'FORECAST to product'
+
+entityRelationship 'PLAN_account'
+	lineageTag: 606e4468-d97c-57a5-829c-d4fe7d670059
+	fromEntity: 'PLAN'
+	toEntity: 'account'
+	backingConfiguration
+		relationship: 'PLAN to account'
+
+entityRelationship 'PLAN_cost_center'
+	lineageTag: cd61764b-df47-5590-94bb-af9fa071df17
+	fromEntity: 'PLAN'
+	toEntity: 'cost_center'
+	backingConfiguration
+		relationship: 'PLAN to cost_center'
+
+entityRelationship 'PLAN_DIM_DATE'
+	lineageTag: 028d2bb6-c2be-5f15-b742-875136062dba
+	fromEntity: 'PLAN'
+	toEntity: 'DIM_DATE'
+	backingConfiguration
+		relationship: 'PLAN to DIM_DATE'
+
+entityRelationship 'PLAN_product'
+	lineageTag: 54ae33b5-367f-5b8b-9127-ed316924889b
+	fromEntity: 'PLAN'
+	toEntity: 'product'
+	backingConfiguration
+		relationship: 'PLAN to product'

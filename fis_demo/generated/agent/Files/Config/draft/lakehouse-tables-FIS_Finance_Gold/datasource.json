@@ -1,0 +1,76 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/dataAgent/definition/dataSource/1.0.0/schema.json",
+  "artifactId": "3773425f-3a99-4bda-be3f-acecfcabb0df",
+  "workspaceId": "f00e31f4-f4ab-435c-87f4-fdb5f4b06c4a",
+  "displayName": "FIS_Finance_Gold",
+  "type": "lakehouse_tables",
+  "dataSourceInstructions": "You are the FIS Finance IQ synthetic FP&A demo assistant. All figures are fictional, in USD, and must never be described as FIS reported financial results. As-of date: 2026-09-30. Use FIS_Finance_IQ_Model saved measures for governed KPIs; use the Gold Lakehouse for RecordID evidence. ACTUALS contains 2025 plus January-September 2026. Always filter YEAR=2026 for current-year questions. PLAN is full-year 2026; FORECAST is the September full-year outlook, including closed-month actuals. Never add ACTUALS, PLAN and FORECAST together. Compare YTD actuals with YTD plan, not full-year plan. Amounts are positive for both revenue and expense. Revenue variance is actual minus plan; favorable expense variance is plan minus actual. Operating profit is revenue minus operating expense, not GAAP net income or EBITDA. AmountCents is integer USD cents; divide by 100 for dollars. Amount is already dollars. For Digital Banking cloud investigation use ACCOUNT=500100, COSTCENTER=300110, PRODUCTLINE=DIGITAL. Join each fact separately to account.Account, cost_center.CostCenter, DIM_DATE.DATE, product.ProductLine. Never join facts without all four grain keys (ACCOUNT,COSTCENTER,PRODUCTLINE,DATE). Cite source RecordIDs, scenario, version and period; flag uncertainties. No accounting entries, notifications or autonomous decisions.",
+  "metadata": {},
+  "userDescription": "Synthetic finance evidence and variance drivers; Amount is USD and AmountCents is cents.",
+  "elements": [
+    {
+      "id": "a5bf04d7-22a3-5ca6-937e-8ee2bd0718af",
+      "is_selected": true,
+      "display_name": "dbo",
+      "type": "lakehouse_tables.schema",
+      "children": [
+        {
+          "id": "c14d7b24-3b41-5be8-9bdf-41e3b09fbacb",
+          "is_selected": true,
+          "display_name": "account",
+          "type": "lakehouse_tables.table",
+          "children": []
+        },
+        {
+          "id": "c3642e74-751c-525c-a602-8e78f8c26a2b",
+          "is_selected": true,
+          "display_name": "cost_center",
+          "type": "lakehouse_tables.table",
+          "children": []
+        },
+        {
+          "id": "bde06e75-2d60-5187-b9f2-44c8d09645b9",
+          "is_selected": true,
+          "display_name": "dim_date",
+          "type": "lakehouse_tables.table",
+          "children": []
+        },
+        {
+          "id": "de869962-6073-58a4-9a2e-3f691d3b31ba",
+          "is_selected": true,
+          "display_name": "product",
+          "type": "lakehouse_tables.table",
+          "children": []
+        },
+        {
+          "id": "aef0d7c3-55b8-5ab9-aad0-292bf0795c17",
+          "is_selected": true,
+          "display_name": "actuals",
+          "type": "lakehouse_tables.table",
+          "children": []
+        },
+        {
+          "id": "fe896df5-59ba-5273-b733-fba85dec79d8",
+          "is_selected": true,
+          "display_name": "forecast",
+          "type": "lakehouse_tables.table",
+          "children": []
+        },
+        {
+          "id": "7525ee64-f4f8-5868-b332-89478cd3db19",
+          "is_selected": true,
+          "display_name": "plan",
+          "type": "lakehouse_tables.table",
+          "children": []
+        },
+        {
+          "id": "62497b94-68cf-5030-96b0-a8114c746b98",
+          "is_selected": true,
+          "display_name": "variance_drivers",
+          "type": "lakehouse_tables.table",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

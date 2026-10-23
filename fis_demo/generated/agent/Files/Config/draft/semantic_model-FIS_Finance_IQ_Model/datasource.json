@@ -1,0 +1,61 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/dataAgent/definition/dataSource/1.0.0/schema.json",
+  "artifactId": "f9179801-db61-48ce-a536-f8de621718bb",
+  "workspaceId": "f00e31f4-f4ab-435c-87f4-fdb5f4b06c4a",
+  "displayName": "FIS_Finance_IQ_Model",
+  "type": "semantic_model",
+  "dataSourceInstructions": "You are the FIS Finance IQ synthetic FP&A demo assistant. All figures are fictional, in USD, and must never be described as FIS reported financial results. As-of date: 2026-09-30. Use FIS_Finance_IQ_Model saved measures for governed KPIs; use the Gold Lakehouse for RecordID evidence. ACTUALS contains 2025 plus January-September 2026. Always filter YEAR=2026 for current-year questions. PLAN is full-year 2026; FORECAST is the September full-year outlook, including closed-month actuals. Never add ACTUALS, PLAN and FORECAST together. Compare YTD actuals with YTD plan, not full-year plan. Amounts are positive for both revenue and expense. Revenue variance is actual minus plan; favorable expense variance is plan minus actual. Operating profit is revenue minus operating expense, not GAAP net income or EBITDA. AmountCents is integer USD cents; divide by 100 for dollars. Amount is already dollars. For Digital Banking cloud investigation use ACCOUNT=500100, COSTCENTER=300110, PRODUCTLINE=DIGITAL. Join each fact separately to account.Account, cost_center.CostCenter, DIM_DATE.DATE, product.ProductLine. Never join facts without all four grain keys (ACCOUNT,COSTCENTER,PRODUCTLINE,DATE). Cite source RecordIDs, scenario, version and period; flag uncertainties. No accounting entries, notifications or autonomous decisions.",
+  "metadata": {},
+  "userDescription": "Seven-table Direct Lake model, 12 shared-dimension relationships, governed finance measures.",
+  "elements": [
+    {
+      "id": "a5402af9-391c-57a1-93b8-aff595ab73b3",
+      "is_selected": true,
+      "display_name": "account",
+      "type": "semantic_model.table",
+      "children": []
+    },
+    {
+      "id": "65940c7e-aa5d-5a70-b3eb-f21b9de272d1",
+      "is_selected": true,
+      "display_name": "cost_center",
+      "type": "semantic_model.table",
+      "children": []
+    },
+    {
+      "id": "bd23dc85-f104-5df4-8f56-2199cd285026",
+      "is_selected": true,
+      "display_name": "DIM_DATE",
+      "type": "semantic_model.table",
+      "children": []
+    },
+    {
+      "id": "e1b77737-61d2-58b7-b6eb-35a4f32e94ba",
+      "is_selected": true,
+      "display_name": "product",
+      "type": "semantic_model.table",
+      "children": []
+    },
+    {
+      "id": "1c3c1954-f9a4-5b56-bd4b-e78439421e0b",
+      "is_selected": true,
+      "display_name": "ACTUALS",
+      "type": "semantic_model.table",
+      "children": []
+    },
+    {
+      "id": "45a82977-4a7f-5bf0-badf-2b13563ab63b",
+      "is_selected": true,
+      "display_name": "FORECAST",
+      "type": "semantic_model.table",
+      "children": []
+    },
+    {
+      "id": "d43405b7-0b38-5fc6-8600-6bd8044d0619",
+      "is_selected": true,
+      "display_name": "PLAN",
+      "type": "semantic_model.table",
+      "children": []
+    }
+  ]
+}

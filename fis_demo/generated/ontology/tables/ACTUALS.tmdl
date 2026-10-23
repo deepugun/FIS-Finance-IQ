@@ -1,0 +1,265 @@
+table 'ACTUALS'
+
+	measure 'Actual Revenue' = CALCULATE(DIVIDE(SUM('ACTUALS'[AmountCents]),100), 'account'[AccountType] = "Revenue")
+		formatString: \$#,##0.00;(\$#,##0.00)
+		displayFolder: Finance KPIs
+
+	measure 'Actual Revenue YTD' = CALCULATE([Actual Revenue], KEEPFILTERS('DIM_DATE'[YEAR] = 2026), KEEPFILTERS('DIM_DATE'[DATE] <= DATE(2026,9,30)))
+		formatString: \$#,##0.00;(\$#,##0.00)
+		displayFolder: Finance KPIs
+
+	measure 'Actual Opex' = CALCULATE(DIVIDE(SUM('ACTUALS'[AmountCents]),100), 'account'[AccountType] = "Operating Expense")
+		formatString: \$#,##0.00;(\$#,##0.00)
+		displayFolder: Finance KPIs
+
+	measure 'Actual Opex YTD' = CALCULATE([Actual Opex], KEEPFILTERS('DIM_DATE'[YEAR] = 2026), KEEPFILTERS('DIM_DATE'[DATE] <= DATE(2026,9,30)))
+		formatString: \$#,##0.00;(\$#,##0.00)
+		displayFolder: Finance KPIs
+
+	measure 'Actual Operating Profit' = [Actual Revenue] - [Actual Opex]
+		formatString: \$#,##0.00;(\$#,##0.00)
+		displayFolder: Finance KPIs
+
+	measure 'Actual Operating Profit YTD' = [Actual Revenue YTD] - [Actual Opex YTD]
+		formatString: \$#,##0.00;(\$#,##0.00)
+		displayFolder: Finance KPIs
+
+	measure 'Actual Operating Margin YTD' = DIVIDE([Actual Operating Profit YTD],[Actual Revenue YTD])
+		formatString: 0.0%
+		displayFolder: Finance KPIs
+
+	measure 'Plan Revenue' = CALCULATE(DIVIDE(SUM('PLAN'[AmountCents]),100), 'account'[AccountType] = "Revenue")
+		formatString: \$#,##0.00;(\$#,##0.00)
+		displayFolder: Finance KPIs
+
+	measure 'Plan Revenue YTD' = CALCULATE([Plan Revenue], KEEPFILTERS('DIM_DATE'[YEAR] = 2026), KEEPFILTERS('DIM_DATE'[DATE] <= DATE(2026,9,30)))
+		formatString: \$#,##0.00;(\$#,##0.00)
+		displayFolder: Finance KPIs
+
+	measure 'Plan Opex' = CALCULATE(DIVIDE(SUM('PLAN'[AmountCents]),100), 'account'[AccountType] = "Operating Expense")
+		formatString: \$#,##0.00;(\$#,##0.00)
+		displayFolder: Finance KPIs
+
+	measure 'Plan Opex YTD' = CALCULATE([Plan Opex], KEEPFILTERS('DIM_DATE'[YEAR] = 2026), KEEPFILTERS('DIM_DATE'[DATE] <= DATE(2026,9,30)))
+		formatString: \$#,##0.00;(\$#,##0.00)
+		displayFolder: Finance KPIs
+
+	measure 'Plan Operating Profit' = [Plan Revenue] - [Plan Opex]
+		formatString: \$#,##0.00;(\$#,##0.00)
+		displayFolder: Finance KPIs
+
+	measure 'Plan Operating Profit YTD' = [Plan Revenue YTD] - [Plan Opex YTD]
+		formatString: \$#,##0.00;(\$#,##0.00)
+		displayFolder: Finance KPIs
+
+	measure 'Plan Operating Margin YTD' = DIVIDE([Plan Operating Profit YTD],[Plan Revenue YTD])
+		formatString: 0.0%
+		displayFolder: Finance KPIs
+
+	measure 'Forecast Revenue' = CALCULATE(DIVIDE(SUM('FORECAST'[AmountCents]),100), 'account'[AccountType] = "Revenue")
+		formatString: \$#,##0.00;(\$#,##0.00)
+		displayFolder: Finance KPIs
+
+	measure 'Forecast Revenue YTD' = CALCULATE([Forecast Revenue], KEEPFILTERS('DIM_DATE'[YEAR] = 2026), KEEPFILTERS('DIM_DATE'[DATE] <= DATE(2026,9,30)))
+		formatString: \$#,##0.00;(\$#,##0.00)
+		displayFolder: Finance KPIs
+
+	measure 'Forecast Opex' = CALCULATE(DIVIDE(SUM('FORECAST'[AmountCents]),100), 'account'[AccountType] = "Operating Expense")
+		formatString: \$#,##0.00;(\$#,##0.00)
+		displayFolder: Finance KPIs
+
+	measure 'Forecast Opex YTD' = CALCULATE([Forecast Opex], KEEPFILTERS('DIM_DATE'[YEAR] = 2026), KEEPFILTERS('DIM_DATE'[DATE] <= DATE(2026,9,30)))
+		formatString: \$#,##0.00;(\$#,##0.00)
+		displayFolder: Finance KPIs
+
+	measure 'Forecast Operating Profit' = [Forecast Revenue] - [Forecast Opex]
+		formatString: \$#,##0.00;(\$#,##0.00)
+		displayFolder: Finance KPIs
+
+	measure 'Forecast Operating Profit YTD' = [Forecast Revenue YTD] - [Forecast Opex YTD]
+		formatString: \$#,##0.00;(\$#,##0.00)
+		displayFolder: Finance KPIs
+
+	measure 'Forecast Operating Margin YTD' = DIVIDE([Forecast Operating Profit YTD],[Forecast Revenue YTD])
+		formatString: 0.0%
+		displayFolder: Finance KPIs
+
+	measure 'Revenue Variance YTD' = [Actual Revenue YTD] - [Plan Revenue YTD]
+		formatString: \$#,##0.00;(\$#,##0.00)
+		displayFolder: Finance KPIs
+
+	measure 'Revenue Variance Pct YTD' = DIVIDE([Revenue Variance YTD],[Plan Revenue YTD])
+		formatString: 0.0%
+		displayFolder: Finance KPIs
+
+	measure 'Favorable Expense Variance YTD' = [Plan Opex YTD] - [Actual Opex YTD]
+		formatString: \$#,##0.00;(\$#,##0.00)
+		displayFolder: Finance KPIs
+
+	measure 'Favorable Expense Variance Pct YTD' = DIVIDE([Favorable Expense Variance YTD],[Plan Opex YTD])
+		formatString: 0.0%
+		displayFolder: Finance KPIs
+
+	measure 'Operating Profit Variance YTD' = [Actual Operating Profit YTD] - [Plan Operating Profit YTD]
+		formatString: \$#,##0.00;(\$#,##0.00)
+		displayFolder: Finance KPIs
+
+	measure 'Forecast Revenue FY' = CALCULATE([Forecast Revenue], KEEPFILTERS('DIM_DATE'[YEAR] = 2026))
+		formatString: \$#,##0.00;(\$#,##0.00)
+		displayFolder: Finance KPIs
+
+	measure 'Plan Revenue FY' = CALCULATE([Plan Revenue], KEEPFILTERS('DIM_DATE'[YEAR] = 2026))
+		formatString: \$#,##0.00;(\$#,##0.00)
+		displayFolder: Finance KPIs
+
+	measure 'Forecast Operating Profit FY' = CALCULATE([Forecast Operating Profit], KEEPFILTERS('DIM_DATE'[YEAR] = 2026))
+		formatString: \$#,##0.00;(\$#,##0.00)
+		displayFolder: Finance KPIs
+
+	measure 'Plan Operating Profit FY' = CALCULATE([Plan Operating Profit], KEEPFILTERS('DIM_DATE'[YEAR] = 2026))
+		formatString: \$#,##0.00;(\$#,##0.00)
+		displayFolder: Finance KPIs
+
+	measure 'Forecast Operating Profit Variance FY' = [Forecast Operating Profit FY] - [Plan Operating Profit FY]
+		formatString: \$#,##0.00;(\$#,##0.00)
+		displayFolder: Finance KPIs
+
+	measure 'Prior Year Revenue YTD' = CALCULATE([Actual Revenue], REMOVEFILTERS('DIM_DATE'), 'DIM_DATE'[YEAR] = 2025, 'DIM_DATE'[DATE] <= DATE(2025,9,30))
+		formatString: \$#,##0.00;(\$#,##0.00)
+		displayFolder: Finance KPIs
+
+	measure 'Revenue Growth YoY' = DIVIDE([Actual Revenue YTD] - [Prior Year Revenue YTD],[Prior Year Revenue YTD])
+		formatString: 0.0%
+		displayFolder: Finance KPIs
+
+	measure 'As Of Date' = DATE(2026,9,30)
+		formatString: yyyy-mm-dd
+		displayFolder: Finance KPIs
+
+	measure 'Review Threshold USD' = 100000
+		formatString: \$#,##0.00;(\$#,##0.00)
+		displayFolder: Finance KPIs
+
+	column 'RecordID'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: RecordID
+
+	column 'ACCOUNT'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: ACCOUNT
+
+	column 'Amount'
+		dataType: decimal
+		summarizeBy: none
+		formatString: \$#,##0.00;(\$#,##0.00)
+		sourceColumn: Amount
+
+	column 'AmountCents'
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: AmountCents
+
+	column 'CC_PR_AC'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: CC_PR_AC
+
+	column 'COSTCENTER'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: COSTCENTER
+
+	column 'COSTCENTER_PRODUCTLINE'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: COSTCENTER_PRODUCTLINE
+
+	column 'CURRENCY'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: CURRENCY
+
+	column 'CUSTOMER'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: CUSTOMER
+
+	column 'DATASOURCE'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: DATASOURCE
+
+	column 'DATE'
+		dataType: dateTime
+		summarizeBy: none
+		formatString: yyyy-mm-dd
+		sourceColumn: DATE
+
+	column 'ENTITY'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: ENTITY
+
+	column 'ICP'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: ICP
+
+	column 'LOAD_DATE'
+		dataType: dateTime
+		summarizeBy: none
+		formatString: yyyy-mm-dd
+		sourceColumn: LOAD_DATE
+
+	column 'LOAD_TIMESTAMP'
+		dataType: dateTime
+		summarizeBy: none
+		sourceColumn: LOAD_TIMESTAMP
+
+	column 'LOCATION'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: LOCATION
+
+	column 'PERIOD'
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: PERIOD
+
+	column 'PRODUCTLINE'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: PRODUCTLINE
+
+	column 'QUARTER'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: QUARTER
+
+	column 'SCENARIO'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: SCENARIO
+
+	column 'VERSION'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: VERSION
+
+	column 'VIEW'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: VIEW
+
+	column 'YEAR'
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: YEAR
+
+	partition 'ACTUALS' = entity
+		mode: directLake
+		source
+			entityName: actuals
+			expressionSource: DL_FIS_Finance

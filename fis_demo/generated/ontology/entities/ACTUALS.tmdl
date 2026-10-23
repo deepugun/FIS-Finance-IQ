@@ -1,0 +1,142 @@
+entity 'ACTUALS'
+	lineageTag: 58920530-10f3-5467-8968-1a983ca9e22d
+	backingTable: 'ACTUALS'
+	keyProperty: RecordID
+
+	property 'RecordID'
+		dataType: string
+		lineageTag: 6304dadd-31ab-5f63-b366-fffc3c501da6
+		backingConfiguration
+			valueColumn: 'ACTUALS'.'RecordID'
+
+	property 'ACCOUNT'
+		dataType: string
+		lineageTag: 30af8e71-a399-5ffe-91ad-808d735e21ba
+		backingConfiguration
+			valueColumn: 'ACTUALS'.'ACCOUNT'
+
+	property 'Amount'
+		dataType: decimal
+		lineageTag: a633b865-847a-52f5-b3b9-b29a0099a2ce
+		backingConfiguration
+			valueColumn: 'ACTUALS'.'Amount'
+
+	property 'AmountCents'
+		dataType: int64
+		lineageTag: 42e1d5bf-3830-50d7-a863-a7148e732758
+		backingConfiguration
+			valueColumn: 'ACTUALS'.'AmountCents'
+
+	property 'CC_PR_AC'
+		dataType: string
+		lineageTag: bca11f86-da85-5ffb-91ec-c715e7839805
+		backingConfiguration
+			valueColumn: 'ACTUALS'.'CC_PR_AC'
+
+	property 'COSTCENTER'
+		dataType: string
+		lineageTag: 50906b55-fdc5-552a-a904-ac1317fb1078
+		backingConfiguration
+			valueColumn: 'ACTUALS'.'COSTCENTER'
+
+	property 'COSTCENTER_PRODUCTLINE'
+		dataType: string
+		lineageTag: f6c6bd85-55b4-5c1b-aa3d-04b1c512d75f
+		backingConfiguration
+			valueColumn: 'ACTUALS'.'COSTCENTER_PRODUCTLINE'
+
+	property 'CURRENCY'
+		dataType: string
+		lineageTag: 8de24742-8582-539b-be2c-63a9c968a35f
+		backingConfiguration
+			valueColumn: 'ACTUALS'.'CURRENCY'
+
+	property 'CUSTOMER'
+		dataType: string
+		lineageTag: 9734769f-9718-5f70-abed-f761205f5431
+		backingConfiguration
+			valueColumn: 'ACTUALS'.'CUSTOMER'
+
+	property 'DATASOURCE'
+		dataType: string
+		lineageTag: b4c0b202-5dd9-5765-8c33-959d70fae9de
+		backingConfiguration
+			valueColumn: 'ACTUALS'.'DATASOURCE'
+
+	property 'DATE'
+		dataType: dateTime
+		lineageTag: e45b7a9b-5ce1-5974-b403-a3528a67e513
+		backingConfiguration
+			valueColumn: 'ACTUALS'.'DATE'
+
+	property 'ENTITY'
+		dataType: string
+		lineageTag: 115eab94-1fe7-5656-8f04-d0eeb96d3449
+		backingConfiguration
+			valueColumn: 'ACTUALS'.'ENTITY'
+
+	property 'ICP'
+		dataType: string
+		lineageTag: db46705f-5bd7-56fe-be1e-9f3dfb27f94f
+		backingConfiguration
+			valueColumn: 'ACTUALS'.'ICP'
+
+	property 'LOAD_DATE'
+		dataType: dateTime
+		lineageTag: 240e4dd7-00d4-52df-874f-82820b6412b1
+		backingConfiguration
+			valueColumn: 'ACTUALS'.'LOAD_DATE'
+
+	property 'LOAD_TIMESTAMP'
+		dataType: dateTime
+		lineageTag: 65385a8f-c1d0-5d6e-a17c-06b9de4f7469
+		backingConfiguration
+			valueColumn: 'ACTUALS'.'LOAD_TIMESTAMP'
+
+	property 'LOCATION'
+		dataType: string
+		lineageTag: a66a2533-ac36-583c-835a-4839bd0675ed
+		backingConfiguration
+			valueColumn: 'ACTUALS'.'LOCATION'
+
+	property 'PERIOD'
+		dataType: int64
+		lineageTag: 23af0c2c-1710-5275-bfa3-295efd7b33ad
+		backingConfiguration
+			valueColumn: 'ACTUALS'.'PERIOD'
+
+	property 'PRODUCTLINE'
+		dataType: string
+		lineageTag: e61ebc74-2ed5-53b3-9270-83475633d2bc
+		backingConfiguration
+			valueColumn: 'ACTUALS'.'PRODUCTLINE'
+
+	property 'QUARTER'
+		dataType: string
+		lineageTag: 8b4c026f-da93-51a8-ae35-5cd58fe07a61
+		backingConfiguration
+			valueColumn: 'ACTUALS'.'QUARTER'
+
+	property 'SCENARIO'
+		dataType: string
+		lineageTag: 03456d23-e5bb-56a6-b0b9-f60e2097ef7c
+		backingConfiguration
+			valueColumn: 'ACTUALS'.'SCENARIO'
+
+	property 'VERSION'
+		dataType: string
+		lineageTag: c76ed1ef-0f16-5c06-8554-46e9cc74b2af
+		backingConfiguration
+			valueColumn: 'ACTUALS'.'VERSION'
+
+	property 'VIEW'
+		dataType: string
+		lineageTag: 14066fc1-0c4e-562d-90de-075844611b1e
+		backingConfiguration
+			valueColumn: 'ACTUALS'.'VIEW'
+
+	property 'YEAR'
+		dataType: int64
+		lineageTag: ff360331-cf91-5d76-b27d-19b9a29df50e
+		backingConfiguration
+			valueColumn: 'ACTUALS'.'YEAR'
