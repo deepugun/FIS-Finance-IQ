@@ -38,11 +38,23 @@ table 'DIM_DATE'
 		formatString: yyyy-mm-dd
 		sourceColumn: FIRST_DAY_MONTH
 
+	column 'FIRST_DAY_QUARTER'
+		dataType: dateTime
+		summarizeBy: none
+		formatString: yyyy-mm-dd
+		sourceColumn: FIRST_DAY_QUARTER
+
 	column 'LAST_DAY_MONTH'
 		dataType: dateTime
 		summarizeBy: none
 		formatString: yyyy-mm-dd
 		sourceColumn: LAST_DAY_MONTH
+
+	column 'LAST_DAY_QUARTER'
+		dataType: dateTime
+		summarizeBy: none
+		formatString: yyyy-mm-dd
+		sourceColumn: LAST_DAY_QUARTER
 
 	column 'MONTH_ID'
 		dataType: int64
@@ -91,10 +103,21 @@ table 'DIM_DATE'
 		summarizeBy: none
 		sourceColumn: QUARTER_ID
 
+	column 'QUARTER_SEQUENCE'
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: QUARTER_SEQUENCE
+
 	column 'REPORTING_MONTH'
 		dataType: string
 		summarizeBy: none
 		sourceColumn: REPORTING_MONTH
+
+	column 'SOW_MONDAY'
+		dataType: dateTime
+		summarizeBy: none
+		formatString: yyyy-mm-dd
+		sourceColumn: SOW_MONDAY
 
 	column 'WEEK_OF_YEAR'
 		dataType: int64
@@ -115,6 +138,11 @@ table 'DIM_DATE'
 		dataType: string
 		summarizeBy: none
 		sourceColumn: YEAR_MONTH_SHORT
+
+	column 'YEAR_MONTH_SHORT_V1'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: YEAR_MONTH_SHORT_V1
 
 	column 'YEAR_QUARTER'
 		dataType: string

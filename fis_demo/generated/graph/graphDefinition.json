@@ -204,8 +204,16 @@
           "sourceColumn": "FIRST_DAY_MONTH"
         },
         {
+          "propertyName": "FIRST_DAY_QUARTER",
+          "sourceColumn": "FIRST_DAY_QUARTER"
+        },
+        {
           "propertyName": "LAST_DAY_MONTH",
           "sourceColumn": "LAST_DAY_MONTH"
+        },
+        {
+          "propertyName": "LAST_DAY_QUARTER",
+          "sourceColumn": "LAST_DAY_QUARTER"
         },
         {
           "propertyName": "MONTH_ID",
@@ -244,8 +252,16 @@
           "sourceColumn": "QUARTER_ID"
         },
         {
+          "propertyName": "QUARTER_SEQUENCE",
+          "sourceColumn": "QUARTER_SEQUENCE"
+        },
+        {
           "propertyName": "REPORTING_MONTH",
           "sourceColumn": "REPORTING_MONTH"
+        },
+        {
+          "propertyName": "SOW_MONDAY",
+          "sourceColumn": "SOW_MONDAY"
         },
         {
           "propertyName": "WEEK_OF_YEAR",
@@ -262,6 +278,10 @@
         {
           "propertyName": "YEAR_MONTH_SHORT",
           "sourceColumn": "YEAR_MONTH_SHORT"
+        },
+        {
+          "propertyName": "YEAR_MONTH_SHORT_V1",
+          "sourceColumn": "YEAR_MONTH_SHORT_V1"
         },
         {
           "propertyName": "YEAR_QUARTER",

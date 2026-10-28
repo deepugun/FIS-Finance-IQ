@@ -173,20 +173,27 @@ def build_data() -> Tables:
         quarter = (current.month - 1) // 3 + 1
         first = current.replace(day=1)
         last = current.replace(day=calendar.monthrange(current.year, current.month)[1])
+        first_quarter = date(current.year, (quarter - 1) * 3 + 1, 1)
+        last_quarter = date(current.year, quarter * 3, calendar.monthrange(current.year, quarter * 3)[1])
         prior = current.replace(year=current.year - 1)
         dates.append({
             "DATE": current.isoformat(), "DATE_INTEGER": int(current.strftime("%Y%m%d")),
             "DAY_NUMBER": current.day, "DAY_OF_WEEK": current.isoweekday(),
             "DAY_OF_WEEK_LONG": current.strftime("%A"), "DAY_OF_WEEK_SHORT": current.strftime("%a"),
-            "FIRST_DAY_MONTH": first.isoformat(), "LAST_DAY_MONTH": last.isoformat(),
+            "FIRST_DAY_MONTH": first.isoformat(), "FIRST_DAY_QUARTER": first_quarter.isoformat(),
+            "LAST_DAY_MONTH": last.isoformat(), "LAST_DAY_QUARTER": last_quarter.isoformat(),
             "MONTH_ID": current.year * 100 + current.month,
             "MONTH_NAME_LONG": current.strftime("%B"), "MONTH_NAME_SHORT": current.strftime("%b"),
             "MONTH_YEAR": current.strftime("%b %Y"), "MONTH_YEAR_INTEGER": current.year * 100 + current.month,
             "MONTHNUMBER": current.month, "PY_COMPARE_DATE": prior.isoformat(),
             "QUARTER": f"Q{quarter}", "QUARTER_ID": current.year * 10 + quarter,
-            "REPORTING_MONTH": AS_OF.strftime("%Y-%m"), "WEEK_OF_YEAR": current.isocalendar().week,
+            "QUARTER_SEQUENCE": (current.year - (YEAR - 1)) * 4 + quarter,
+            "REPORTING_MONTH": AS_OF.strftime("%Y-%m"),
+            "SOW_MONDAY": (current - timedelta(days=current.weekday())).isoformat(),
+            "WEEK_OF_YEAR": current.isocalendar().week,
             "YEAR": current.year, "YEAR_MONTH": current.strftime("%Y-%m"),
-            "YEAR_MONTH_SHORT": current.strftime("%b %y"), "YEAR_QUARTER": f"{current.year} Q{quarter}",
+            "YEAR_MONTH_SHORT": current.strftime("%b %y"), "YEAR_MONTH_SHORT_V1": current.strftime("%b-%y"),
+            "YEAR_QUARTER": f"{current.year} Q{quarter}",
         })
         current += timedelta(days=1)
 
@@ -213,7 +220,10 @@ def column_type(name: str, value: Scalar) -> str:
         return "decimal"
     if name == "LOAD_TIMESTAMP":
         return "timestamp"
-    if name in {"DATE", "LOAD_DATE", "FIRST_DAY_MONTH", "LAST_DAY_MONTH", "PY_COMPARE_DATE"}:
+    if name in {
+        "DATE", "LOAD_DATE", "FIRST_DAY_MONTH", "FIRST_DAY_QUARTER",
+        "LAST_DAY_MONTH", "LAST_DAY_QUARTER", "PY_COMPARE_DATE", "SOW_MONDAY",
+    }:
         return "date"
     return "int64" if isinstance(value, int) else "string"
 

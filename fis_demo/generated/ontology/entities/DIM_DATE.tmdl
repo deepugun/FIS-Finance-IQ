@@ -45,11 +45,23 @@ entity 'DIM_DATE'
 		backingConfiguration
 			valueColumn: 'DIM_DATE'.'FIRST_DAY_MONTH'
 
+	property 'FIRST_DAY_QUARTER'
+		dataType: dateTime
+		lineageTag: e6bb2f77-8416-52de-8407-0bd162399d87
+		backingConfiguration
+			valueColumn: 'DIM_DATE'.'FIRST_DAY_QUARTER'
+
 	property 'LAST_DAY_MONTH'
 		dataType: dateTime
 		lineageTag: 86d848e6-a63a-5593-98ba-5a6677e1bc67
 		backingConfiguration
 			valueColumn: 'DIM_DATE'.'LAST_DAY_MONTH'
+
+	property 'LAST_DAY_QUARTER'
+		dataType: dateTime
+		lineageTag: c2f51e56-98bf-5319-8c8d-d8724c567e1a
+		backingConfiguration
+			valueColumn: 'DIM_DATE'.'LAST_DAY_QUARTER'
 
 	property 'MONTH_ID'
 		dataType: int64
@@ -105,11 +117,23 @@ entity 'DIM_DATE'
 		backingConfiguration
 			valueColumn: 'DIM_DATE'.'QUARTER_ID'
 
+	property 'QUARTER_SEQUENCE'
+		dataType: int64
+		lineageTag: c8d9de3d-52b2-5e9f-b355-f5a8397ae78b
+		backingConfiguration
+			valueColumn: 'DIM_DATE'.'QUARTER_SEQUENCE'
+
 	property 'REPORTING_MONTH'
 		dataType: string
 		lineageTag: 0f7aee4a-e8d3-5a9c-b789-e5599e4337f0
 		backingConfiguration
 			valueColumn: 'DIM_DATE'.'REPORTING_MONTH'
+
+	property 'SOW_MONDAY'
+		dataType: dateTime
+		lineageTag: adf86fc2-6852-5b79-9c20-6b3329228124
+		backingConfiguration
+			valueColumn: 'DIM_DATE'.'SOW_MONDAY'
 
 	property 'WEEK_OF_YEAR'
 		dataType: int64
@@ -134,6 +158,12 @@ entity 'DIM_DATE'
 		lineageTag: 84fccc01-66bb-53ba-ba6a-095173ef391f
 		backingConfiguration
 			valueColumn: 'DIM_DATE'.'YEAR_MONTH_SHORT'
+
+	property 'YEAR_MONTH_SHORT_V1'
+		dataType: string
+		lineageTag: 3fc4ca33-78ee-5680-aea7-76a8259154de
+		backingConfiguration
+			valueColumn: 'DIM_DATE'.'YEAR_MONTH_SHORT_V1'
 
 	property 'YEAR_QUARTER'
 		dataType: string

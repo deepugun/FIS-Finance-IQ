@@ -26,12 +26,16 @@ treat a generated artifact or a successful local test as proof of live deploymen
 - [Interactive three-page FP&A report](https://app.powerbi.com/groups/f00e31f4-f4ab-435c-87f4-fdb5f4b06c4a/reports/7a8240e8-b94b-42a3-9a5e-f0f6beb224d5)
 - [Rendered report PDF](generated/FIS-Finance-IQ-Demo.pdf)
 
-Final live checks passed for persisted data, all twelve semantic filter paths,
+The historical deployment receipt records passing live checks for persisted data, all twelve semantic filter paths,
 the three GQL investigations, seven ontology entities and twelve relationships,
 and the single-user workspace role assignment. All three report pages were
 rendered server-side and checked for real KPI/chart content rather than blank
 pages. The Data Agent is published; conversational responses still require
 review before a customer presentation.
+
+**Local screenshot alignment:** the five additional `DIM_DATE` columns documented
+below have been added to the local generated artifacts, not redeployed to Fabric.
+The historical deployment receipt does not verify these new columns.
 
 The approved existing F16 capacity is active. Standard capacity running charges
 apply; no capacity size or recurring schedule was changed.
@@ -105,6 +109,39 @@ deployment, because it does not round-trip into the current ontology experience.
   with full-year plan. A raw fact-to-fact join must use all four grain keys.
 - Account/product hierarchies and cost-center hierarchy attributes mirror the
   shapes shown in the supplied screenshots.
+
+### Screenshot reconstruction and assumptions
+
+The supplied screenshots and twelve relationship pairs define the seven-table
+scope. They show column names, not source rows, data types, join expressions or
+business definitions. The key mappings above are inferred from matching names;
+all account codes, product names, cost-center names, hierarchy values and amounts
+remain fictional. Other tables visible in the screenshots' Data pane are outside
+this demo's scope.
+
+All three facts retain the visible `ACCOUNT`, `Amount`, `CC_PR_AC`, `COSTCENTER`,
+`COSTCENTER_PRODUCTLINE`, `CURRENCY`, `CUSTOMER`, `DATASOURCE`, `DATE`, `ENTITY`,
+`ICP`, `LOAD_DATE`, `LOAD_TIMESTAMP`, `LOCATION`, `PERIOD`, `PRODUCTLINE`,
+`QUARTER`, `SCENARIO`, `VERSION`, `VIEW` and `YEAR` columns. The dimensions retain
+the account/product `L1`-`L8` and cost-center `CC_L1`-`CC_L4` hierarchy shapes.
+Extra fields such as `RecordID`, `AmountCents`, `AccountType` and `DemoWeight`
+are synthetic demo helpers, not claims about the source schema.
+
+The date dimension includes all 28 visible columns. The five previously missing
+columns use these **inferred calendar conventions**, not verified FIS definitions:
+
+| Column | Synthetic convention |
+|---|---|
+| `FIRST_DAY_QUARTER` | First calendar date of the quarter |
+| `LAST_DAY_QUARTER` | Last calendar date of the quarter |
+| `QUARTER_SEQUENCE` | Consecutive quarters: 2025 Q1 = 1 through 2026 Q4 = 8 |
+| `SOW_MONDAY` | Monday starting the date's week, even when it falls in the prior year |
+| `YEAR_MONTH_SHORT_V1` | Abbreviated month and two-digit year, for example `Jan-26` |
+
+These columns propagate from [the data generator](data.py) into CSV/schema,
+notebook, semantic-model, ontology and graph artifacts. Regression tests cover
+the screenshot column names, exact twelve join-key mappings, calendar boundaries
+and generated property types. Existing financial checkpoints are unchanged.
 
 ## Fabric items
 

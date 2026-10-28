@@ -216,7 +216,15 @@
           "type": "DATETIME"
         },
         {
+          "name": "FIRST_DAY_QUARTER",
+          "type": "DATETIME"
+        },
+        {
           "name": "LAST_DAY_MONTH",
+          "type": "DATETIME"
+        },
+        {
+          "name": "LAST_DAY_QUARTER",
           "type": "DATETIME"
         },
         {
@@ -256,8 +264,16 @@
           "type": "INT"
         },
         {
+          "name": "QUARTER_SEQUENCE",
+          "type": "INT"
+        },
+        {
           "name": "REPORTING_MONTH",
           "type": "STRING"
+        },
+        {
+          "name": "SOW_MONDAY",
+          "type": "DATETIME"
         },
         {
           "name": "WEEK_OF_YEAR",
@@ -273,6 +289,10 @@
         },
         {
           "name": "YEAR_MONTH_SHORT",
+          "type": "STRING"
+        },
+        {
+          "name": "YEAR_MONTH_SHORT_V1",
           "type": "STRING"
         },
         {
