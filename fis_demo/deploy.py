@@ -5,7 +5,6 @@ from __future__ import annotations
 import argparse
 import base64
 import json
-import sys
 import time
 from datetime import datetime, timezone
 from pathlib import Path
@@ -14,10 +13,7 @@ import requests
 
 from fis_demo import artifacts
 from fis_demo.data import AS_OF, FACTS, RELATIONSHIPS, ROOT, build_data, validate
-
-
-sys.path.insert(0, str(ROOT.parent / "deployment"))
-from fabric_deploy import Fabric, az_token, normalize_notebook  # noqa: E402
+from fis_demo.fabric import Fabric, az_token, normalize_notebook
 
 
 RECEIPT = ROOT / "deployment.json"
@@ -60,8 +56,9 @@ def verify_privacy(fabric: Fabric, name: str) -> dict:
     if assignment["principal"]["id"] != claims["oid"] or assignment["principal"]["type"] != "User" or assignment["role"] != "Admin":
         raise ValueError("Workspace must have only the authenticated user as Admin")
     return {
-        "workspace": workspace, "roleAssignments": assignments, "tenantId": claims["tid"],
-        "explicitMembers": 1, "privacyVerified": True,
+        "workspace": {key: value for key, value in workspace.items() if key != "description"},
+        "roleAssignments": assignments, "tenantId": claims["tid"],
+        "explicitMembers": 1, "privacyVerified": True, "descriptionMarkerVerified": True,
         "boundary": "Only the caller is assigned a workspace role. Tenant administrative policies still apply.",
     }
 
@@ -412,13 +409,12 @@ def main() -> None:
     fabric = Fabric(args.workspace_id)
     privacy = verify_privacy(fabric, args.workspace_name)
     receipt = json.loads(RECEIPT.read_text()) if RECEIPT.exists() else {
-        "baseRepository": "https://github.com/deepugun/fabric-iq-commercial-insurance-poc",
-        "baseCommit": "501f412f68ce4b048d5eb4fadcf3e04abe00265f",
         "synthetic": True, "asOf": AS_OF.isoformat(),
     }
     if receipt.get("workspaceId", args.workspace_id) != args.workspace_id:
         raise ValueError("Deployment receipt belongs to a different workspace; refusing to overwrite it")
     receipt.update({
+        "repository": "https://github.com/deepugun/FIS-Finance-IQ",
         "workspaceId": args.workspace_id, "workspaceName": args.workspace_name, "privacy": privacy,
         "workspaceUrl": f"https://app.fabric.microsoft.com/groups/{args.workspace_id}/list",
         "status": "in_progress",

@@ -1,5 +1,0 @@
-expression DL_CommercialInsurance =
-	let
-		Source = AzureStorage.DataLake("https://onelake.dfs.fabric.microsoft.com/fef80264-9f1f-4160-b8c8-8e3bf1de7e14/726a950f-970a-487c-a75e-555a3b2cfbff", [HierarchicalNavigation=true])
-	in
-		Source

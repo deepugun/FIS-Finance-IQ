@@ -1,4 +1,4 @@
-"""Build FIS artifacts using the base project's notebook, Direct Lake and IQ patterns."""
+"""Build the FIS finance notebook, Direct Lake, report, graph and ontology artifacts."""
 
 from __future__ import annotations
 

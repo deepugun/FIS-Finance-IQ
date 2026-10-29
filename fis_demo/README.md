@@ -1,24 +1,27 @@
 # FIS Finance IQ - synthetic FP&A demo
 
-An FIS-oriented adaptation of the [commercial insurance base project](https://github.com/deepugun/fabric-iq-commercial-insurance-poc).
-The original insurance example is retained unchanged. This demo uses **fictional
+This standalone FIS-style finance demo uses **fictional
 financial technology products and synthetic financial values**, not FIS customer
 data, official segment reporting, forecasts or published financial results.
 
 ## Scope and isolation
 
-- One new **FIS-Finance-IQ** Fabric workspace on the approved existing capacity.
+- One dedicated **FIS-Finance-IQ** Fabric workspace on the approved existing capacity.
 - Only the authenticated user is assigned a workspace role, as Admin. No other
   users, groups, applications or service principals are added.
 - Workspace membership is not a way to exclude tenant administrators from their
   administrative powers. Tenant governance and retention policies still apply.
-- No GitHub repository is created, and no changes are pushed to the base repository.
+- Code is maintained in [FIS-Finance-IQ](https://github.com/deepugun/FIS-Finance-IQ).
+  Pushing code does not deploy Fabric items.
 - No capacity resizing, recurring schedules, notifications, source-system writes,
   accounting entries or autonomous financial decisions.
 
 The latest live state, item IDs, query results and access verification are persisted
 in [the deployment receipt](deployment.json) once deployment has started. Do not
 treat a generated artifact or a successful local test as proof of live deployment.
+The receipt records the workspace description-marker check rather than retaining
+the free-text description. This repository cleanup does not change live workspace
+metadata or the historical live-check timestamp.
 
 ## Open the deployed demo
 
@@ -93,8 +96,8 @@ retain their original `DATE` relationships; no user-requested relationship is re
 The current tenant uses the
 [new TMDL ontology format](https://learn.microsoft.com/rest/api/fabric/articles/item-management/definitions/ontology-definition).
 Its entity relationships reuse the twelve Direct Lake table relationships.
-The older JSON ontology format used by the insurance base is not used for this
-deployment, because it does not round-trip into the current ontology experience.
+Legacy JSON ontology definitions are not used for this deployment, because they
+do not round-trip into the current ontology experience.
 
 - **13,710 rows:** 6,048 actuals, 3,456 forecast, 3,456 plan, 8 accounts,
   6 cost centers, 6 products and 730 daily dates.
@@ -202,18 +205,19 @@ From the repository root, using Python 3.11 or later:
 
 ```powershell
 python -m fis_demo.artifacts
-python -m unittest fis_demo.test_demo -v
-python .\validation\validate_repository.py
+python -m unittest discover -s .\fis_demo -p "test_*.py" -v
 ```
 
-The generator and unit tests use the Python standard library. Generated CSVs,
+The generator and artifact tests use the Python standard library. The deployment
+helper and its mocked tests require `requests` from [requirements.txt](../requirements.txt);
+tests do not contact Fabric. Generated CSVs,
 schemas, hashes, notebook, TMDL, PBIR, ontology, graph and SQL examples are under
 [generated](generated). Initial artifact templates contain explicit placeholder
 IDs; deployment replaces them with the dedicated workspace's real IDs.
 
 ## Deploy or rerun safely
 
-Install [the base deployment dependencies](../requirements.txt) if missing and
+Install [the deployment dependencies](../requirements.txt) if missing and
 authenticate Azure CLI as the workspace owner. The workspace must have the exact
 approved name and this description marker:
 
@@ -244,7 +248,6 @@ Do not delete the workspace or alter capacity as part of a rehearsal.
 - [Data generator and finance validation](data.py)
 - [Artifact builders](artifacts.py)
 - [Deployment and live verification](deploy.py)
+- [Shared Fabric REST, authentication and notebook helpers](fabric.py)
 - [Targeted unit tests](test_demo.py)
-- [Original lab](../LAB.md)
-
-Base revision: `501f412f68ce4b048d5eb4fadcf3e04abe00265f`.
+- [Mocked deployment and helper tests](test_deploy.py)

@@ -1,6 +1,5 @@
 {
-  "baseRepository": "https://github.com/deepugun/fabric-iq-commercial-insurance-poc",
-  "baseCommit": "501f412f68ce4b048d5eb4fadcf3e04abe00265f",
+  "repository": "https://github.com/deepugun/FIS-Finance-IQ",
   "synthetic": true,
   "asOf": "2026-09-30",
   "workspaceId": "f00e31f4-f4ab-435c-87f4-fdb5f4b06c4a",
@@ -9,7 +8,6 @@
     "workspace": {
       "id": "f00e31f4-f4ab-435c-87f4-fdb5f4b06c4a",
       "displayName": "FIS-Finance-IQ",
-      "description": "FIS synthetic FP&A demo; dedicated single-user workspace. Fictional financial technology data only; not FIS reported results. Based on deepugun/fabric-iq-commercial-insurance-poc. Existing capacity reused; no scheduled jobs, external sharing, notifications or source-system writes.",
       "type": "Workspace",
       "capacityId": "430e2755-966b-4060-881a-ea4f35180fdd",
       "capacityRegion": "Central US",
@@ -36,6 +34,7 @@
     "tenantId": "e71292eb-9def-4f9e-8b65-2e9fdbd52cf9",
     "explicitMembers": 1,
     "privacyVerified": true,
+    "descriptionMarkerVerified": true,
     "boundary": "Only the caller is assigned a workspace role. Tenant administrative policies still apply."
   },
   "workspaceUrl": "https://app.fabric.microsoft.com/groups/f00e31f4-f4ab-435c-87f4-fdb5f4b06c4a/list",
